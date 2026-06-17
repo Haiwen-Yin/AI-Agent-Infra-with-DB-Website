@@ -177,20 +177,20 @@ section{padding:100px 0}
 .edition4-header{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:0;text-align:center;margin-bottom:8px}
 .edition4-header>div{padding:14px 10px;font-weight:700;font-size:.85rem}
 .edition4-header .feat4-col{text-align:left;color:var(--text)}
-.edition4-header .pg-com-col{color:var(--teal);background:rgba(20,184,166,.06);border-radius:8px 0 0 0}
-.edition4-header .pg-ent-col{color:var(--orange);background:rgba(245,158,11,.06)}
-.edition4-header .ora-com-col{color:var(--green);background:rgba(0,212,170,.06)}
-.edition4-header .ora-ent-col{color:var(--purple);background:rgba(124,92,252,.06);border-radius:0 8px 0 0}
+.edition4-header .ora-com-col{color:var(--green);background:rgba(0,212,170,.06);border-radius:8px 0 0 0}
+.edition4-header .ora-ent-col{color:var(--purple);background:rgba(124,92,252,.06)}
+.edition4-header .pg-com-col{color:var(--teal);background:rgba(20,184,166,.06)}
+.edition4-header .pg-ent-col{color:var(--orange);background:rgba(245,158,11,.06);border-radius:0 8px 0 0}
 .edition4-header .sub{display:block;font-size:.7rem;font-weight:400;color:var(--muted);margin-top:2px}
 .compare4-row{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:0;border-top:1px solid var(--border);font-size:.82rem;transition:background .2s}
 .compare4-row:hover{background:rgba(79,142,247,.04)}
 .compare4-row>div{padding:10px 10px;display:flex;align-items:center}
 .compare4-row .feat4-col{color:var(--secondary);text-align:left}
-.compare4-row .pg-com-col,.compare4-row .pg-ent-col,.compare4-row .ora-com-col,.compare4-row .ora-ent-col{justify-content:center;text-align:center;color:var(--muted)}
-.compare4-row .pg-com-col{background:rgba(20,184,166,.02)}
-.compare4-row .pg-ent-col{background:rgba(245,158,11,.02)}
+.compare4-row .ora-com-col,.compare4-row .ora-ent-col,.compare4-row .pg-com-col,.compare4-row .pg-ent-col{justify-content:center;text-align:center;color:var(--muted)}
 .compare4-row .ora-com-col{background:rgba(0,212,170,.02)}
 .compare4-row .ora-ent-col{background:rgba(124,92,252,.02)}
+.compare4-row .pg-com-col{background:rgba(20,184,166,.02)}
+.compare4-row .pg-ent-col{background:rgba(245,158,11,.02)}
 .compare4-row .has{color:var(--green);font-weight:700;font-size:1rem}
 .compare4-row .has-ent{color:var(--purple);font-weight:700;font-size:1rem}
 .compare4-row .has-pg{color:var(--teal);font-weight:700;font-size:1rem}
@@ -199,10 +199,10 @@ section{padding:100px 0}
 .edition4-footer{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:0;border-top:2px solid var(--border)}
 .edition4-footer>div{padding:14px 10px;text-align:center}
 .edition4-footer .feat4-col{background:transparent}
-.edition4-footer .pg-com-col{background:rgba(20,184,166,.06);border-radius:0 0 0 8px}
-.edition4-footer .pg-ent-col{background:rgba(245,158,11,.06)}
-.edition4-footer .ora-com-col{background:rgba(0,212,170,.06)}
-.edition4-footer .ora-ent-col{background:rgba(124,92,252,.06);border-radius:0 0 8px 0}
+.edition4-footer .ora-com-col{background:rgba(0,212,170,.06);border-radius:0 0 0 8px}
+.edition4-footer .ora-ent-col{background:rgba(124,92,252,.06)}
+.edition4-footer .pg-com-col{background:rgba(20,184,166,.06)}
+.edition4-footer .pg-ent-col{background:rgba(245,158,11,.06);border-radius:0 0 8px 0}
 .edition4-footer .ed4-action{display:inline-block;padding:8px 16px;border-radius:8px;font-size:.8rem;font-weight:600;transition:all .2s}
 .edition4-footer .ed4-action.pg-com-btn{background:rgba(20,184,166,.12);color:var(--teal);border:1px solid rgba(20,184,166,.3)}
 .edition4-footer .ed4-action.pg-com-btn:hover{background:rgba(20,184,166,.25)}
@@ -269,8 +269,8 @@ section{padding:60px 0}
 <div class="nav-gh">
 <svg class="nav-gh-icon" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
 <div class="nav-gh-drop">
-<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank"><span class="dot-pg"></span>PG Community</a>
-<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank"><span class="dot-ora"></span>Oracle Community</a>
+<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank"><span class="dot-ora"></span>Oracle Edition</a>
+<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank"><span class="dot-pg"></span>PG Edition</a>
 </div>
 </div>
 <button class="lang-toggle" onclick="toggleLang()"><span data-lang="en">中文</span><span data-lang="zh">EN</span></button>
@@ -290,8 +290,8 @@ section{padding:60px 0}
 <p class="subtitle"><span data-lang="en">Converge memory, knowledge, identity, skills, security, and branching into a single database kernel. Eliminate microservice sprawl. Built for enterprise-grade multi-Agent complex scenarios. Now supporting both Oracle and PostgreSQL.</span><span data-lang="zh">将记忆、知识、身份、技能、安全、分支统一收敛于一个数据库内核之中，消除微服务拼装。为企业级多Agent复杂运行场景而生。现已支持 Oracle 与 PostgreSQL。</span></p>
 <p class="note"><span data-lang="en">Available on Oracle Database &amp; PostgreSQL. 4 editions across 2 database platforms.</span><span data-lang="zh">支持 Oracle 数据库与 PostgreSQL。2大数据库平台共4个版本。</span></p>
 <div class="cta-group">
+<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" class="btn btn-primary" target="_blank"><span data-lang="en">Get Started (Oracle)</span><span data-lang="zh">开始使用 (Oracle)</span></a>
 <a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" class="btn btn-primary" target="_blank"><span data-lang="en">Get Started (PG)</span><span data-lang="zh">开始使用 (PG)</span></a>
-<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" class="btn btn-secondary" target="_blank"><span data-lang="en">Get Started (Oracle)</span><span data-lang="zh">开始使用 (Oracle)</span></a>
 <a href="#architecture" class="btn btn-secondary"><span data-lang="en">View Architecture</span><span data-lang="zh">查看架构</span></a>
 </div>
 </div>
@@ -305,7 +305,7 @@ section{padding:60px 0}
 <div class="stat-card fade-in"><div class="stat-number" data-target="305">0</div><div class="stat-label"><span data-lang="en">API Functions</span><span data-lang="zh">API 函数</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="5">0</div><div class="stat-label"><span data-lang="en">Search Signals</span><span data-lang="zh">搜索信号</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="6">0</div><div class="stat-label"><span data-lang="en">Security Layers</span><span data-lang="zh">安全层</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="25">0</div><div class="stat-label"><span data-lang="en">RLS Policies (COM/ENT: 25+/31)</span><span data-lang="zh">RLS策略 (COM/ENT: 25+/31)</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="25">0</div><div class="stat-label"><span data-lang="en">Row-Level Isolation Policies (COM/ENT: 25+/31)</span><span data-lang="zh">行级隔离策略 (COM/ENT: 25+/31)</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="4">0</div><div class="stat-label"><span data-lang="en">Editions (2 Oracle + 2 PG)</span><span data-lang="zh">版本 (2 Oracle + 2 PG)</span></div></div>
 </div>
 </div>
@@ -334,7 +334,7 @@ section{padding:60px 0}
 <div class="pain-card fade-in">
 <div class="pain-title"><span data-lang="en">No Access Control</span><span data-lang="zh">缺乏访问控制</span></div>
 <div class="pain-desc"><span data-lang="en">Any agent with a connection string can read all data. No per-agent row-level isolation. No audit trail.</span><span data-lang="zh">任何持有连接字符串的Agent都能读取全部数据，无按Agent行级隔离，无审计。</span></div>
-<div class="pain-solve"><span data-lang="en">Per-agent-user row-level isolation via Data Grants + zero-trust</span><span data-lang="zh">Data Grants按Agent用户行级隔离 + 零信任</span></div>
+<div class="pain-solve"><span data-lang="en">Per-agent-user row-level isolation (Data Grants / RLS) + zero-trust</span><span data-lang="zh">按Agent用户行级隔离 (Data Grants / RLS) + 零信任</span></div>
 </div>
 <div class="pain-card fade-in">
 <div class="pain-title"><span data-lang="en">Operational Complexity</span><span data-lang="zh">运维复杂</span></div>
@@ -354,7 +354,7 @@ section{padding:60px 0}
 <div class="pain-card fade-in">
 <div class="pain-title"><span data-lang="en">Multi-Agent Collaboration</span><span data-lang="zh">多Agent协作</span></div>
 <div class="pain-desc"><span data-lang="en">Opaque data flow between agents, scattered interaction logs, difficult cross-agent reconciliation. Permission and data isolation models inadequate for agent scenarios.</span><span data-lang="zh">协作数据流转不透明，交互记录分散，跨Agent对账困难；协作权限与数据隔离混乱，传统权限模型适配不足。</span></div>
-<div class="pain-solve"><span data-lang="en">Collaboration groups + per-agent row-level isolation + Data Grants</span><span data-lang="zh">协作组 + 按Agent行级隔离 + Data Grants</span></div>
+<div class="pain-solve"><span data-lang="en">Collaboration groups + per-agent row-level isolation (Data Grants / RLS)</span><span data-lang="zh">协作组 + 按Agent行级隔离 (Data Grants / RLS)</span></div>
 </div>
 <div class="pain-card fade-in">
 <div class="pain-title"><span data-lang="en">Knowledge Base Silos</span><span data-lang="zh">知识库割裂</span></div>
@@ -385,7 +385,7 @@ section{padding:60px 0}
 <div class="vs-row"><div class="aspect"><span data-lang="en">Cross-Agent Sharing</span><span data-lang="zh">跨Agent共享</span></div><div class="split"><span data-lang="en">Sharing possible via workarounds, but concurrent writes risk file corruption</span><span data-lang="zh">可通过变通方式共享，但多Agent同时写入时存在文件损坏风险</span></div><div class="fusion"><span data-lang="en">Shared entities with per-user row-level access control</span><span data-lang="zh">共享实体 + 按用户行级访问控制</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Concurrent Safety</span><span data-lang="zh">并发安全</span></div><div class="split"><span data-lang="en">No guarantee on simultaneous file operations — data corruption risk</span><span data-lang="zh">无法保证文件同时操作安全性——数据损坏风险</span></div><div class="fusion"><span data-lang="en">ACID transactions, row-level locking, multi-version concurrency</span><span data-lang="zh">ACID事务、行级锁、多版本并发控制</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Data Consistency</span><span data-lang="zh">数据一致性</span></div><div class="split"><span data-lang="en">Manual sync, no referential integrity, orphaned files</span><span data-lang="zh">手动同步，无引用完整性，孤立文件</span></div><div class="fusion"><span data-lang="en">Foreign keys, cascading, unified schema constraints</span><span data-lang="zh">外键、级联、统一schema约束</span></div></div>
-<div class="vs-row"><div class="aspect"><span data-lang="en">Access Control</span><span data-lang="zh">访问控制</span></div><div class="split"><span data-lang="en">File permissions only — no row-level, no audit trail</span><span data-lang="zh">仅文件权限——无行级控制、无审计</span></div><div class="fusion"><span data-lang="en">Data Grants per-agent-user, zero-trust, full audit log</span><span data-lang="zh">Data Grants按Agent用户、零信任、完整审计</span></div></div>
+<div class="vs-row"><div class="aspect"><span data-lang="en">Access Control</span><span data-lang="zh">访问控制</span></div><div class="split"><span data-lang="en">File permissions only — no row-level, no audit trail</span><span data-lang="zh">仅文件权限——无行级控制、无审计</span></div><div class="fusion"><span data-lang="en">Per-agent-user row-level isolation (Data Grants / RLS), zero-trust, full audit log</span><span data-lang="zh">按Agent用户行级隔离 (Data Grants / RLS)、零信任、完整审计</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Schema Evolution</span><span data-lang="zh">Schema演进</span></div><div class="split"><span data-lang="en">Rewrite files, break compatibility, manual migration</span><span data-lang="zh">重写文件，破坏兼容性，手动迁移</span></div><div class="fusion"><span data-lang="en">DDL migration, atomic update, backward compatible</span><span data-lang="zh">DDL迁移、原子更新、向后兼容</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Scalability</span><span data-lang="zh">可扩展性</span></div><div class="split"><span data-lang="en">Linear scan, O(n) search, degrades with volume</span><span data-lang="zh">线性扫描，O(n)检索，随数据量退化</span></div><div class="fusion"><span data-lang="en">B-tree/vector indexes, partition pruning, O(log n)</span><span data-lang="zh">B树/向量索引、分区裁剪、O(log n)</span></div></div>
 <div class="vs-footer">
@@ -433,8 +433,8 @@ section{padding:60px 0}
 </div>
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">Row-Level Security</span><span data-lang="zh">行级安全</span></div><span class="cap-badge required"><span data-lang="en">Required</span><span data-lang="zh">必需</span></span>
-<div class="cap-desc"><span data-lang="en">Per-user data isolation, Data Grants / Row Security Policies (RLS), Mandatory Access Control (MAC)</span><span data-lang="zh">按用户数据隔离、Data Grants / RLS、强制访问控制(MAC)</span></div>
-<div class="cap-tech">Data Grants / RLS &middot; MAC &middot; VPD</div>
+<div class="cap-desc"><span data-lang="en">Per-user data isolation, Row-Level Security (Data Grants / RLS), Mandatory Access Control (MAC)</span><span data-lang="zh">按用户数据隔离、行级安全(Data Grants / RLS)、强制访问控制(MAC)</span></div>
+<div class="cap-tech">Data Grants / RLS &middot; MAC</div>
 </div>
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">JSON Document API over Relational Data (e.g. JRD)</span><span data-lang="zh">基于关系数据的JSON文档API（如JRD）</span></div><span class="cap-badge optional"><span data-lang="en">Optional</span><span data-lang="zh">可选</span></span>
@@ -542,7 +542,7 @@ section{padding:60px 0}
 <div class="feature-card fade-in">
 <div class="feature-icon">&#128737;</div>
 <div class="feature-title"><span data-lang="en">Agent Data Access Control</span><span data-lang="zh">Agent数据访问控制</span></div>
-<div class="feature-desc"><span data-lang="en">Per-agent user row-level isolation, Data Grants, zero-trust model, credential masking — defense in depth for multi-agent scenarios</span><span data-lang="zh">按Agent用户行级隔离、Data Grants、零信任模型、凭证脱敏——多Agent场景纵深防御</span></div>
+<div class="feature-desc"><span data-lang="en">Per-agent user row-level isolation (Data Grants / RLS), zero-trust model, credential masking — defense in depth for multi-agent scenarios</span><span data-lang="zh">按Agent用户行级隔离 (Data Grants / RLS)、零信任模型、凭证脱敏——多Agent场景纵深防御</span></div>
 </div>
 <div class="feature-card fade-in">
 <div class="feature-icon">&#128274;</div>
@@ -651,29 +651,29 @@ section{padding:60px 0}
 <div class="edition4-wrap fade-in">
 <div class="edition4-header">
 <div class="feat4-col"><span data-lang="en">Feature</span><span data-lang="zh">特性</span></div>
-<div class="pg-com-col"><span data-lang="en">PG Community</span><span data-lang="zh">PG 社区版</span><span class="sub">Apache 2.0</span></div>
-<div class="pg-ent-col"><span data-lang="en">PG Enterprise</span><span data-lang="zh">PG 企业版</span><span class="sub">BSL 1.1</span></div>
 <div class="ora-com-col"><span data-lang="en">Oracle Community</span><span data-lang="zh">Oracle 社区版</span><span class="sub">Apache 2.0</span></div>
 <div class="ora-ent-col"><span data-lang="en">Oracle Enterprise</span><span data-lang="zh">Oracle 企业版</span><span class="sub">BSL 1.1</span></div>
+<div class="pg-com-col"><span data-lang="en">PG Community</span><span data-lang="zh">PG 社区版</span><span class="sub">Apache 2.0</span></div>
+<div class="pg-ent-col"><span data-lang="en">PG Enterprise</span><span data-lang="zh">PG 企业版</span><span class="sub">BSL 1.1</span></div>
 </div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Core Features</span><span data-lang="zh">核心功能</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Admin/Agent Separation</span><span data-lang="zh">Admin/Agent分离</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">5-Signal Search</span><span data-lang="zh">5信号搜索</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Property Graph</span><span data-lang="zh">属性图</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Skill System</span><span data-lang="zh">Skill系统</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Branching</span><span data-lang="zh">分支</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Embedding</span><span data-lang="zh">嵌入</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Row Security / Data Grants</span><span data-lang="zh">Row Security / Data Grants</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">LDAP Auth</span><span data-lang="zh">LDAP认证</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Skill Token API</span><span data-lang="zh">Skill Token API</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Workspace Audit</span><span data-lang="zh">工作区审计</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Compliance</span><span data-lang="zh">合规</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Core Features</span><span data-lang="zh">核心功能</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Admin/Agent Separation</span><span data-lang="zh">Admin/Agent分离</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">5-Signal Search</span><span data-lang="zh">5信号搜索</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Property Graph</span><span data-lang="zh">属性图</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Skill System</span><span data-lang="zh">Skill系统</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Branching</span><span data-lang="zh">分支</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Embedding</span><span data-lang="zh">嵌入</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Row-Level Isolation</span><span data-lang="zh">行级隔离</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">LDAP Auth</span><span data-lang="zh">LDAP认证</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Skill Token API</span><span data-lang="zh">Skill Token API</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Workspace Audit</span><span data-lang="zh">工作区审计</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Compliance</span><span data-lang="zh">合规</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
 <div class="edition4-footer">
 <div class="feat4-col"></div>
-<div class="pg-com-col"><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank" class="ed4-action pg-com-btn"><span data-lang="en">GitHub</span><span data-lang="zh">GitHub</span></a></div>
-<div class="pg-ent-col"><span class="ed4-action pg-ent-btn" style="cursor:default;opacity:.5"><span data-lang="en">Coming Soon</span><span data-lang="zh">敬请期待</span></span></div>
 <div class="ora-com-col"><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank" class="ed4-action ora-com-btn"><span data-lang="en">GitHub</span><span data-lang="zh">GitHub</span></a></div>
 <div class="ora-ent-col"><span class="ed4-action ora-ent-btn" style="cursor:default;opacity:.5"><span data-lang="en">Coming Soon</span><span data-lang="zh">敬请期待</span></span></div>
+<div class="pg-com-col"><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank" class="ed4-action pg-com-btn"><span data-lang="en">GitHub</span><span data-lang="zh">GitHub</span></a></div>
+<div class="pg-ent-col"><span class="ed4-action pg-ent-btn" style="cursor:default;opacity:.5"><span data-lang="en">Coming Soon</span><span data-lang="zh">敬请期待</span></span></div>
 </div>
 </div>
 </div>
@@ -723,7 +723,7 @@ section{padding:60px 0}
 </div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.4.0</div><div class="date">2026-06-11</div></div>
-<div class="tl-desc"><span data-lang="en">Deep Data Security, Data Grants, MAC, zero-trust</span><span data-lang="zh">Deep Data Security、Data Grants、MAC、零信任</span></div>
+<div class="tl-desc"><span data-lang="en">Deep Data Security, Row-Level Isolation (Data Grants / RLS), MAC, zero-trust</span><span data-lang="zh">Deep Data Security、行级隔离(Data Grants / RLS)、MAC、零信任</span></div>
 </div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.1.0</div><div class="date">2026-06-02</div></div>
@@ -744,9 +744,9 @@ section{padding:60px 0}
 <div class="container">
 <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px">
 <svg width="24" height="24" viewBox="0 0 16 16" fill="var(--secondary)"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank" style="color:var(--teal);font-size:.85rem;font-weight:600">PG Community</a>
+<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank" style="color:var(--green);font-size:.85rem;font-weight:600">Oracle Edition</a>
 <span style="color:var(--muted);font-size:.8rem">&middot;</span>
-<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank" style="color:var(--green);font-size:.85rem;font-weight:600">Oracle Community</a>
+<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank" style="color:var(--teal);font-size:.85rem;font-weight:600">PG Edition</a>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:8px">
 <a href="https://db4agent.top" target="_blank" style="color:var(--accent);font-size:.95rem;font-weight:600">db4agent.top</a>
