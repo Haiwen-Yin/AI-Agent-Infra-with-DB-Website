@@ -324,7 +324,7 @@ section{padding:60px 0}
 <div class="pain-card fade-in">
 <div class="pain-title"><span data-lang="en">Credential Sprawl</span><span data-lang="zh">凭证散落</span></div>
 <div class="pain-desc"><span data-lang="en">API keys, DB passwords, tokens scattered across config files and env vars. No rotation, no audit.</span><span data-lang="zh">API密钥、数据库密码、令牌散布在配置文件和环境变量中，无法轮换和审计。</span></div>
-<div class="pain-solve"><span data-lang="en">DB_CRYPTO native encryption + PBKDF2 credential distribution</span><span data-lang="zh">DB_CRYPTO原生加密 + PBKDF2凭证分发</span></div>
+<div class="pain-solve"><span data-lang="en">Database-native encryption + PBKDF2 credential distribution</span><span data-lang="zh">数据库原生加密 + PBKDF2凭证分发</span></div>
 </div>
 <div class="pain-card fade-in">
 <div class="pain-title"><span data-lang="en">Data Silos</span><span data-lang="zh">数据孤岛</span></div>
@@ -414,17 +414,17 @@ section{padding:60px 0}
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">Full-Text Search</span><span data-lang="zh">全文搜索</span></div><span class="cap-badge required"><span data-lang="en">Required</span><span data-lang="zh">必需</span></span>
 <div class="cap-desc"><span data-lang="en">Long-text full-text indexing, multi-column datastore, relevance scoring</span><span data-lang="zh">长文本全文索引、多列数据存储、相关性评分</span></div>
-<div class="cap-tech">Oracle Text / tsvector &middot; CONTAINS &middot; SCORE</div>
+<div class="cap-tech">Fulltext Engine &middot; Relevance Scoring</div>
 </div>
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">Vector Storage &amp; Search</span><span data-lang="zh">向量存储与搜索</span></div><span class="cap-badge required"><span data-lang="en">Required</span><span data-lang="zh">必需</span></span>
 <div class="cap-desc"><span data-lang="en">Native VECTOR type, cosine similarity search, embedding integration</span><span data-lang="zh">原生VECTOR类型、余弦相似度搜索、嵌入集成</span></div>
-<div class="cap-tech">VECTOR_DISTANCE / pgvector &middot; COSINE &middot; Embeddings</div>
+<div class="cap-tech">Vector Engine &middot; COSINE &middot; Embeddings</div>
 </div>
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">Property Graph</span><span data-lang="zh">属性图</span></div><span class="cap-badge required"><span data-lang="en">Required</span><span data-lang="zh">必需</span></span>
-<div class="cap-desc"><span data-lang="en">Unified property graph, SQL/PGQ GRAPH_TABLE traversal, BFS proximity</span><span data-lang="zh">统一属性图、SQL/PGQ GRAPH_TABLE遍历、BFS近邻</span></div>
-<div class="cap-tech">GRAPH_TABLE / Apache AGE &middot; SQL/PGQ &middot; BFS</div>
+<div class="cap-desc"><span data-lang="en">Unified property graph, graph traversal, BFS proximity</span><span data-lang="zh">统一属性图、图遍历、BFS近邻</span></div>
+<div class="cap-tech">Property Graph &middot; SQL/PGQ &middot; BFS</div>
 </div>
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">Table Partitioning</span><span data-lang="zh">表分区</span></div><span class="cap-badge required"><span data-lang="en">Required</span><span data-lang="zh">必需</span></span>
@@ -438,8 +438,8 @@ section{padding:60px 0}
 </div>
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">JSON Document API over Relational Data (e.g. JRD)</span><span data-lang="zh">基于关系数据的JSON文档API（如JRD）</span></div><span class="cap-badge optional"><span data-lang="en">Optional</span><span data-lang="zh">可选</span></span>
-<div class="cap-desc"><span data-lang="en">REST-friendly JSON document API over relational data with atomic partial updates. Oracle JRD is one implementation; not required — relational metadata storage is efficient without it.</span><span data-lang="zh">基于关系数据的REST友好JSON文档API，支持原子部分更新。Oracle JRD是一种实现，非必需——关系型元数据存储本身已足够高效。</span></div>
-<div class="cap-tech">JRD (Oracle) &middot; JSON API</div>
+<div class="cap-desc"><span data-lang="en">REST-friendly JSON document API over relational data with atomic partial updates. Not required &mdash; relational metadata storage is efficient without it.</span><span data-lang="zh">基于关系数据的REST友好JSON文档API，支持原子部分更新。非必需——关系型元数据存储本身已足够高效。</span></div>
+<div class="cap-tech">JSON Document API</div>
 </div>
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">Composite Partitioning</span><span data-lang="zh">复合分区</span></div><span class="cap-badge optional"><span data-lang="en">Optional</span><span data-lang="zh">可选</span></span>
@@ -476,7 +476,7 @@ section{padding:60px 0}
 <div class="vs-row"><div class="aspect"><span data-lang="en">Schema Evolution</span><span data-lang="zh">Schema演进</span></div><div class="fusion"><span data-lang="en">DDL atomic update, single migration</span><span data-lang="zh">DDL原子更新，一次迁移</span></div><div class="split"><span data-lang="en">Coordinated migration across 5+ systems</span><span data-lang="zh">5+系统协调迁移</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Deployment</span><span data-lang="zh">部署</span></div><div class="fusion"><span data-lang="en">1 database, 1 backup, 1 monitoring stack</span><span data-lang="zh">1个数据库，1套备份，1套监控</span></div><div class="split"><span data-lang="en">5+ services, 5+ backups, 5+ monitoring</span><span data-lang="zh">5+服务，5+备份，5+监控</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Token Cost</span><span data-lang="zh">Token消耗</span></div><div class="fusion"><span data-lang="en">Single query, minimal tool calls, 70-85% less</span><span data-lang="zh">单次查询，最少工具调用，节省70-85%</span></div><div class="split"><span data-lang="en">Multiple round-trips, context pollution</span><span data-lang="zh">多次往返，上下文污染</span></div></div>
-<div class="vs-row"><div class="aspect"><span data-lang="en">Encryption</span><span data-lang="zh">加密</span></div><div class="fusion"><span data-lang="en">DB_CRYPTO native encryption, master key mgmt</span><span data-lang="zh">DB_CRYPTO原生加密，主密钥管理</span></div><div class="split"><span data-lang="en">Each system manages its own encryption</span><span data-lang="zh">各系统独立管理加密</span></div></div>
+ <div class="vs-row"><div class="aspect"><span data-lang="en">Encryption</span><span data-lang="zh">加密</span></div><div class="fusion"><span data-lang="en">Database-native encryption, master key mgmt</span><span data-lang="zh">数据库原生加密，主密钥管理</span></div><div class="split"><span data-lang="en">Each system manages its own encryption</span><span data-lang="zh">各系统独立管理加密</span></div></div>
 <div class="vs-footer">
 <div class="label-col"></div>
 <div class="fusion-col"><span data-lang="en">1 kernel · 1 deployment · unified model</span><span data-lang="zh">1个内核 · 1次部署 · 统一模型</span></div>
@@ -502,8 +502,8 @@ section{padding:60px 0}
 </div>
 <div class="arch-layer fade-in">
 <div class="layer-label"><span data-lang="en">Database Layer</span><span data-lang="zh">数据库层</span></div>
-<div class="layer-title"><span data-lang="en">30/35 tables &middot; 22+91 PL/SQL functions &middot; 13/17 scheduler jobs</span><span data-lang="zh">30/35 数据表 &middot; 22+91 PL/SQL函数 &middot; 13/17 调度作业</span></div>
-<div class="layer-tech">Partitioning &middot; JSON API &middot; Graph &middot; Vector &middot; Fulltext</div>
+<div class="layer-title"><span data-lang="en">30/35 tables &middot; 22+91 stored functions &middot; 13/17 scheduler jobs</span><span data-lang="zh">30/35 数据表 &middot; 22+91 存储函数 &middot; 13/17 调度作业</span></div>
+<div class="layer-tech">Partitioning &middot; JSON &middot; Graph &middot; Vector &middot; Fulltext</div>
 </div>
 </div>
 </div>
@@ -547,7 +547,7 @@ section{padding:60px 0}
 <div class="feature-card fade-in">
 <div class="feature-icon">&#128274;</div>
 <div class="feature-title"><span data-lang="en">Encrypted Storage</span><span data-lang="zh">加密存储</span></div>
-<div class="feature-desc"><span data-lang="en">PBKDF2+AES-256-GCM, DB_CRYPTO database-native encryption, master key management</span><span data-lang="zh">PBKDF2+AES-256-GCM、DB_CRYPTO数据库原生加密、主密钥管理</span></div>
+<div class="feature-desc"><span data-lang="en">PBKDF2+AES-256-GCM, database-native encryption, master key management</span><span data-lang="zh">PBKDF2+AES-256-GCM、数据库原生加密、主密钥管理</span></div>
 </div>
 <div class="feature-card fade-in">
 <div class="feature-icon">&#128203;</div>
@@ -577,7 +577,7 @@ section{padding:60px 0}
 <div class="signal-name">Fulltext</div>
 <div class="signal-weight">0.25</div>
 <div class="signal-bar"><div class="signal-bar-fill" data-width="25"></div></div>
-<div class="signal-desc"><span data-lang="en">Full-text relevance (Oracle Text / tsvector)</span><span data-lang="zh">全文相关性 (Oracle Text / tsvector)</span></div>
+<div class="signal-desc"><span data-lang="en">Full-text relevance scoring</span><span data-lang="zh">全文相关性评分</span></div>
 </div>
 <div class="signal-card fade-in">
 <div class="signal-name">Relational</div>
@@ -624,7 +624,7 @@ section{padding:60px 0}
 <div class="sec-item fade-in">
 <div class="sec-label">L2</div>
 <div class="sec-title"><span data-lang="en">Least Privilege Users</span><span data-lang="zh">最小权限用户</span></div>
-<div class="sec-desc"><span data-lang="en">Schema owner + End Users (restricted), AUTHID DEFINER packages / Row Security Policies</span><span data-lang="zh">模式所有者 + End User(受限)、AUTHID DEFINER包 / Row Security Policies</span></div>
+<div class="sec-desc"><span data-lang="en">Schema owner + restricted users, definer-rights packages / Row Security Policies</span><span data-lang="zh">模式所有者 + 受限用户、DEFINER权限包 / Row Security Policies</span></div>
 </div>
 <div class="sec-item fade-in">
 <div class="sec-label">L3</div>
@@ -719,15 +719,15 @@ section{padding:60px 0}
 </div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.6.0</div><div class="date">2026-06-13</div></div>
-<div class="tl-desc"><span data-lang="en">Admin/Agent separation, Recovery Codes, Private Skill, Deep Sec fix</span><span data-lang="zh">Admin/Agent分离、恢复码、私有Skill、Deep Sec修复</span></div>
+<div class="tl-desc"><span data-lang="en">Admin/Agent separation, Recovery Codes, Private Skill, row-level isolation fix</span><span data-lang="zh">Admin/Agent分离、恢复码、私有Skill、行级隔离修复</span></div>
 </div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.4.0</div><div class="date">2026-06-11</div></div>
-<div class="tl-desc"><span data-lang="en">Deep Data Security, Row-Level Isolation (Data Grants / RLS), MAC, zero-trust</span><span data-lang="zh">Deep Data Security、行级隔离(Data Grants / RLS)、MAC、零信任</span></div>
+<div class="tl-desc"><span data-lang="en">Deep Data Security, Row-Level Isolation (Data Grants / RLS), MAC, zero-trust</span><span data-lang="zh">深度数据安全、行级隔离(Data Grants / RLS)、MAC、零信任</span></div>
 </div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.1.0</div><div class="date">2026-06-02</div></div>
-<div class="tl-desc"><span data-lang="en">Full rewrite, dual-edition strategy, DB_CRYPTO</span><span data-lang="zh">完全重构、双版本策略、DB_CRYPTO</span></div>
+<div class="tl-desc"><span data-lang="en">Full rewrite, dual-edition strategy, database-native encryption</span><span data-lang="zh">完全重构、双版本策略、数据库原生加密</span></div>
 </div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v2.0.0</div><div class="date">2026-05-15</div></div>
