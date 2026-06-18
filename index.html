@@ -261,6 +261,7 @@ section{padding:60px 0}
 <li><a href="#vs"><span data-lang="en">Comparison</span><span data-lang="zh">对比</span></a></li>
 <li><a href="#architecture"><span data-lang="en">Architecture</span><span data-lang="zh">架构</span></a></li>
 <li><a href="#features"><span data-lang="en">Features</span><span data-lang="zh">特性</span></a></li>
+<li><a href="#loop-engineering"><span data-lang="en">Loop</span><span data-lang="zh">循环</span></a></li>
 <li><a href="#search"><span data-lang="en">Search</span><span data-lang="zh">搜索</span></a></li>
 <li><a href="#security"><span data-lang="en">Security</span><span data-lang="zh">安全</span></a></li>
 <li><a href="#editions"><span data-lang="en">Editions</span><span data-lang="zh">版本</span></a></li>
@@ -285,7 +286,7 @@ section{padding:60px 0}
 <div class="orb"></div>
 </div>
 <div class="hero-content">
-<div class="badge"><span class="dot"></span> v3.6.2 &middot; Open Source &middot; Enterprise Ready</div>
+<div class="badge"><span class="dot"></span> v3.7.0 &middot; Open Source &middot; Enterprise Ready</div>
 <h1><span data-lang="en">The Database-Native Infrastructure for AI Agents</span><span data-lang="zh">AI Agent 的数据库原生基础设施</span></h1>
 <p class="subtitle"><span data-lang="en">Converge memory, knowledge, identity, skills, security, and branching into a single database kernel. Eliminate microservice sprawl. Built for enterprise-grade multi-Agent complex scenarios. Now supporting both Oracle and PostgreSQL.</span><span data-lang="zh">将记忆、知识、身份、技能、安全、分支统一收敛于一个数据库内核之中，消除微服务拼装。为企业级多Agent复杂运行场景而生。现已支持 Oracle 与 PostgreSQL。</span></p>
 <p class="note"><span data-lang="en">Available on Oracle Database &amp; PostgreSQL. 4 editions across 2 database platforms.</span><span data-lang="zh">支持 Oracle 数据库与 PostgreSQL。2大数据库平台共4个版本。</span></p>
@@ -301,9 +302,9 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">By the Numbers</span><span data-lang="zh">数据一览</span></div>
 <h2 class="section-title"><span data-lang="en">Infrastructure at a Glance</span><span data-lang="zh">基础设施一览</span></h2>
 <div class="stats-grid">
-<div class="stat-card fade-in"><div class="stat-number" data-target="30">0</div><div class="stat-label"><span data-lang="en">Tables (COM/ENT: 30/35)</span><span data-lang="zh">数据表 (COM/ENT: 30/35)</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="34">0</div><div class="stat-label"><span data-lang="en">Tables (COM/ENT: 34/40)</span><span data-lang="zh">数据表 (COM/ENT: 34/40)</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="305">0</div><div class="stat-label"><span data-lang="en">API Functions</span><span data-lang="zh">API 函数</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="5">0</div><div class="stat-label"><span data-lang="en">Search Signals</span><span data-lang="zh">搜索信号</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="4">0</div><div class="stat-label"><span data-lang="en">Evaluation Types (Loop)</span><span data-lang="zh">评估类型 (循环)</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="6">0</div><div class="stat-label"><span data-lang="en">Security Layers</span><span data-lang="zh">安全层</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="25">0</div><div class="stat-label"><span data-lang="en">Row-Level Isolation Policies (COM/ENT: 25+/31)</span><span data-lang="zh">行级隔离策略 (COM/ENT: 25+/31)</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="4">0</div><div class="stat-label"><span data-lang="en">Editions (2 Oracle + 2 PG)</span><span data-lang="zh">版本 (2 Oracle + 2 PG)</span></div></div>
@@ -365,6 +366,11 @@ section{padding:60px 0}
 <div class="pain-title"><span data-lang="en">Complex Task &amp; Dev Iteration</span><span data-lang="zh">复杂任务与研发迭代</span></div>
 <div class="pain-desc"><span data-lang="en">Unclear data dependencies after task decomposition; issue diagnosis requires cross-system verification. Schema changes in iteration are costly and slow down development.</span><span data-lang="zh">任务拆解后数据依赖关系不清晰，问题定位需跨系统核对；研发迭代中schema变更成本高，影响开发效率。</span></div>
 <div class="pain-solve"><span data-lang="en">Task plans with dependency tracking + DDL atomic schema evolution</span><span data-lang="zh">任务计划依赖追踪 + DDL原子schema演进</span></div>
+</div>
+<div class="pain-card fade-in">
+<div class="pain-title"><span data-lang="en">Uncontrolled Agent Iteration</span><span data-lang="zh">Agent迭代失控</span></div>
+<div class="pain-desc"><span data-lang="en">Agents loop indefinitely without clear stop conditions. No evaluation of intermediate results. Wasted tokens, no observability, no lifecycle management for iterative workflows.</span><span data-lang="zh">Agent无明确停止条件地无限循环，无中间结果评估，Token浪费，缺乏可观测性和生命周期管理。</span></div>
+<div class="pain-solve"><span data-lang="en">Loop Engineering: goal-driven autonomous feedback loops with 4 evaluation types, stop conditions, and lifecycle hooks</span><span data-lang="zh">循环工程：目标驱动自主反馈循环，4种评估类型、停止条件、生命周期钩子</span></div>
 </div>
 </div>
 </div>
@@ -497,12 +503,12 @@ section{padding:60px 0}
 </div>
 <div class="arch-layer fade-in">
 <div class="layer-label"><span data-lang="en">API Layer</span><span data-lang="zh">API 层</span></div>
-<div class="layer-title"><span data-lang="en">23/24 modules &middot; 305+ functions &middot; unified bind variables</span><span data-lang="zh">23/24 模块 &middot; 305+ 函数 &middot; 统一绑定变量</span></div>
+<div class="layer-title"><span data-lang="en">23/26 modules &middot; 305+ functions &middot; unified bind variables</span><span data-lang="zh">23/26 模块 &middot; 305+ 函数 &middot; 统一绑定变量</span></div>
 <div class="layer-tech">memory_api &middot; knowledge_api &middot; agent_api &middot; ...</div>
 </div>
 <div class="arch-layer fade-in">
 <div class="layer-label"><span data-lang="en">Database Layer</span><span data-lang="zh">数据库层</span></div>
-<div class="layer-title"><span data-lang="en">30/35 tables &middot; 22+91 stored functions &middot; 13/17 scheduler jobs</span><span data-lang="zh">30/35 数据表 &middot; 22+91 存储函数 &middot; 13/17 调度作业</span></div>
+<div class="layer-title"><span data-lang="en">34/40 tables &middot; 22+91 stored functions &middot; 16/20 scheduler jobs</span><span data-lang="zh">34/40 数据表 &middot; 22+91 存储函数 &middot; 16/20 调度作业</span></div>
 <div class="layer-tech">Partitioning &middot; JSON &middot; Graph &middot; Vector &middot; Fulltext</div>
 </div>
 </div>
@@ -562,6 +568,101 @@ section{padding:60px 0}
 </div>
 </div>
 </section>
+
+<section id="loop-engineering">
+<div class="container">
+<div class="section-label"><span data-lang="en">Loop Engineering</span><span data-lang="zh">循环工程</span></div>
+<h2 class="section-title"><span data-lang="en">The 4th Generation AI Engineering Paradigm</span><span data-lang="zh">第四代 AI 工程范式</span></h2>
+<p class="section-desc"><span data-lang="en">From Prompt Engineering to Loop Engineering — designing autonomous feedback loops where Agents self-iterate until goals are achieved.</span><span data-lang="zh">从提示词工程到循环工程——设计自主反馈循环，让 Agent 自我迭代直到达成目标。</span></p>
+<div class="arch-layers" style="max-width:800px">
+<div class="arch-layer fade-in">
+<div class="layer-label" style="color:var(--green)">GEN 1</div>
+<div class="layer-title">Prompt Engineering</div>
+<div class="layer-detail"><span data-lang="en">How to ask the AI</span><span data-lang="zh">怎么问 AI</span></div>
+<div class="layer-tech">2022-2024</div>
+</div>
+<div class="arch-layer fade-in">
+<div class="layer-label" style="color:var(--accent)">GEN 2</div>
+<div class="layer-title">Context Engineering</div>
+<div class="layer-detail"><span data-lang="en">What information to give the AI</span><span data-lang="zh">给 AI 什么信息</span></div>
+<div class="layer-tech">2025</div>
+</div>
+<div class="arch-layer fade-in">
+<div class="layer-label" style="color:var(--purple)">GEN 3</div>
+<div class="layer-title">Harness Engineering</div>
+<div class="layer-detail"><span data-lang="en">What environment to build for the Agent</span><span data-lang="zh">为 Agent 搭建什么环境</span></div>
+<div class="layer-tech">2026 Q1</div>
+</div>
+<div class="arch-layer fade-in">
+<div class="layer-label" style="color:var(--orange)">GEN 4</div>
+<div class="layer-title">Loop Engineering</div>
+<div class="layer-detail"><span data-lang="en">Design loops where Agents self-iterate until goals are met</span><span data-lang="zh">设计让 Agent 自我迭代直至达成目标的循环</span></div>
+<div class="layer-tech">2026 Q2 &middot; Peter Steinberger</div>
+</div>
+</div>
+<div style="max-width:800px;margin:48px auto 0">
+<h3 style="text-align:center;font-size:1.3rem;margin-bottom:24px"><span data-lang="en">The 5-Stage Loop Cycle</span><span data-lang="zh">五阶段循环</span></h3>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px;text-align:center" class="fade-in">
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 8px">
+<div style="font-size:.75rem;color:var(--accent);font-weight:700;text-transform:uppercase">1</div>
+<div style="font-weight:700;margin:4px 0"><span data-lang="en">Intent</span><span data-lang="zh">意图</span></div>
+<div style="font-size:.8rem;color:var(--secondary)"><span data-lang="en">Define goal</span><span data-lang="zh">定义目标</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 8px">
+<div style="font-size:.75rem;color:var(--accent);font-weight:700;text-transform:uppercase">2</div>
+<div style="font-weight:700;margin:4px 0"><span data-lang="en">Context</span><span data-lang="zh">上下文</span></div>
+<div style="font-size:.8rem;color:var(--secondary)"><span data-lang="en">Gather info</span><span data-lang="zh">收集信息</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 8px">
+<div style="font-size:.75rem;color:var(--accent);font-weight:700;text-transform:uppercase">3</div>
+<div style="font-weight:700;margin:4px 0"><span data-lang="en">Action</span><span data-lang="zh">行动</span></div>
+<div style="font-size:.8rem;color:var(--secondary)"><span data-lang="en">Execute tools</span><span data-lang="zh">执行工具</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 8px">
+<div style="font-size:.75rem;color:var(--accent);font-weight:700;text-transform:uppercase">4</div>
+<div style="font-weight:700;margin:4px 0"><span data-lang="en">Observe</span><span data-lang="zh">观察</span></div>
+<div style="font-size:.8rem;color:var(--secondary)"><span data-lang="en">Get results</span><span data-lang="zh">获取结果</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 8px">
+<div style="font-size:.75rem;color:var(--accent);font-weight:700;text-transform:uppercase">5</div>
+<div style="font-weight:700;margin:4px 0"><span data-lang="en">Adjust</span><span data-lang="zh">调整</span></div>
+<div style="font-size:.8rem;color:var(--secondary)"><span data-lang="en">Refine &amp; repeat</span><span data-lang="zh">优化并重复</span></div>
+</div>
+</div>
+</div>
+<div style="max-width:800px;margin:48px auto 0">
+<h3 style="text-align:center;font-size:1.3rem;margin-bottom:24px"><span data-lang="en">4 Evaluation Types</span><span data-lang="zh">四种评估方式</span></h3>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px" class="fade-in">
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center">
+<div style="font-size:2rem;margin-bottom:8px">&#9889;</div>
+<div style="font-weight:700;margin-bottom:4px">TEST</div>
+<div style="font-size:.85rem;color:var(--secondary)"><span data-lang="en">Run command, check exit code</span><span data-lang="zh">运行命令，检查退出码</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center">
+<div style="font-size:2rem;margin-bottom:8px">&#128196;</div>
+<div style="font-weight:700;margin-bottom:4px">DIFF</div>
+<div style="font-size:.85rem;color:var(--secondary)"><span data-lang="en">Analyze git diff</span><span data-lang="zh">分析 Git diff</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center">
+<div style="font-size:2rem;margin-bottom:8px">&#129504;</div>
+<div style="font-weight:700;margin-bottom:4px">LLM_JUDGE</div>
+<div style="font-size:.85rem;color:var(--secondary)"><span data-lang="en">LLM scoring (configurable)</span><span data-lang="zh">LLM 打分（可配置）</span></div>
+</div>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center">
+<div style="font-size:2rem;margin-bottom:8px">&#128100;</div>
+<div style="font-weight:700;margin-bottom:4px">MANUAL</div>
+<div style="font-size:.85rem;color:var(--secondary)"><span data-lang="en">Human review</span><span data-lang="zh">人工审核</span></div>
+</div>
+</div>
+</div>
+<div class="arch-note fade-in" style="margin-top:32px">
+<div class="arch-note-title"><span data-lang="en">Loop Engineering in This Project</span><span data-lang="zh">本项目中的循环工程</span></div>
+<div class="arch-note-desc"><span data-lang="en">Loop definitions are stored as entities (entity_type='LOOP_DEFINITION') with metadata in loop_meta. Each run tracks iterations with plan&rarr;action&rarr;observe&rarr;evaluate&rarr;adjust. Stop conditions include max_iterations, max_tokens, and max_duration. Lifecycle hooks (PRE_RUN, POST_ITERATION, ON_STOP, ON_FAIL, ON_TIMEOUT, ON_START) enable extensible automation.</span><span data-lang="zh">循环定义存储为实体（entity_type='LOOP_DEFINITION'），元数据存于 loop_meta。每次运行追踪迭代：计划&rarr;行动&rarr;观察&rarr;评估&rarr;调整。停止条件包括最大迭代次数、最大Token数和最大时长。生命周期钩子支持可扩展自动化。</span></div>
+<div class="arch-note-tech">LOOP_META &middot; LOOP_RUNS &middot; LOOP_ITERATIONS &middot; LOOP_HOOKS &middot; LOOP_AUDIT (ENT)</div>
+</div>
+</div>
+</section>
+
 <section id="search">
 <div class="container">
 <div class="section-label"><span data-lang="en">Unified Search</span><span data-lang="zh">统一搜索</span></div>
@@ -657,6 +758,7 @@ section{padding:60px 0}
 <div class="pg-ent-col"><span data-lang="en">PG Enterprise</span><span data-lang="zh">PG 企业版</span><span class="sub">BSL 1.1</span></div>
 </div>
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">Core Features</span><span data-lang="zh">核心功能</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Loop Engineering</span><span data-lang="zh">循环工程</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">Admin/Agent Separation</span><span data-lang="zh">Admin/Agent分离</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">5-Signal Search</span><span data-lang="zh">5信号搜索</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">Property Graph</span><span data-lang="zh">属性图</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
@@ -706,8 +808,12 @@ section{padding:60px 0}
 <h2 class="section-title"><span data-lang="en">Version Timeline</span><span data-lang="zh">版本时间线</span></h2>
 <div class="timeline-list">
 <div class="tl-item fade-in">
+<div class="tl-version"><div class="ver">v3.7.0</div><div class="date">2026-06-18</div></div>
+<div class="tl-desc"><span data-lang="en">All 4 editions | Loop Engineering (4th gen AI methodology): 4 loop tables, LOOP_MANAGER package, loop_api.py, 4 evaluation types (TEST/DIFF/LLM_JUDGE/MANUAL), lifecycle hooks, 3 scheduler jobs. ENT: LOOP_AUDIT. Bug fixes: COM loop API, audit pages, nav, auth.</span><span data-lang="zh">全部4版本 | 循环工程（第4代AI方法论）：4张循环表、LOOP_MANAGER包、loop_api.py、4种评估类型(TEST/DIFF/LLM_JUDGE/MANUAL)、生命周期钩子、3个调度任务。ENT: LOOP_AUDIT。Bug修复：COM循环API、审计页面、导航、认证。</span></div>
+</div>
+<div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.6.2</div><div class="date">2026-06-18</div></div>
-<div class="tl-desc"><span data-lang="en">All 4 editions (Oracle + PG) | Portal chat send/switch fix, 15 PG bug fixes, ENT: audit trail, LDAP auth, skill tokens, compliance</span><span data-lang="zh">全部4版本 (Oracle + PG) | Portal聊天发送/切换修复、15个PG Bug修复，ENT: 审计追踪、LDAP认证、Skill令牌、合规日志</span></div>
+<div class="tl-desc"><span data-lang="en">Portal chat send/switch fix, 15 PG bug fixes, ENT: audit trail, LDAP auth, skill tokens, compliance</span><span data-lang="zh">Portal聊天发送/切换修复、15个PG Bug修复，ENT: 审计追踪、LDAP认证、Skill令牌、合规日志</span></div>
 </div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.6.1</div><div class="date">2026-06-16</div></div>
