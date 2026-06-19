@@ -286,7 +286,7 @@ section{padding:60px 0}
 <div class="orb"></div>
 </div>
 <div class="hero-content">
-<div class="badge"><span class="dot"></span> v3.7.1 &middot; Open Source &middot; Enterprise Ready</div>
+<div class="badge"><span class="dot"></span> v3.7.2 &middot; Open Source &middot; Enterprise Ready</div>
 <h1><span data-lang="en">The Database-Native Infrastructure for AI Agents</span><span data-lang="zh">AI Agent 的数据库原生基础设施</span></h1>
 <p class="subtitle"><span data-lang="en">Converge memory, knowledge, identity, skills, security, and branching into a single database kernel. Eliminate microservice sprawl. Built for enterprise-grade multi-Agent complex scenarios. Now supporting both Oracle and PostgreSQL.</span><span data-lang="zh">将记忆、知识、身份、技能、安全、分支统一收敛于一个数据库内核之中，消除微服务拼装。为企业级多Agent复杂运行场景而生。现已支持 Oracle 与 PostgreSQL。</span></p>
 <p class="note"><span data-lang="en">Available on Oracle Database &amp; PostgreSQL. 4 editions across 2 database platforms.</span><span data-lang="zh">支持 Oracle 数据库与 PostgreSQL。2大数据库平台共4个版本。</span></p>
@@ -672,7 +672,7 @@ section{padding:60px 0}
 </div>
 <div class="arch-note fade-in" style="margin-top:32px">
 <div class="arch-note-title"><span data-lang="en">Loop Engineering in This Project</span><span data-lang="zh">本项目中的循环工程</span></div>
-<div class="arch-note-desc"><span data-lang="en">Loop definitions are stored as entities (entity_type='LOOP_DEFINITION') with metadata in loop_meta. Each run tracks iterations with plan&rarr;action&rarr;observe&rarr;evaluate&rarr;adjust. Stop conditions include max_iterations, max_tokens, and max_duration. Lifecycle hooks (PRE_RUN, ON_START, POST_ITERATION, ON_STOP, ON_FAIL, ON_TIMEOUT) enable extensible automation. v3.7.1 adds Collaborative Integration: Spec-Driven Loops derive from acceptance criteria, Task-Loop Binding auto-completes steps on loop success, Collaborative Loops create parent/child loops for group coordination with AGGREGATE evaluation, and Skill-Triggered Loops auto-start validation on skill acquire.</span><span data-lang="zh">循环定义存储为实体（entity_type='LOOP_DEFINITION'），元数据存于 loop_meta。每次运行追踪迭代：计划&rarr;行动&rarr;观察&rarr;评估&rarr;调整。停止条件包括最大迭代次数、最大Token数和最大时长。生命周期钩子支持可扩展自动化。v3.7.1 新增协同集成：规格驱动循环从验收标准派生、Task-Loop绑定循环成功时步骤自动完成、协作循环创建父子循环配合AGGREGATE评估、Skill触发循环在技能获取时自动启动验证。</span></div>
+<div class="arch-note-desc"><span data-lang="en">Loop definitions are stored as entities (entity_type='LOOP_DEFINITION') with metadata in loop_meta. Each run tracks iterations with plan&rarr;action&rarr;observe&rarr;evaluate&rarr;adjust. Stop conditions include max_iterations, max_tokens, and max_duration. Lifecycle hooks (PRE_RUN, ON_START, POST_ITERATION, ON_STOP, ON_FAIL, ON_TIMEOUT) enable extensible automation. v3.7.2 adds Collaborative Integration: Spec-Driven Loops derive from acceptance criteria, Task-Loop Binding auto-completes steps on loop success, Collaborative Loops create parent/child loops for group coordination with AGGREGATE evaluation, and Skill-Triggered Loops auto-start validation on skill acquire.</span><span data-lang="zh">循环定义存储为实体（entity_type='LOOP_DEFINITION'），元数据存于 loop_meta。每次运行追踪迭代：计划&rarr;行动&rarr;观察&rarr;评估&rarr;调整。停止条件包括最大迭代次数、最大Token数和最大时长。生命周期钩子支持可扩展自动化。v3.7.2 新增协同集成：规格驱动循环从验收标准派生、Task-Loop绑定循环成功时步骤自动完成、协作循环创建父子循环配合AGGREGATE评估、Skill触发循环在技能获取时自动启动验证。</span></div>
 <div class="arch-note-tech">LOOP_META &middot; LOOP_RUNS &middot; LOOP_ITERATIONS &middot; LOOP_HOOKS &middot; TASK_LOOP_BINDING &middot; LOOP_AUDIT (ENT)</div>
 </div>
 </div>
@@ -829,6 +829,10 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">Version History</span><span data-lang="zh">版本历史</span></div>
 <h2 class="section-title"><span data-lang="en">Version Timeline</span><span data-lang="zh">版本时间线</span></h2>
 <div class="timeline-list">
+<div class="tl-item fade-in">
+<div class="tl-version"><div class="ver">v3.7.2</div><div class="date">2026-06-19</div></div>
+<div class="tl-desc"><span data-lang="en">All 4 editions | Documentation consistency: corrected function counts, job schedules, partition counts, PG terminology, evaluation types</span><span data-lang="zh">全部4版本 | 文档一致性修复：修正函数计数、作业调度、分区计数、PG术语、评估类型</span></div>
+</div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.7.1</div><div class="date">2026-06-19</div></div>
 <div class="tl-desc"><span data-lang="en">All 4 editions | Loop Engineering Collaborative Integration: Spec-Driven Loop, Task-Loop Binding, Collaborative Loop. SPEC_VALIDATION &amp; AGGREGATE evaluation types. 7 new API endpoints. Session persistence &amp; auth fixes.</span><span data-lang="zh">全部4版本 | 循环工程协同集成：规格驱动循环、任务-循环绑定、协作循环。SPEC_VALIDATION 与 AGGREGATE 评估类型。7个新API端点。会话持久化与认证修复。</span></div>
