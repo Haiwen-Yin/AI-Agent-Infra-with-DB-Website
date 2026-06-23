@@ -22,11 +22,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,26,.85
 nav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
 nav .logo{font-weight:700;font-size:1.1rem;color:var(--text)}
 nav .logo span{color:var(--accent)}
-.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
-.nav-links a{color:var(--secondary);font-size:.9rem;transition:color .2s}
+.nav-links{display:flex;align-items:center;gap:18px;list-style:none;flex-wrap:nowrap;white-space:nowrap;flex-shrink:1;min-width:0;overflow:hidden}
+.nav-links a{color:var(--secondary);font-size:.82rem;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--text)}
-.nav-gh{position:relative;display:flex;align-items:center}
-.nav-gh-icon{color:var(--secondary);transition:color .2s;cursor:pointer;padding:4px}
+.nav-gh{position:relative;display:flex;align-items:center;flex-shrink:0}
+.nav-gh-icon{color:var(--secondary);transition:color .2s;cursor:pointer;width:20px;height:20px;flex-shrink:0;display:block}
 .nav-gh-icon:hover{color:var(--text)}
 .nav-gh::after{content:'';position:absolute;top:100%;left:0;right:0;height:8px}
 .nav-gh-drop{display:none;position:absolute;top:calc(100% + 8px);left:-8px;min-width:180px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:8px 0;box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:200}
@@ -35,7 +35,7 @@ nav .logo span{color:var(--accent)}
 .nav-gh-drop a:hover{background:rgba(79,142,247,.08);color:var(--text)}
 .nav-gh-drop .dot-pg{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0}
 .nav-gh-drop .dot-ora{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0}
-.lang-toggle{background:rgba(79,142,247,.12);border:1px solid var(--border);color:var(--accent);padding:6px 14px;border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600;transition:all .2s}
+.lang-toggle{background:rgba(79,142,247,.12);border:1px solid var(--border);color:var(--accent);padding:6px 14px;border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600;transition:color .2s,background .2s;width:64px;height:32px;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;flex-shrink:0;white-space:nowrap}
 .lang-toggle:hover{background:rgba(79,142,247,.25)}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;overflow:hidden}
 .hero-bg{position:absolute;inset:0;overflow:hidden}
@@ -247,6 +247,19 @@ section{padding:60px 0}
 .security-timeline{padding-left:30px}
 .tl-item{flex-direction:column;gap:4px}
 }
+.deploy-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px 32px;margin-top:32px;align-items:stretch}
+.deploy-col{display:flex;flex-direction:column;gap:20px}
+.deploy-col-title{font-size:1.3rem;font-weight:700;color:var(--accent);text-align:center;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.deploy-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;grid-row:span 1}
+.deploy-card-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:12px}
+.deploy-card-title{font-size:1.1rem;font-weight:600;margin-bottom:12px;color:var(--text)}
+.deploy-card-body{font-size:.88rem;line-height:1.8;color:var(--secondary);white-space:pre-wrap;word-break:break-word}
+.deploy-download{text-align:center;font-size:.95rem;color:var(--secondary);margin-bottom:8px;line-height:1.8}
+.deploy-download a{color:var(--accent);font-weight:600}
+.deploy-db-title{font-size:1.3rem;font-weight:700;color:var(--accent);margin-bottom:8px;text-align:center;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.deploy-mode{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:12px}
+.deploy-prompt{font-size:.85rem;line-height:1.8;color:var(--secondary);white-space:pre-wrap;word-break:break-word;background:rgba(0,0,0,.2);border-radius:8px;padding:16px;overflow-x:auto;flex:1;min-height:0}
+@media(max-width:768px){.deploy-cols{grid-template-columns:1fr}.deploy-prompt{font-size:.8rem}}
 </style>
 </head>
 <body>
@@ -254,6 +267,7 @@ section{padding:60px 0}
 <div class="container">
 <div class="logo">AI Agent Infra <span>with DB</span></div>
 <ul class="nav-links">
+<li><a href="#deploy"><span data-lang="en">Deploy</span><span data-lang="zh">部署</span></a></li>
 <li><a href="#stats"><span data-lang="en">Stats</span><span data-lang="zh">数据</span></a></li>
 <li><a href="#pain-points"><span data-lang="en">Pain Points</span><span data-lang="zh">痛点</span></a></li>
 <li><a href="#why-not-fs"><span data-lang="en">Why Not FS</span><span data-lang="zh">为何非文件系统</span></a></li>
@@ -266,7 +280,7 @@ section{padding:60px 0}
 <li><a href="#security"><span data-lang="en">Security</span><span data-lang="zh">安全</span></a></li>
 <li><a href="#editions"><span data-lang="en">Editions</span><span data-lang="zh">版本</span></a></li>
 </ul>
-<div style="display:flex;align-items:center;gap:12px">
+<div style="display:flex;align-items:center;gap:12px;flex-shrink:0">
 <div class="nav-gh">
 <svg class="nav-gh-icon" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
 <div class="nav-gh-drop">
@@ -295,6 +309,23 @@ section{padding:60px 0}
 <a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" class="btn btn-primary" target="_blank"><span data-lang="en">Get Started (PG)</span><span data-lang="zh">开始使用 (PG)</span></a>
 <a href="#architecture" class="btn btn-secondary"><span data-lang="en">View Architecture</span><span data-lang="zh">查看架构</span></a>
 </div>
+</div>
+</section>
+<section id="deploy">
+<div class="container">
+<div class="section-label"><span data-lang="en">Quick Deploy</span><span data-lang="zh">快速部署</span></div>
+<h2 class="section-title"><span data-lang="en">Deployment Prompts</span><span data-lang="zh">部署提示词</span></h2>
+<p class="section-desc"><span data-lang="en">Download the latest release zip from the corresponding GitHub Release page, extract it into your Agent's Skill directory, and rename the directory to remove the version suffix.</span><span data-lang="zh">请到对应GitHub项目地址的Release页面下载最新版本zip压缩文件，解压到你的Agent的Skill目录中，并重命名目录名，清除其中的版本号后缀。</span></p>
+<div class="deploy-cols">
+<div class="deploy-db-title">Oracle</div>
+<div class="deploy-db-title">PostgreSQL</div>
+<div class="deploy-card"><div class="deploy-mode"><span data-lang="en">Standalone Mode</span><span data-lang="zh">Standalone 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-OracleDB-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用Oracle数据库作为Agent的运行底座，现在需要你以Standalone模式初始化部署。数据库已由管理员提前准备好，信息为IP地址xxx.xxx.xxx.xxx，端口xxxx，服务名xxxxxx，用户名/密码为xxxxxx/xxxxxx。必要时你也可以连接到sys用户进行需要的操作，密码为xxxx。Oracle SQLcl部署在/path/to/sqlcl中。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。如果遇到问题，先尝试自行解决。</span><span data-lang="en">A new Skill has been deployed in your Skill directory at AI-Agent-Infra-with-OracleDB-Community-Edition (or Enterprise-Edition), using an Oracle database as the Agent runtime foundation. You need to initialize the deployment in Standalone mode. The database has already been prepared by the administrator — IP address xxx.xxx.xxx.xxx, port xxxx, service name xxxxxx, username/password xxxxxx/xxxxxx. If necessary, you may also connect using the sys user for required operations, password xxxx. Oracle SQLcl is located at /path/to/sqlcl. Embedding model info: URL xxx.xxx/v1, model ID xxxxxxxxxxxx. If you encounter issues, try to resolve them yourself first.</span></pre></div>
+<div class="deploy-card"><div class="deploy-mode"><span data-lang="en">Standalone Mode</span><span data-lang="zh">Standalone 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-PG-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用PostgreSQL数据库作为Agent的运行底座，现在需要你以Standalone模式初始化部署。目标服务器IP地址为xxx.xxx.xxx.xxx，SSH用户为xxx。需要你在这台服务器上安装PostgreSQL 18并完成全部配置（包括pgvector、Apache AGE、pg_cron扩展）。数据库端口设为5432（社区版）或5433（企业版），数据库名为ai_agent（社区版）或ai_agent_ee（企业版），数据库superuser为pgsql（trust认证）。项目代码已位于服务器的/path/to/project目录。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。如果遇到问题，先尝试自行解决。</span><span data-lang="en">A new Skill has been deployed in your Skill directory at AI-Agent-Infra-with-PG-Community-Edition (or Enterprise-Edition), using a PostgreSQL database as the Agent's runtime foundation. You need to initialize deployment in Standalone mode. The target server IP is xxx.xxx.xxx.xxx, SSH user is xxx. You need to install PostgreSQL 18 on this server and complete all configuration (including pgvector, Apache AGE, pg_cron extensions). Set the database port to 5432 (Community) or 5433 (Enterprise), database name to ai_agent (Community) or ai_agent_ee (Enterprise), database superuser to pgsql (trust authentication). The project code is located at /path/to/project on the server. Embedding model info: URL xxx.xxx/v1, model ID xxxxxxxxxxxx. If you encounter issues, try to resolve them yourself first.</span></pre></div>
+<div class="deploy-card"><div class="deploy-mode"><span data-lang="en">Admin Agent Mode</span><span data-lang="zh">Admin Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-OracleDB-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用Oracle数据库作为Agent的运行底座，现在需要你作为管理Agent初始化部署。数据库已由管理员提前准备好，信息为IP地址xxx.xxx.xxx.xxx，端口xxxx，服务名xxxxxx，用户名/密码为xxxxxx/xxxxxx。必要时你也可以连接到sys用户进行需要的操作，密码为xxxx。Oracle SQLcl部署在/path/to/sqlcl中。Web Portal监听端口设为xxxx。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。部署完成后生成Admin Token并安全保存，后续将用于Business Agent注册。启动Web Portal服务并确认可正常访问。如果遇到问题，先尝试自行解决。</span><span data-lang="en">A new Skill has been deployed in your Skill directory at AI-Agent-Infra-with-OracleDB-Community-Edition (or Enterprise-Edition), using an Oracle database as the runtime foundation for the Agent. You are now required to initialize the deployment as the Admin Agent. The database has already been prepared by the administrator — connection details: IP address xxx.xxx.xxx.xxx, port xxxx, service name xxxxxx, username/password xxxxxx/xxxxxx. If necessary, you may also connect as the sys user for required operations, password xxxx. Oracle SQLcl is installed at /path/to/sqlcl. Set the Web Portal listening port to xxxx. Embedding model info: URL xxx.xxx/v1, model ID xxxxxxxxxxxx. After deployment, generate an Admin Token and store it securely — it will be used later for Business Agent registration. Start the Web Portal service and confirm it is accessible. If you encounter issues, attempt to resolve them on your own first.</span></pre></div>
+<div class="deploy-card"><div class="deploy-mode"><span data-lang="en">Admin Agent Mode</span><span data-lang="zh">Admin Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-PG-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用PostgreSQL数据库作为Agent的运行底座，现在需要你作为管理Agent初始化部署。目标服务器IP地址为xxx.xxx.xxx.xxx，SSH用户为xxx。需要你在这台服务器上安装PostgreSQL 18并完成全部配置（包括pgvector、Apache AGE、pg_cron扩展）。数据库端口设为5432（社区版）或5433（企业版），数据库名为ai_agent（社区版）或ai_agent_ee（企业版），数据库superuser为pgsql（trust认证）。Web Portal监听端口为xxxx。项目代码已位于服务器的/path/to/project目录。部署完成后生成Admin Token并安全保存，后续将用于Business Agent注册。启动Web Portal服务并确认可正常访问。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。如果遇到问题，先尝试自行解决。</span><span data-lang="en">A new Skill has been deployed in your Skill directory at AI-Agent-Infra-with-PG-Community-Edition (or Enterprise-Edition), using a PostgreSQL database as the Agent's runtime foundation. You need to initialize the deployment as the Admin Agent. The target server IP is xxx.xxx.xxx.xxx, SSH user is xxx. You need to install PostgreSQL 18 on this server and complete all configuration (including pgvector, Apache AGE, pg_cron extensions). Set the database port to 5432 (Community) or 5433 (Enterprise), database name to ai_agent (Community) or ai_agent_ee (Enterprise), database superuser to pgsql (trust authentication). The project code is located at /path/to/project on the server. Set the Web Portal listening port to xxxx. After deployment, generate an Admin Token and store it securely for Business Agent registration. Start the Web Portal service and confirm it is accessible. Embedding model info: URL xxx.xxx/v1, model ID xxxxxxxxxxxx. If you encounter issues, try to resolve them yourself first.</span></pre></div>
+<div class="deploy-card"><div class="deploy-mode"><span data-lang="en">Business Agent Mode</span><span data-lang="zh">Business Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-OracleDB-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用Oracle数据库作为Agent的运行底座。现在需要你作为业务Agent加入已有的管理Agent集群。Admin Agent已运行在IP地址xxx.xxx.xxx.xxx，端口xxxx上，Admin Token为AT_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。新业务Agent的ID为AGENT_XXX，名称为"XXX Agent"。请通过agent_bootstrap.py向Admin Agent注册，获取End User数据库连接凭证。Web Portal监听端口设为xxxx。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。如果遇到问题，先尝试自行解决。</span><span data-lang="en">A new Skill has been deployed in your Skill directory at AI-Agent-Infra-with-OracleDB-Community-Edition (or Enterprise-Edition), using an Oracle database as the Agent's runtime foundation. You now need to join an existing Admin Agent cluster as a Business Agent. The Admin Agent is running at IP xxx.xxx.xxx.xxx, port xxxx, with Admin Token AT_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. The new Business Agent ID is AGENT_XXX, name is "XXX Agent". Please register with the Admin Agent via agent_bootstrap.py to obtain End User database connection credentials. Set the Web Portal listening port to xxxx. Embedding model info: URL xxx.xxx/v1, model ID xxxxxxxxxxxx. If you encounter issues, try to resolve them yourself first.</span></pre></div>
+<div class="deploy-card"><div class="deploy-mode"><span data-lang="en">Business Agent Mode</span><span data-lang="zh">Business Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-PG-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用PostgreSQL数据库作为Agent的运行底座。现在需要你作为业务Agent加入已有的管理Agent集群。Admin Agent已运行在IP地址xxx.xxx.xxx.xxx，端口xxxx上，Admin Token为AT_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。新业务Agent的ID为AGENT_XXX，名称为"XXX Agent"。请通过agent_bootstrap.py向Admin Agent注册，获取End User数据库连接凭证。Web Portal监听端口设为xxxx。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。如果遇到问题，先尝试自行解决。</span><span data-lang="en">A new Skill has been deployed in your Skill directory at AI-Agent-Infra-with-PG-Community-Edition (or Enterprise-Edition), using a PostgreSQL database as the Agent's runtime foundation. You now need to join an existing Admin Agent cluster as a Business Agent. The Admin Agent is running at IP xxx.xxx.xxx.xxx, port xxxx, with Admin Token AT_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx. The new Business Agent ID is AGENT_XXX, name is "XXX Agent". Please register with the Admin Agent via agent_bootstrap.py to obtain End User database connection credentials. Set the Web Portal listening port to xxxx. Embedding model info: URL xxx.xxx/v1, model ID xxxxxxxxxxxx. If you encounter issues, try to resolve them yourself first.</span></pre></div>
+</div></div>
 </div>
 </section>
 <section id="stats">
