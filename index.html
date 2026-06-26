@@ -300,7 +300,7 @@ section{padding:60px 0}
 <div class="orb"></div>
 </div>
 <div class="hero-content">
-<div class="badge"><span class="dot"></span> v3.7.3 &middot; Open Source &middot; Enterprise Ready</div>
+<div class="badge"><span class="dot"></span> v3.7.4 &middot; Open Source &middot; Enterprise Ready</div>
 <h1><span data-lang="en">The Database-Native Infrastructure for AI Agents</span><span data-lang="zh">AI Agent 的数据库原生基础设施</span></h1>
 <p class="subtitle"><span data-lang="en">Converge memory, knowledge, identity, skills, security, and branching into a single database kernel. Eliminate microservice sprawl. Built for enterprise-grade multi-Agent complex scenarios. Now supporting both Oracle and PostgreSQL.</span><span data-lang="zh">将记忆、知识、身份、技能、安全、分支统一收敛于一个数据库内核之中，消除微服务拼装。为企业级多Agent复杂运行场景而生。现已支持 Oracle 与 PostgreSQL。</span></p>
 <p class="note"><span data-lang="en">Available on Oracle Database &amp; PostgreSQL. 4 editions across 2 database platforms.</span><span data-lang="zh">支持 Oracle 数据库与 PostgreSQL。2大数据库平台共4个版本。</span></p>
@@ -333,8 +333,8 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">By the Numbers</span><span data-lang="zh">数据一览</span></div>
 <h2 class="section-title"><span data-lang="en">Infrastructure at a Glance</span><span data-lang="zh">基础设施一览</span></h2>
 <div class="stats-grid">
-<div class="stat-card fade-in"><div class="stat-number" data-target="35">0</div><div class="stat-label"><span data-lang="en">Tables (COM/ENT: 35/41)</span><span data-lang="zh">数据表 (COM/ENT: 35/41)</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="330">0</div><div class="stat-label"><span data-lang="en">API Functions</span><span data-lang="zh">API 函数</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="44">0</div><div class="stat-label"><span data-lang="en">Tables (COM/ENT: 44/50)</span><span data-lang="zh">数据表 (COM/ENT: 44/50)</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="370">0</div><div class="stat-label"><span data-lang="en">API Functions</span><span data-lang="zh">API 函数</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="6">0</div><div class="stat-label"><span data-lang="en">Evaluation Types (Loop)</span><span data-lang="zh">评估类型 (循环)</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="6">0</div><div class="stat-label"><span data-lang="en">Security Layers</span><span data-lang="zh">安全层</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="25">0</div><div class="stat-label"><span data-lang="en">Row-Level Isolation Policies (COM/ENT: 25+/31)</span><span data-lang="zh">行级隔离策略 (COM/ENT: 25+/31)</span></div></div>
@@ -534,12 +534,12 @@ section{padding:60px 0}
 </div>
 <div class="arch-layer fade-in">
 <div class="layer-label"><span data-lang="en">API Layer</span><span data-lang="zh">API 层</span></div>
-<div class="layer-title"><span data-lang="en">23/26 modules &middot; 305+ functions &middot; unified bind variables</span><span data-lang="zh">23/26 模块 &middot; 305+ 函数 &middot; 统一绑定变量</span></div>
+<div class="layer-title"><span data-lang="en">29 modules &middot; 370+ functions &middot; unified bind variables</span><span data-lang="zh">29 模块 &middot; 370+ 函数 &middot; 统一绑定变量</span></div>
 <div class="layer-tech">memory_api &middot; knowledge_api &middot; agent_api &middot; ...</div>
 </div>
 <div class="arch-layer fade-in">
 <div class="layer-label"><span data-lang="en">Database Layer</span><span data-lang="zh">数据库层</span></div>
-<div class="layer-title"><span data-lang="en">34/40 tables &middot; 22+91 stored functions &middot; 16/20 scheduler jobs</span><span data-lang="zh">34/40 数据表 &middot; 22+91 存储函数 &middot; 16/20 调度作业</span></div>
+<div class="layer-title"><span data-lang="en">44+ tables &middot; 14 stored procedure packages &middot; 19/23 scheduler jobs</span><span data-lang="zh">44+ 数据表 &middot; 14 存储过程包 &middot; 19/23 调度作业</span></div>
 <div class="layer-tech">Partitioning &middot; JSON &middot; Graph &middot; Vector &middot; Fulltext</div>
 </div>
 </div>
@@ -600,6 +600,37 @@ section{padding:60px 0}
 <div class="feature-icon">&#128260;</div>
 <div class="feature-title"><span data-lang="en">Loop Collaborative Integration</span><span data-lang="zh">循环协同集成</span></div>
 <div class="feature-desc"><span data-lang="en">Spec-driven loops, Task-Loop binding with auto-completion, Collaborative loops with parent/child nesting, Skill-triggered validation loops</span><span data-lang="zh">规格驱动循环、Task-Loop绑定自动完成、协作组父子循环、Skill触发验证循环</span></div>
+</div>
+<!-- v3.7.4 Features -->
+<div class="feature-card fade-in" style="border-color:rgba(233,69,96,.3)">
+<div class="feature-icon" style="color:var(--accent)">&#128172;</div>
+<div class="feature-title"><span data-lang="en">Agent Communication Protocol</span><span data-lang="zh">Agent通信协议</span></div>
+<div class="feature-desc"><span data-lang="en">Inter-agent messaging with threaded replies, broadcast, priority levels, attachment references, and unread tracking. Direct agent-to-agent communication via COLLAB_MESSAGES.</span><span data-lang="zh">Agent间通信：线程化回复、广播、优先级、附件引用、未读追踪。通过COLLAB_MESSAGES实现Agent直连通信。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(233,69,96,.3)">
+<div class="feature-icon" style="color:var(--accent)">&#128260;</div>
+<div class="feature-title"><span data-lang="en">Multi-Agent DAG Orchestration</span><span data-lang="zh">多Agent DAG编排</span></div>
+<div class="feature-desc"><span data-lang="en">Topological sort of task steps, parallel execution groups, fan-out to distribute to multiple agents, fan-in aggregation (CONSENSUS/BEST_OF_N/CONCATENATE). Retry policies with exponential backoff.</span><span data-lang="zh">任务步骤拓扑排序、并行执行组、fan-out分发到多Agent、fan-in聚合(CONSENSUS/BEST_OF_N/CONCATENATE)。指数退避重试策略。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(233,69,96,.3)">
+<div class="feature-icon" style="color:var(--accent)">&#128227;</div>
+<div class="feature-title"><span data-lang="en">Event-Driven Architecture</span><span data-lang="zh">事件驱动架构</span></div>
+<div class="feature-desc"><span data-lang="en">Publish/subscribe event bus, LOOP_HOOKS execution engine (WEBHOOK/SCRIPT/NOTIFICATION/MCP_CALL), agent capability discovery and recommendation.</span><span data-lang="zh">发布/订阅事件总线、LOOP_HOOKS执行引擎(WEBHOOK/SCRIPT/NOTIFICATION/MCP_CALL)、Agent能力发现与推荐。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(233,69,96,.3)">
+<div class="feature-icon" style="color:var(--accent)">&#129504;</div>
+<div class="feature-title"><span data-lang="en">Advanced Memory Management</span><span data-lang="zh">高级记忆管理</span></div>
+<div class="feature-desc"><span data-lang="en">Branch memory consolidation, episodic-to-semantic promotion, knowledge merging (OVERWRITE/UNION/WEIGHTED), conflict detection, entity reindexing.</span><span data-lang="zh">分支记忆合并、情景→语义提升、知识融合(覆盖/联合/加权)、冲突检测、实体重索引。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(233,69,96,.3)">
+<div class="feature-icon" style="color:var(--accent)">&#128202;</div>
+<div class="feature-title"><span data-lang="en">Observability &amp; Monitoring</span><span data-lang="zh">可观察性与监控</span></div>
+<div class="feature-desc"><span data-lang="en">Distributed tracing (TRACE_ID across sessions/plans/loops/tool_calls), health dashboard, performance metrics, drift detection, alert rules engine.</span><span data-lang="zh">分布式追踪(TRACE_ID跨会话/计划/循环/工具调用)、健康仪表盘、性能指标、漂移检测、告警规则引擎。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(233,69,96,.3)">
+<div class="feature-icon" style="color:var(--accent)">&#128295;</div>
+<div class="feature-title"><span data-lang="en">Tool Ecosystem</span><span data-lang="zh">工具生态</span></div>
+<div class="feature-desc"><span data-lang="en">OpenAPI spec auto-import into tool definitions, versioned tool registry, tool DAG composition (TOOL_CHAINS + TOOL_CHAIN_STEPS), call tracking.</span><span data-lang="zh">OpenAPI规范自动导入工具定义、版本化工具注册中心、工具DAG组合(TOOL_CHAINS + TOOL_CHAIN_STEPS)、调用追踪。</span></div>
 </div>
 </div>
 </div>
@@ -819,6 +850,12 @@ section{padding:60px 0}
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">SPEC_VALIDATION Eval</span><span data-lang="zh">SPEC_VALIDATION评估</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">AGGREGATE Eval</span><span data-lang="zh">AGGREGATE评估</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">Skill-Triggered Loop</span><span data-lang="zh">Skill触发循环</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Agent Communication Protocol</span><span data-lang="zh">Agent通信协议</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Multi-Agent Orchestration (DAG)</span><span data-lang="zh">多Agent编排(DAG)</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Event-Driven (Pub/Sub + Hooks)</span><span data-lang="zh">事件驱动(Pub/Sub+Hooks)</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Advanced Memory Management</span><span data-lang="zh">高级记忆管理</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Observability (Traces + Health)</span><span data-lang="zh">可观察性(追踪+健康)</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
+<div class="compare4-row"><div class="feat4-col"><span data-lang="en">Tool Ecosystem (OpenAPI + Registry)</span><span data-lang="zh">工具生态(OpenAPI+注册中心)</span></div><div class="ora-com-col"><span class="has">&#10003;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="has-pg">&#10003;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">LDAP Auth</span><span data-lang="zh">LDAP认证</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">Skill Token API</span><span data-lang="zh">Skill Token API</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
 <div class="compare4-row"><div class="feat4-col"><span data-lang="en">Workspace Audit</span><span data-lang="zh">工作区审计</span></div><div class="ora-com-col"><span class="no">&#8212;</span></div><div class="ora-ent-col"><span class="has-ent">&#10003;</span></div><div class="pg-com-col"><span class="no">&#8212;</span></div><div class="pg-ent-col"><span class="has-pg-ent">&#10003;</span></div></div>
@@ -860,6 +897,10 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">Version History</span><span data-lang="zh">版本历史</span></div>
 <h2 class="section-title"><span data-lang="en">Version Timeline</span><span data-lang="zh">版本时间线</span></h2>
 <div class="timeline-list">
+<div class="tl-item fade-in">
+<div class="tl-version"><div class="ver">v3.7.4</div><div class="date">2026-06-26</div></div>
+<div class="tl-desc"><span data-lang="en">All 4 editions | 6 expansions: Agent Communication Protocol (COLLAB_MESSAGES), Multi-Agent Orchestration (DAG engine, fan-out/in), Event-Driven Architecture (publish/subscribe, LOOP_HOOKS), Advanced Memory Management (consolidation, merging), Observability/Monitoring (traces, health dashboard, drift detection), Tool Ecosystem (OpenAPI auto-import, tool registry)</span><span data-lang="zh">全部4版本 | 6大扩展：Agent通信协议、多Agent编排DAG引擎、事件驱动架构、高级记忆管理、可观察性/监控、工具生态（含OpenAPI导入）</span></div>
+</div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.7.3</div><div class="date">2026-06-23</div></div>
 <div class="tl-desc"><span data-lang="en">All 4 editions | Deployment fixes: schema FK ordering (CONTEXT_BRANCHES, LOOP_RUNS, LOOP_ITERATIONS), hardcoded schema owner (DEFINE SCHEMA_OWNER), config priority (config.json > env > defaults), embedding model prompt</span><span data-lang="zh">全部4版本 | 部署修复：建表外键顺序、硬编码Schema Owner、配置优先级、Embedding模型提示</span></div>
