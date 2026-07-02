@@ -300,7 +300,7 @@ section{padding:60px 0}
 <div class="orb"></div>
 </div>
 <div class="hero-content">
-<div class="badge"><span class="dot"></span> v3.7.5 &middot; Open Source &middot; Enterprise Ready</div>
+<div class="badge"><span class="dot"></span> v3.8.0 &middot; Open Source &middot; Enterprise Ready</div>
 <h1><span data-lang="en">The Database-Native Infrastructure for AI Agents</span><span data-lang="zh">AI Agent 的数据库原生基础设施</span></h1>
 <p class="subtitle"><span data-lang="en">Converge memory, knowledge, identity, skills, security, and branching into a single database kernel. Eliminate microservice sprawl. Built for enterprise-grade multi-Agent complex scenarios. Now supporting both Oracle and PostgreSQL.</span><span data-lang="zh">将记忆、知识、身份、技能、安全、分支统一收敛于一个数据库内核之中，消除微服务拼装。为企业级多Agent复杂运行场景而生。现已支持 Oracle 与 PostgreSQL。</span></p>
 <p class="note"><span data-lang="en">Available on Oracle Database &amp; PostgreSQL. 4 editions across 2 database platforms.</span><span data-lang="zh">支持 Oracle 数据库与 PostgreSQL。2大数据库平台共4个版本。</span></p>
@@ -901,6 +901,10 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">Version History</span><span data-lang="zh">版本历史</span></div>
 <h2 class="section-title"><span data-lang="en">Version Timeline</span><span data-lang="zh">版本时间线</span></h2>
 <div class="timeline-list">
+<div class="tl-item fade-in">
+<div class="tl-version"><div class="ver">v3.8.0</div><div class="date">2026-07-02</div></div>
+<div class="tl-desc"><span data-lang="en">Multi-Agent integration testing on real databases — 5-phase deployment (schema → admin agent → 4 business agents → 15-module functional tests → regression). All 15/15 tests passed.<br>Oracle: LOOP_MANAGER body missing log_loop_audit, DB_CRYPTO ORA-14551 runtime fix, agent_api schema prefix, 4_grants.sql dynamic tablespace. 50 tables, 19 packages (0 invalid).<br>PG: connection.py _convert_params rewrite, execute_query_one commit, CREATE POLICY double-ON, loop_audit FK, authenticate v_salt, event_bus/monitor_api column fixes. 69 tables, 176 functions.<br>ENT-only: LOOP_AUDIT procedure, audit API routing + page render fix</span><span data-lang="zh">基于真实多Agent环境的集成测试 — 5阶段部署验证（Schema → Admin Agent → 4个Business Agent → 15模块功能测试 → 回归）。15/15全部通过。<br>Oracle：LOOP_MANAGER包体缺失log_loop_audit、DB_CRYPTO ORA-14551运行时修复、agent_api schema前缀、4_grants.sql动态表空间。50张表、19个PL/SQL包（0无效）。<br>PG：connection.py _convert_params重写、execute_query_one commit、CREATE POLICY双重ON、loop_audit FK、authenticate v_salt、event_bus/monitor_api列名修复。69张表、176个函数。<br>企业版特有：LOOP_AUDIT过程、Audit API路由及页面渲染修复</span></div>
+</div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.7.5</div><div class="date">2026-06-28</div></div>
 <div class="tl-desc"><span data-lang="en">Oracle: orchestrator stub fix, event_bus security, message_api DELETED status, ENT missing Data Grants + syntax fix<br>PG: connection.py rewrite (oracledb to psycopg2), 10 modules Oracle SQL to PostgreSQL migration, monitor_api column fixes</span><span data-lang="zh">Oracle：orchestrator空壳修复、event_bus安全、message_api DELETED状态、ENT缺失Data Grants+语法修复<br>PG：connection.py重写(oracledb转psycopg2)、10个模块Oracle SQL转PostgreSQL、monitor_api列名修复</span></div>
