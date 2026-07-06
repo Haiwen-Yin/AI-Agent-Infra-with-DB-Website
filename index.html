@@ -300,7 +300,7 @@ section{padding:60px 0}
 <div class="orb"></div>
 </div>
 <div class="hero-content">
-<div class="badge"><span class="dot"></span> v3.8.0 &middot; Open Source &middot; Enterprise Ready</div>
+<div class="badge"><span class="dot"></span> v3.9.0 &middot; Open Source &middot; Enterprise Ready</div>
 <h1><span data-lang="en">The Database-Native Infrastructure for AI Agents</span><span data-lang="zh">AI Agent 的数据库原生基础设施</span></h1>
 <p class="subtitle"><span data-lang="en">Converge memory, knowledge, identity, skills, security, and branching into a single database kernel. Eliminate microservice sprawl. Built for enterprise-grade multi-Agent complex scenarios. Now supporting both Oracle and PostgreSQL.</span><span data-lang="zh">将记忆、知识、身份、技能、安全、分支统一收敛于一个数据库内核之中，消除微服务拼装。为企业级多Agent复杂运行场景而生。现已支持 Oracle 与 PostgreSQL。</span></p>
 <p class="note"><span data-lang="en">Available on Oracle Database &amp; PostgreSQL. 4 editions across 2 database platforms.</span><span data-lang="zh">支持 Oracle 数据库与 PostgreSQL。2大数据库平台共4个版本。</span></p>
@@ -337,10 +337,10 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">By the Numbers</span><span data-lang="zh">数据一览</span></div>
 <h2 class="section-title"><span data-lang="en">Infrastructure at a Glance</span><span data-lang="zh">基础设施一览</span></h2>
 <div class="stats-grid">
-<div class="stat-card fade-in"><div class="stat-number" data-target="50">0</div><div class="stat-label"><span data-lang="en">Logical Tables (Oracle: 44/50, PG: 54/60)</span><span data-lang="zh">逻辑数据表 (Oracle: 44/50, PG: 54/60)</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="400">0</div><div class="stat-label"><span data-lang="en">API Functions (Oracle: ~115/129, PG: 182/176)</span><span data-lang="zh">API 函数 (Oracle: ~115/129, PG: 182/176)</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="52">0</div><div class="stat-label"><span data-lang="en">Logical Tables (Oracle: 45/52, PG: 57/64)</span><span data-lang="zh">逻辑数据表 (Oracle: 45/52, PG: 57/64)</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="400">0</div><div class="stat-label"><span data-lang="en">API Functions (Oracle: ~120/135, PG: 190/184)</span><span data-lang="zh">API 函数 (Oracle: ~120/135, PG: 190/184)</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="35">0</div><div class="stat-label"><span data-lang="en">Python Modules (per edition)</span><span data-lang="zh">Python 模块 (每版本)</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="6">0</div><div class="stat-label"><span data-lang="en">Evaluation Types (Loop)</span><span data-lang="zh">评估类型 (循环)</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="6">0</div><div class="stat-label"><span data-lang="en">Security Layers</span><span data-lang="zh">安全层</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="89">0</div><div class="stat-label"><span data-lang="en">Security Policies (Oracle Data Grants: 80/89, PG RLS: 30/37)</span><span data-lang="zh">安全策略 (Oracle Data Grants: 80/89, PG RLS: 30/37)</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="4">0</div><div class="stat-label"><span data-lang="en">Editions (2 Oracle + 2 PG)</span><span data-lang="zh">版本 (2 Oracle + 2 PG)</span></div></div>
 </div>
@@ -406,6 +406,21 @@ section{padding:60px 0}
 <div class="pain-title"><span data-lang="en">Uncontrolled Agent Iteration</span><span data-lang="zh">Agent迭代失控</span></div>
 <div class="pain-desc"><span data-lang="en">Agents loop indefinitely without clear stop conditions. No evaluation of intermediate results. Wasted tokens, no observability, no lifecycle management for iterative workflows.</span><span data-lang="zh">Agent无明确停止条件地无限循环，无中间结果评估，Token浪费，缺乏可观测性和生命周期管理。</span></div>
 <div class="pain-solve"><span data-lang="en">Loop Engineering: goal-driven autonomous feedback loops with 4 evaluation types, stop conditions, and lifecycle hooks</span><span data-lang="zh">循环工程：目标驱动自主反馈循环，4种评估类型、停止条件、生命周期钩子</span></div>
+</div>
+<div class="pain-card fade-in">
+<div class="pain-title"><span data-lang="en">No Ecosystem Connectivity</span><span data-lang="zh">生态连接缺失</span></div>
+<div class="pain-desc"><span data-lang="en">Agent tools and knowledge are locked inside the system. External AI clients (Claude Desktop, Cursor, VS Code) can't access them. No standard protocol for tool exposure.</span><span data-lang="zh">Agent工具和知识被锁在系统内部，外部AI客户端(Claude Desktop/Cursor/VS Code)无法访问，缺乏标准工具暴露协议。</span></div>
+<div class="pain-solve"><span data-lang="en">MCP Server: 10 tools exposed via Model Context Protocol (stdio + SSE), connectable by any MCP-compatible client</span><span data-lang="zh">MCP Server：通过MCP协议暴露10个工具(stdio+SSE)，可被任何MCP兼容客户端连接</span></div>
+</div>
+<div class="pain-card fade-in">
+<div class="pain-title"><span data-lang="en">Blocking Response UX</span><span data-lang="zh">阻塞式交互体验</span></div>
+<div class="pain-desc"><span data-lang="en">Users wait for the entire Agent response to complete before seeing anything. No real-time feedback. Poor experience for long-running reasoning tasks.</span><span data-lang="zh">用户需等待Agent完整回复才能看到内容，无实时反馈，长推理任务体验差。</span></div>
+<div class="pain-solve"><span data-lang="en">SSE streaming: token-by-token output via Server-Sent Events with HTTP/1.1 + ThreadingHTTPServer</span><span data-lang="zh">SSE流式输出：通过Server-Sent Events逐token输出，HTTP/1.1+多线程服务器</span></div>
+</div>
+<div class="pain-card fade-in">
+<div class="pain-title"><span data-lang="en">Unattended Risky Actions</span><span data-lang="zh">无人值守高风险操作</span></div>
+<div class="pain-desc"><span data-lang="en">Agents execute production deploys, external API calls, and schema migrations without human review. No approval gates for critical steps. No audit trail for decisions.</span><span data-lang="zh">Agent执行生产部署、外部API调用、Schema迁移时无人工审核，关键步骤无审批门控，决策无审计追踪。</span></div>
+<div class="pain-solve"><span data-lang="en">Human-in-the-Loop: 3-level approval (Step/Loop/Tool) with PAUSED state, unified APPROVAL_REQUESTS queue + web UI</span><span data-lang="zh">Human-in-the-Loop：三级审批(步骤/循环/工具) + PAUSED状态 + 统一APPROVAL_REQUESTS队列 + Web界面</span></div>
 </div>
 </div>
 </div>
@@ -636,6 +651,26 @@ section{padding:60px 0}
 <div class="feature-title"><span data-lang="en">Tool Ecosystem</span><span data-lang="zh">工具生态</span></div>
 <div class="feature-desc"><span data-lang="en">OpenAPI spec auto-import into tool definitions, versioned tool registry, tool DAG composition (TOOL_CHAINS + TOOL_CHAIN_STEPS), call tracking.</span><span data-lang="zh">OpenAPI规范自动导入工具定义、版本化工具注册中心、工具DAG组合(TOOL_CHAINS + TOOL_CHAIN_STEPS)、调用追踪。</span></div>
 </div>
+<!-- v3.9.0 Features -->
+<div class="feature-card fade-in" style="border-color:rgba(0,212,170,.3)">
+<div class="feature-icon" style="color:var(--green)">&#128268;</div>
+<div class="feature-title"><span data-lang="en">MCP Server</span><span data-lang="zh">MCP 服务器</span></div>
+<div class="feature-desc"><span data-lang="en">Exposes 10 tools (search, memory, knowledge, tool_invoke, graph, loop, agent) via Model Context Protocol with stdio + SSE dual transport. Connectable by Claude Desktop, Cursor, VS Code.</span><span data-lang="zh">通过MCP协议暴露10个工具（搜索、记忆、知识、工具调用、图、循环、Agent），stdio+SSE双模式，可被Claude Desktop/Cursor/VS Code连接。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(0,212,170,.3)">
+<div class="feature-icon" style="color:var(--green)">&#128246;</div>
+<div class="feature-title"><span data-lang="en">SSE Streaming Output</span><span data-lang="zh">SSE 流式输出</span></div>
+<div class="feature-desc"><span data-lang="en">Token-by-token streaming via Server-Sent Events in Web Portal. Real-time Agent response with HTTP/1.1 chunked transfer and ThreadingHTTPServer.</span><span data-lang="zh">Web Portal通过SSE逐token流式输出，HTTP/1.1分块传输+多线程服务器实现实时Agent响应。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(0,212,170,.3)">
+<div class="feature-icon" style="color:var(--green)">&#9989;</div>
+<div class="feature-title"><span data-lang="en">Human-in-the-Loop</span><span data-lang="zh">人工审批</span></div>
+<div class="feature-desc"><span data-lang="en">3-level approval workflow: Step (PAUSED state in DAG), Loop (auto-pause before run), Tool (pre-invoke gate). Unified APPROVAL_REQUESTS queue with API + web UI.</span><span data-lang="zh">三级审批：步骤(DAG PAUSED状态)、循环(运行前自动暂停)、工具(调用前门控)。统一APPROVAL_REQUESTS队列+API+Web界面。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(0,212,170,.3)">
+<div class="feature-icon" style="color:var(--green)">&#128279;</div>
+<div class="feature-title"><span data-lang="en">Agent Protocol</span><span data-lang="zh">Agent Protocol</span></div>
+<div class="feature-desc"><span data-lang="en">Standard API endpoints (POST /ap/v1/agent/tasks, /steps) for interoperability with benchmark tools (AutoGPT, babyagi). Multi-model routing: simple/standard/complex.</span><span data-lang="zh">标准API端点(POST /ap/v1/agent/tasks, /steps)，可与benchmark工具互操作。多模型路由：简单/标准/复杂。</span></div>
 </div>
 </div>
 </section>
@@ -901,6 +936,10 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">Version History</span><span data-lang="zh">版本历史</span></div>
 <h2 class="section-title"><span data-lang="en">Version Timeline</span><span data-lang="zh">版本时间线</span></h2>
 <div class="timeline-list">
+<div class="tl-item fade-in">
+<div class="tl-version"><div class="ver">v3.9.0</div><div class="date">2026-07-05</div></div>
+<div class="tl-desc"><span data-lang="en">AI Agent ecosystem connectivity — MCP Server (10 tools, stdio+SSE), SSE streaming output, Human-in-the-Loop approval (step/loop/tool), Agent Protocol compatibility, multi-model routing. New: mcp_server.py, approval_api.py, approvals.html. DB: APPROVAL_REQUESTS table + PAUSED state</span><span data-lang="zh">AI Agent生态连接层 — MCP Server（10个工具，stdio+SSE双模式）、SSE流式输出、Human-in-the-Loop三级审批（步骤/循环/工具）、Agent Protocol兼容、多模型路由。新增：mcp_server.py、approval_api.py、approvals.html。数据库：APPROVAL_REQUESTS表 + PAUSED状态</span></div>
+</div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.8.0</div><div class="date">2026-07-02</div></div>
 <div class="tl-desc"><span data-lang="en">Multi-Agent integration testing on real databases — 5-phase deployment (schema → admin agent → 4 business agents → 15-module functional tests → regression). All 15/15 tests passed.<br>Oracle: LOOP_MANAGER body missing log_loop_audit, DB_CRYPTO ORA-14551 runtime fix, agent_api schema prefix, 4_grants.sql dynamic tablespace. 50 tables, 19 packages (0 invalid).<br>PG: connection.py _convert_params rewrite, execute_query_one commit, CREATE POLICY double-ON, loop_audit FK, authenticate v_salt, event_bus/monitor_api column fixes. 69 tables, 176 functions.<br>ENT-only: LOOP_AUDIT procedure, audit API routing + page render fix</span><span data-lang="zh">基于真实多Agent环境的集成测试 — 5阶段部署验证（Schema → Admin Agent → 4个Business Agent → 15模块功能测试 → 回归）。15/15全部通过。<br>Oracle：LOOP_MANAGER包体缺失log_loop_audit、DB_CRYPTO ORA-14551运行时修复、agent_api schema前缀、4_grants.sql动态表空间。50张表、19个PL/SQL包（0无效）。<br>PG：connection.py _convert_params重写、execute_query_one commit、CREATE POLICY双重ON、loop_audit FK、authenticate v_salt、event_bus/monitor_api列名修复。69张表、176个函数。<br>企业版特有：LOOP_AUDIT过程、Audit API路由及页面渲染修复</span></div>
