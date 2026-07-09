@@ -946,7 +946,7 @@ section{padding:60px 0}
 <div class="tl-desc"><span data-lang="en">6 expansions: Agent Communication Protocol, Multi-Agent Orchestration (DAG), Event-Driven, Advanced Memory, Observability, Tool Ecosystem</span><span data-lang="zh">6大扩展：Agent通信协议、多Agent编排(DAG)、事件驱动、高级记忆、可观察性、工具生态</span></div>
 </div>
 <div style="text-align:center;margin-top:8px">
-<button class="expand-btn" onclick="var hidden=document.querySelectorAll('.tl-item.hidden');var expanded=this.getAttribute('data-expanded')==='1';hidden.forEach(function(e){if(expanded){e.classList.remove('show')}else{e.classList.add('show')}});this.setAttribute('data-expanded',expanded?'0':'1');var en=this.querySelector('[data-en]');var zh=this.querySelector('[data-zh]');var ar=this.querySelector('.arrow');if(expanded){en.textContent='Show more versions';zh.textContent='展开更多历史版本';if(ar)ar.innerHTML='&#9660;'}else{en.textContent='Hide versions';zh.textContent='收起历史版本';if(ar)ar.innerHTML='&#9650;'}"><span data-en>Show more versions</span><span data-zh>展开更多历史版本</span> <span class="arrow">&#9660;</span></button>
+<button class="expand-btn" onclick="var hidden=document.querySelectorAll('.tl-item.hidden');var expanded=this.getAttribute('data-expanded')==='1';hidden.forEach(function(e){e.classList.toggle('show',!expanded)});this.setAttribute('data-expanded',expanded?'0':'1');var isZh=document.body.classList.contains('lang-zh');var txt=this.querySelector('.btn-txt');if(txt){txt.textContent=expanded?(isZh?'展开更多历史版本':'Show more versions'):(isZh?'收起历史版本':'Hide versions')}"><span class="btn-txt">Show more versions</span></button>
 </div>
 <div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.7.3</div><div class="date">2026-06-23</div></div>
@@ -1011,7 +1011,16 @@ section{padding:60px 0}
 </footer>
 
 <script>
-function toggleLang(){document.body.classList.toggle('lang-zh')}
+function toggleLang(){
+  document.body.classList.toggle('lang-zh');
+  var btn=document.querySelector('.expand-btn');
+  if(btn){
+    var isZh=document.body.classList.contains('lang-zh');
+    var expanded=btn.getAttribute('data-expanded')==='1';
+    var txt=btn.querySelector('.btn-txt');
+    if(txt)txt.textContent=expanded?(isZh?'收起历史版本':'Hide versions'):(isZh?'展开更多历史版本':'Show more versions');
+  }
+}
 
 var fadeObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:0.1});
 document.querySelectorAll('.fade-in').forEach(function(el){fadeObs.observe(el)});
