@@ -50,6 +50,7 @@ nav .logo span{color:var(--accent)}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
 .hero h1{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;line-height:1.15;margin-bottom:24px;background:linear-gradient(135deg,var(--accent),var(--purple),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero .subtitle{font-size:clamp(1rem,2vw,1.2rem);color:var(--secondary);max-width:720px;margin:0 auto 16px;line-height:1.8}
+.hero .slogan{font-size:clamp(1.1rem,2.4vw,1.5rem);font-weight:700;background:linear-gradient(135deg,var(--accent),var(--purple),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin:8px auto 24px;letter-spacing:.5px}
 .hero .note{font-size:.9rem;color:var(--muted);margin-bottom:36px}
 .cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:10px;font-size:1rem;font-weight:600;transition:all .25s;cursor:pointer;border:none}
@@ -301,8 +302,9 @@ section{padding:60px 0}
 </div>
 <div class="hero-content">
 <div class="badge"><span class="dot"></span> v3.10.0 &middot; Open Source &middot; Enterprise Ready</div>
-<h1><span data-lang="en">The Database-Native Infrastructure for AI Agents</span><span data-lang="zh">AI Agent 的数据库原生基础设施</span></h1>
-<p class="subtitle"><span data-lang="en">One database kernel replaces fragmented microservices — hybrid vector + full-text + graph search, knowledge graph with entity fusion, per-agent row-level access control, encrypted credential distribution, multi-agent collaboration groups, context branching (fork/merge/resume), skill package management, and autonomous feedback loops. Now with MCP Server for connecting external AI clients (Claude Desktop, Cursor, VS Code), token-by-token SSE streaming, Human-in-the-Loop approval workflows, and Agent Protocol compatibility.</span><span data-lang="zh">一个数据库内核替代碎片化微服务——混合向量+全文+图谱搜索、知识图谱实体融合、按Agent行级访问控制、加密凭证分发、多Agent协作组、上下文分支(fork/merge/resume)、Skill包管理、自主反馈循环。现已支持 MCP Server 连接外部AI客户端(Claude Desktop/Cursor/VS Code)、逐token SSE流式输出、人工审批工作流、Agent Protocol兼容。</span></p>
+<h1><span data-lang="en">Breaking the AI Agent Black Box</span><span data-lang="zh">打破 AI Agent 黑盒</span></h1>
+<p class="slogan"><span data-lang="en">Observable, Orchestrable, Operable</span><span data-lang="zh">可观测、可调度、可运维</span></p>
+<p class="subtitle"><span data-lang="en"><strong>The database-native infrastructure for AI agents</strong> - one database kernel replaces fragmented microservices. Hybrid search, knowledge graph, per-agent row-level security, encrypted credential distribution, multi-agent collaboration, context branching, skill management, and autonomous feedback loops. Now with MCP Server, SSE streaming, Human-in-the-Loop approval, and Agent Protocol support.</span><span data-lang="zh"><strong>AI Agent 的数据库原生基础设施</strong> -- 一个数据库内核替代碎片化微服务。混合搜索、知识图谱、按Agent行级安全、加密凭证分发、多Agent协作、上下文分支、Skill管理、自主反馈循环。现已支持 MCP Server、SSE流式输出、人工审批、Agent Protocol。</span></p>
 <p class="note"><span data-lang="en">Available on Oracle Database &amp; PostgreSQL. Other databases are being adapted.</span><span data-lang="zh">已支持 Oracle 数据库与 PostgreSQL。其他数据库正在适配中。</span></p>
 <div class="cta-group">
 <a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" class="btn btn-primary" target="_blank"><span data-lang="en">Get Started (Oracle)</span><span data-lang="zh">开始使用 (Oracle)</span></a>
