@@ -301,7 +301,7 @@ section{padding:60px 0}
 <div class="orb"></div>
 </div>
 <div class="hero-content">
-<div class="badge"><span class="dot"></span> v3.10.0 &middot; Open Source &middot; Enterprise Ready</div>
+<div class="badge"><span class="dot"></span> v3.10.1 &middot; Open Source &middot; Enterprise Ready</div>
 <h1><span data-lang="en">Breaking the AI Agent Black Box</span><span data-lang="zh">打破 AI Agent 黑盒</span></h1>
 <p class="slogan"><span data-lang="en">Observable, Orchestrable, Operable</span><span data-lang="zh">可观测、可调度、可运维</span></p>
 <p class="subtitle"><span data-lang="en"><strong>The database-native infrastructure for AI agents</strong> - one database kernel replaces fragmented microservices. Hybrid search, knowledge graph, per-agent row-level security, encrypted credential distribution, multi-agent collaboration, context branching, skill management, and autonomous feedback loops. Now with MCP Server, SSE streaming, Human-in-the-Loop approval, and Agent Protocol support.</span><span data-lang="zh"><strong>AI Agent 的数据库原生基础设施</strong> -- 一个数据库内核替代碎片化微服务。混合搜索、知识图谱、按Agent行级安全、加密凭证分发、多Agent协作、上下文分支、Skill管理、自主反馈循环。现已支持 MCP Server、SSE流式输出、人工审批、Agent Protocol。</span></p>
@@ -653,7 +653,7 @@ section{padding:60px 0}
 <div class="feature-title"><span data-lang="en">Tool Ecosystem</span><span data-lang="zh">工具生态</span></div>
 <div class="feature-desc"><span data-lang="en">OpenAPI spec auto-import into tool definitions, versioned tool registry, tool DAG composition (TOOL_CHAINS + TOOL_CHAIN_STEPS), call tracking.</span><span data-lang="zh">OpenAPI规范自动导入工具定义、版本化工具注册中心、工具DAG组合(TOOL_CHAINS + TOOL_CHAIN_STEPS)、调用追踪。</span></div>
 </div>
-<!-- v3.10.0 Features -->
+<!-- v3.10 Features: Property Graph + Offline Deploy -->
 <div class="feature-card fade-in" style="border-color:rgba(0,212,170,.3)">
 <div class="feature-icon" style="color:var(--green)">&#128268;</div>
 <div class="feature-title"><span data-lang="en">MCP Server</span><span data-lang="zh">MCP 服务器</span></div>
@@ -673,6 +673,16 @@ section{padding:60px 0}
 <div class="feature-icon" style="color:var(--green)">&#128279;</div>
 <div class="feature-title"><span data-lang="en">Agent Protocol</span><span data-lang="zh">Agent Protocol</span></div>
 <div class="feature-desc"><span data-lang="en">Standard API endpoints (POST /ap/v1/agent/tasks, /steps) for interoperability with benchmark tools (AutoGPT, babyagi). Multi-model routing: simple/standard/complex.</span><span data-lang="zh">标准API端点(POST /ap/v1/agent/tasks, /steps)，可与benchmark工具互操作。多模型路由：简单/标准/复杂。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(0,212,170,.3)">
+<div class="feature-icon" style="color:var(--green)">&#128230;</div>
+<div class="feature-title"><span data-lang="en">Offline Deployment</span><span data-lang="zh">离线部署</span></div>
+<div class="feature-desc"><span data-lang="en">Pre-bundled 30 Python wheels (cp314) in vendor/, install_offline.sh for air-gapped environments, verify_deps.py for integrity. Pure-Python deploy_oracle.py replaces SQLcl - no Java required.</span><span data-lang="zh">预打包30个Python wheels(cp314)于vendor/，install_offline.sh气隙环境安装，verify_deps.py完整性验证。纯Python deploy_oracle.py替代SQLcl，无需Java。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(0,212,170,.3)">
+<div class="feature-icon" style="color:var(--green)">&#128277;</div>
+<div class="feature-title"><span data-lang="en">Universal Property Graph</span><span data-lang="zh">通用属性图</span></div>
+<div class="feature-desc"><span data-lang="en">30+ graph functions across 8 domains: knowledge causal, agent collaboration (group-scoped dynamic trust), task orchestration, skill dependency, approval propagation, data lineage, memory evolution, loop iteration. 23 edge types.</span><span data-lang="zh">8个领域30+图函数：知识因果、Agent协作(组内动态信任)、任务编排、Skill依赖、审批传播、数据血缘、记忆演化、Loop迭代。23种边类型。</span></div>
 </div>
 </div>
 </section>
@@ -928,6 +938,10 @@ section{padding:60px 0}
 <h2 class="section-title"><span data-lang="en">Evolution Timeline</span><span data-lang="zh">版本演进</span></h2>
 <div class="timeline-list">
 <div class="tl-item fade-in">
+<div class="tl-version"><div class="ver">v3.10.1</div><div class="date">2026-07-14</div></div>
+<div class="tl-desc"><span data-lang="en">Offline Deployment - vendor/ directory with 30 pre-downloaded cp314 wheels, install_offline.sh for air-gapped installation, verify_deps.py for integrity check. Pure-Python deploy_oracle.py replaces SQLcl (125MB+Java) with a state-machine SQL parser handling PROMPT/DEFINE/&&// syntax. Zero external runtime dependencies.</span><span data-lang="zh">离线部署 - vendor/目录含30个预下载cp314 wheels，install_offline.sh气隙环境一键安装，verify_deps.py完整性验证。纯Python deploy_oracle.py替代SQLcl(125MB+Java)，状态机解析PROMPT/DEFINE/&&//语法。零外部运行时依赖。</span></div>
+</div>
+<div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v3.10.0</div><div class="date">2026-07-09</div></div>
 <div class="tl-desc"><span data-lang="en">Universal Property Graph - 30+ graph functions across 8 domains: knowledge causal (CAUSES/CONTRADICTS), agent collaboration (group-scoped TRUSTS), task orchestration (FEEDS_INTO/PRODUCED_ARTIFACT), skill dependency, approval propagation (BLOCKS with cascade reject), data flow (DERIVED_FROM_DATA), memory evolution (PROMOTED_TO/MERGED_INTO), loop iteration (BUILDS_ON/INFORMS/CORRECTS). 23 new edge types. Dynamic trust via SYSTEM_CONFIG.</span><span data-lang="zh">通用属性图 - 8个领域30+新图函数：知识因果(CAUSES/CONTRADICTS)、Agent协作(组内TRUSTS)、任务编排(FEEDS_INTO/PRODUCED_ARTIFACT)、Skill依赖、审批传播(BLOCKS级联拒绝)、数据流(DERIVED_FROM_DATA)、记忆演化(PROMOTED_TO/MERGED_INTO)、Loop迭代(BUILDS_ON/INFORMS/CORRECTS)。23个新边类型。动态信任配置。</span></div>
 </div>
@@ -943,12 +957,9 @@ section{padding:60px 0}
 <div class="tl-version"><div class="ver">v3.7.5</div><div class="date">2026-06-28</div></div>
 <div class="tl-desc"><span data-lang="en">Bug fixes: orchestrator, event_bus security, message_api DELETED status, ENT missing Data Grants. PG: connection.py rewrite, 10 modules Oracle-to-PG migration</span><span data-lang="zh">Bug修复：orchestrator/event_bus安全/message_api DELETED状态/ENT缺失Data Grants。PG: connection.py重写/10模块Oracle转PG</span></div>
 </div>
-<div class="tl-item fade-in">
+<div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.7.4</div><div class="date">2026-06-26</div></div>
 <div class="tl-desc"><span data-lang="en">6 expansions: Agent Communication Protocol, Multi-Agent Orchestration (DAG), Event-Driven, Advanced Memory, Observability, Tool Ecosystem</span><span data-lang="zh">6大扩展：Agent通信协议、多Agent编排(DAG)、事件驱动、高级记忆、可观察性、工具生态</span></div>
-</div>
-<div style="text-align:center;margin-top:8px">
-<button class="expand-btn" onclick="var hidden=document.querySelectorAll('.tl-item.hidden');var expanded=this.getAttribute('data-expanded')==='1';hidden.forEach(function(e){e.classList.toggle('show',!expanded)});this.setAttribute('data-expanded',expanded?'0':'1');var isZh=document.body.classList.contains('lang-zh');var txt=this.querySelector('.btn-txt');if(txt){txt.textContent=expanded?(isZh?'展开更多历史版本':'Show more versions'):(isZh?'收起历史版本':'Hide versions')}"><span class="btn-txt">Show more versions</span></button>
 </div>
 <div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.7.3</div><div class="date">2026-06-23</div></div>
@@ -993,6 +1004,10 @@ section{padding:60px 0}
 <div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v1.0.0</div><div class="date">2026-05-09</div></div>
 <div class="tl-desc"><span data-lang="en">Initial release: knowledge base & property graph</span><span data-lang="zh">初始版本：知识库与属性图</span></div>
+</div>
+</div>
+<div style="text-align:center;margin-top:16px;margin-bottom:8px">
+<button class="expand-btn" onclick="var hidden=document.querySelectorAll('.tl-item.hidden');var expanded=this.getAttribute('data-expanded')==='1';hidden.forEach(function(e){e.classList.toggle('show',!expanded)});this.setAttribute('data-expanded',expanded?'0':'1');var isZh=document.body.classList.contains('lang-zh');var txt=this.querySelector('.btn-txt');if(txt){txt.textContent=expanded?(isZh?'展开更多历史版本':'Show more versions'):(isZh?'收起历史版本':'Hide versions')}"><span class="btn-txt">Show more versions</span></button>
 </div>
 </div>
 </div>
