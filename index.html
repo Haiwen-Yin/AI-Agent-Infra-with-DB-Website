@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- generated from release manifest sha256:c635724b7690a28d44c76c8fc27e15345897fb18ba36f12c91a3e5d204564cd5 -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -19,18 +20,18 @@ body:not(.lang-zh) [data-lang-block="en"]{display:block!important}
 a{color:var(--accent);text-decoration:none}
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,26,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-nav .container{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;min-height:64px;padding:8px 24px;gap:2px 12px}
-nav .container::before{content:'';flex:0 0 64px}
-nav .logo{font-weight:700;font-size:1.1rem;color:var(--text);white-space:nowrap;margin:0 auto}
+nav .container{display:grid;grid-template-columns:max-content minmax(0,1fr) max-content;align-items:center;min-height:84px;padding:10px 24px;column-gap:24px}
+nav .logo{font-weight:700;font-size:1.1rem;color:var(--text);white-space:nowrap;justify-self:start}
 nav .logo span{color:var(--accent)}
-.nav-links{display:flex;align-items:center;justify-content:center;gap:12px 18px;list-style:none;flex-wrap:wrap;flex-basis:100%;order:1;padding-top:2px}
+.nav-links{display:grid;grid-template-columns:repeat(9,max-content);align-items:center;justify-content:center;gap:8px 16px;list-style:none;min-width:0}
 .nav-links a{color:var(--secondary);font-size:.78rem;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--text)}
+.nav-actions{display:flex;align-items:center;justify-content:flex-end;gap:12px;justify-self:end;white-space:nowrap}
 .nav-gh{position:relative;display:flex;align-items:center;flex-shrink:0}
 .nav-gh-icon{color:var(--secondary);transition:color .2s;cursor:pointer;width:20px;height:20px;flex-shrink:0;display:block}
 .nav-gh-icon:hover{color:var(--text)}
 .nav-gh::after{content:'';position:absolute;top:100%;left:0;right:0;height:8px}
-.nav-gh-drop{display:none;position:absolute;top:calc(100% + 8px);left:-8px;min-width:180px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:8px 0;box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:200}
+.nav-gh-drop{display:none;position:absolute;top:calc(100% + 8px);right:-76px;min-width:180px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:8px 0;box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:200}
 .nav-gh:hover .nav-gh-drop{display:block}
 .nav-gh-drop a{display:flex;align-items:center;gap:10px;padding:10px 16px;font-size:.88rem;font-weight:600;color:var(--secondary);transition:all .2s;text-decoration:none;white-space:nowrap}
 .nav-gh-drop a:hover{background:rgba(79,142,247,.08);color:var(--text)}
@@ -235,9 +236,15 @@ footer .footer-links a:hover{color:var(--text)}
 footer .footer-copy{color:var(--muted);font-size:.85rem}
 .fade-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease-out,transform .6s ease-out}
 .fade-in.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1050px){
+nav .container{grid-template-columns:minmax(0,1fr) max-content;min-height:106px;padding:8px 16px;gap:8px 12px}
+nav .logo{font-size:1rem;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.nav-actions{grid-column:2;grid-row:1}
+.nav-links{grid-column:1/-1;grid-row:2;grid-template-columns:repeat(9,max-content);grid-template-rows:repeat(2,auto);grid-auto-flow:column;justify-content:start;gap:6px 14px;overflow-x:auto;padding:2px 0 6px;scrollbar-width:thin}
+.nav-links a{font-size:.72rem}
+}
 @media(max-width:768px){
-.nav-links{display:none}
-.hero{padding:100px 16px 60px}
+.hero{padding:130px 16px 60px}
 section{padding:60px 0}
 .pain-grid,.cap-grid,.features-grid,.signal-grid{grid-template-columns:1fr}
 .vs-wrap{overflow-x:auto}.vs-row>div{padding:8px 10px;font-size:.78rem}
@@ -268,7 +275,7 @@ section{padding:60px 0}
 <body>
 <nav>
 <div class="container">
-<div class="logo">AI Agent Infra <span>with DB</span></div>
+<div class="logo">AI Infra <span>with DB</span></div>
 <ul class="nav-links">
 <li><a href="#deploy"><span data-lang="en">Deploy</span><span data-lang="zh">部署</span></a></li>
 <li><a href="#stats"><span data-lang="en">Stats</span><span data-lang="zh">数据</span></a></li>
@@ -285,8 +292,10 @@ section{padding:60px 0}
 <li><a href="#agent-security"><span data-lang="en">Agent Crypto</span><span data-lang="zh">Agent加密</span></a></li>
 <li><a href="#token-efficiency"><span data-lang="en">Token Saving</span><span data-lang="zh">Token优化</span></a></li>
 <li><a href="#editions"><span data-lang="en">Editions</span><span data-lang="zh">版本</span></a></li>
+<li><a href="#multi-db"><span data-lang="en">Databases</span><span data-lang="zh">数据库</span></a></li>
+<li><a href="#timeline"><span data-lang="en">History</span><span data-lang="zh">历史</span></a></li>
 </ul>
-<div style="display:flex;align-items:center;gap:12px;flex-shrink:0">
+<div class="nav-actions">
 <div class="nav-gh">
 <svg class="nav-gh-icon" width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
 <div class="nav-gh-drop">
@@ -294,8 +303,6 @@ section{padding:60px 0}
 <a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank"><span class="dot-pg"></span>PG Edition</a>
 <a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-YashanDB-Community-Edition" target="_blank"><span class="dot-yas"></span>YashanDB Edition</a>
 </div>
-</div>
-
 </div>
 <button class="lang-toggle" onclick="toggleLang()"><span data-lang="en">中文</span><span data-lang="zh">EN</span></button>
 </div>
@@ -309,7 +316,7 @@ section{padding:60px 0}
 <div class="orb"></div>
 </div>
 <div class="hero-content">
-<div class="badge"><span class="dot"></span> v4.0.0 &middot; Open Source &middot; Enterprise Ready</div>
+<div class="badge"><span class="dot"></span> v4.0.1 &middot; 6 Editions &middot; 18/18 Modes Validated</div>
 <h1><span data-lang="en">Breaking the AI Agent Black Box</span><span data-lang="zh">打破 AI Agent 黑盒</span></h1>
 <p class="slogan"><span data-lang="en">Observable, Schedulable, Operable</span><span data-lang="zh">可观测、可调度、可运维</span></p>
 <p class="subtitle"><span data-lang="en"><strong>The database-native infrastructure for AI agents</strong> - one database kernel replaces fragmented microservices. Hybrid search, knowledge graph, per-agent row-level security, encrypted credential distribution, multi-agent collaboration, context branching, skill management, and autonomous feedback loops. Now with MCP Server, SSE streaming, Human-in-the-Loop approval, and Agent Protocol support.</span><span data-lang="zh"><strong>AI Agent 的数据库原生基础设施</strong> -- 一个数据库内核替代碎片化微服务。混合搜索、知识图谱、按Agent行级安全、加密凭证分发、多Agent协作、上下文分支、Skill管理、自主反馈循环。现已支持 MCP Server、SSE流式输出、人工审批、Agent Protocol。</span></p>
@@ -353,14 +360,14 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">By the Numbers</span><span data-lang="zh">数据一览</span></div>
 <h2 class="section-title"><span data-lang="en">Infrastructure at a Glance</span><span data-lang="zh">基础设施一览</span></h2>
 <div class="stats-grid">
-<div class="stat-card fade-in"><div class="stat-number" data-target="70">0</div><div class="stat-label"><span data-lang="en">Logical Tables (Oracle: 51, PG: 70, YashanDB: 41)</span><span data-lang="zh">逻辑数据表 (Oracle: 51, PG: 70, 崖山: 41)</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="95">0</div><div class="stat-label"><span data-lang="en">HTTP API Routes</span><span data-lang="zh">HTTP API 路由</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="61">0</div><div class="stat-label"><span data-lang="en">Python Modules (per edition)</span><span data-lang="zh">Python 模块 (每版本)</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="24860">0</div><div class="stat-label"><span data-lang="en">Lines of Python (shared codebase)</span><span data-lang="zh">Python 代码行 (共享代码库)</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="121">0</div><div class="stat-label"><span data-lang="en">Unit Tests</span><span data-lang="zh">单元测试</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="80">0</div><div class="stat-label"><span data-lang="en">Schema Table Objects (Oracle: 59, PG: 80, YashanDB: 59)</span><span data-lang="zh">Schema表对象 (Oracle: 59, PG: 80, 崖山: 59)</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="108">0</div><div class="stat-label"><span data-lang="en">HTTP/Portal API Route Literals</span><span data-lang="zh">HTTP/Portal API 路由字面量</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="66">0</div><div class="stat-label"><span data-lang="en">Python Modules (60-66 per edition)</span><span data-lang="zh">Python模块 (每版本60-66个)</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="23103">0</div><div class="stat-label"><span data-lang="en">Python Lines (21,297-23,103 per edition)</span><span data-lang="zh">Python代码行 (每版本21,297-23,103行)</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="38">0</div><div class="stat-label"><span data-lang="en">Release-Gate Unit/Security Tests Passed</span><span data-lang="zh">发布门禁单元/安全测试通过</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="6">0</div><div class="stat-label"><span data-lang="en">Editions (2 Oracle + 2 PG + 2 YashanDB)</span><span data-lang="zh">版本 (2 Oracle + 2 PG + 2 崖山)</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="3">0</div><div class="stat-label"><span data-lang="en">Supported Databases</span><span data-lang="zh">支持数据库</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="31">0</div><div class="stat-label"><span data-lang="en">Offline Wheels per package</span><span data-lang="zh">每包离线 wheels 数</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="30">0</div><div class="stat-label"><span data-lang="en">Offline Wheels (Oracle/PG: 30, YashanDB: 29)</span><span data-lang="zh">离线wheels (Oracle/PG: 30, 崖山: 29)</span></div></div>
 </div>
 </div>
 </section>
@@ -423,7 +430,7 @@ section{padding:60px 0}
 <div class="pain-card fade-in">
 <div class="pain-title"><span data-lang="en">Uncontrolled Agent Iteration</span><span data-lang="zh">Agent迭代失控</span></div>
 <div class="pain-desc"><span data-lang="en">Agents loop indefinitely without clear stop conditions. No evaluation of intermediate results. Wasted tokens, no observability, no lifecycle management for iterative workflows.</span><span data-lang="zh">Agent无明确停止条件地无限循环，无中间结果评估，Token浪费，缺乏可观测性和生命周期管理。</span></div>
-<div class="pain-solve"><span data-lang="en">Loop Engineering: goal-driven autonomous feedback loops with 4 evaluation types, stop conditions, and lifecycle hooks</span><span data-lang="zh">循环工程：目标驱动自主反馈循环，4种评估类型、停止条件、生命周期钩子</span></div>
+<div class="pain-solve"><span data-lang="en">Loop Engineering: goal-driven autonomous feedback loops with 6 evaluation types, stop conditions, and lifecycle hooks</span><span data-lang="zh">循环工程：目标驱动自主反馈循环，6种评估类型、停止条件、生命周期钩子</span></div>
 </div>
 <div class="pain-card fade-in">
 <div class="pain-title"><span data-lang="en">No Ecosystem Connectivity</span><span data-lang="zh">生态连接缺失</span></div>
@@ -497,8 +504,8 @@ section{padding:60px 0}
 </div>
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">Property Graph</span><span data-lang="zh">属性图</span></div><span class="cap-badge required"><span data-lang="en">Required</span><span data-lang="zh">必需</span></span>
-<div class="cap-desc"><span data-lang="en">Unified property graph, graph traversal, BFS proximity</span><span data-lang="zh">统一属性图、图遍历、BFS近邻</span></div>
-<div class="cap-tech">Property Graph &middot; SQL/PGQ &middot; BFS</div>
+<div class="cap-desc"><span data-lang="en">Unified graph model with native SQL/PGQ or relational edge traversal and BFS proximity</span><span data-lang="zh">统一图模型，使用原生SQL/PGQ或关系边遍历实现BFS近邻</span></div>
+<div class="cap-tech">Property Graph &middot; Relational Edges &middot; BFS</div>
 </div>
 <div class="cap-card fade-in">
 <div class="cap-title"><span data-lang="en">Table Partitioning</span><span data-lang="zh">表分区</span></div><span class="cap-badge required"><span data-lang="en">Required</span><span data-lang="zh">必需</span></span>
@@ -549,7 +556,7 @@ section{padding:60px 0}
 <div class="vs-row"><div class="aspect"><span data-lang="en">Access Control</span><span data-lang="zh">访问控制</span></div><div class="fusion"><span data-lang="en">Row-level isolation per agent user, unified policy</span><span data-lang="zh">按Agent用户行级隔离，统一策略</span></div><div class="split"><span data-lang="en">Per-system auth, no unified row-level control</span><span data-lang="zh">每系统独立认证，无统一行级控制</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Schema Evolution</span><span data-lang="zh">Schema演进</span></div><div class="fusion"><span data-lang="en">DDL atomic update, single migration</span><span data-lang="zh">DDL原子更新，一次迁移</span></div><div class="split"><span data-lang="en">Coordinated migration across 5+ systems</span><span data-lang="zh">5+系统协调迁移</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Deployment</span><span data-lang="zh">部署</span></div><div class="fusion"><span data-lang="en">1 database, 1 backup, 1 monitoring stack</span><span data-lang="zh">1个数据库，1套备份，1套监控</span></div><div class="split"><span data-lang="en">5+ services, 5+ backups, 5+ monitoring</span><span data-lang="zh">5+服务，5+备份，5+监控</span></div></div>
-<div class="vs-row"><div class="aspect"><span data-lang="en">Token Cost</span><span data-lang="zh">Token消耗</span></div><div class="fusion"><span data-lang="en">Single query, minimal tool calls, 70-85% less</span><span data-lang="zh">单次查询，最少工具调用，节省70-85%</span></div><div class="split"><span data-lang="en">Multiple round-trips, context pollution</span><span data-lang="zh">多次往返，上下文污染</span></div></div>
+<div class="vs-row"><div class="aspect"><span data-lang="en">Token Cost</span><span data-lang="zh">Token消耗</span></div><div class="fusion"><span data-lang="en">Top-3 retrieval, 94.76% less prompt input in the reproducible benchmark</span><span data-lang="zh">Top-3检索，可复现基准中输入Token减少94.76%</span></div><div class="split"><span data-lang="en">Multiple round-trips, context pollution</span><span data-lang="zh">多次往返，上下文污染</span></div></div>
  <div class="vs-row"><div class="aspect"><span data-lang="en">Encryption</span><span data-lang="zh">加密</span></div><div class="fusion"><span data-lang="en">Database-native encryption, master key mgmt</span><span data-lang="zh">数据库原生加密，主密钥管理</span></div><div class="split"><span data-lang="en">Each system manages its own encryption</span><span data-lang="zh">各系统独立管理加密</span></div></div>
 <div class="vs-footer">
 <div class="label-col"></div>
@@ -571,12 +578,12 @@ section{padding:60px 0}
 </div>
 <div class="arch-layer fade-in">
 <div class="layer-label"><span data-lang="en">API Layer</span><span data-lang="zh">API 层</span></div>
-<div class="layer-title"><span data-lang="en">29 modules &middot; 370+ functions &middot; unified bind variables</span><span data-lang="zh">29 模块 &middot; 370+ 函数 &middot; 统一绑定变量</span></div>
+<div class="layer-title"><span data-lang="en">32 Community / 37 Enterprise library modules &middot; 495-555 Python callables</span><span data-lang="zh">社区版32/企业版37个库模块 &middot; 495-555个Python可调用对象</span></div>
 <div class="layer-tech">memory_api &middot; knowledge_api &middot; agent_api &middot; ...</div>
 </div>
 <div class="arch-layer fade-in">
 <div class="layer-label"><span data-lang="en">Database Layer</span><span data-lang="zh">数据库层</span></div>
-<div class="layer-title"><span data-lang="en">44+ tables &middot; 14 stored procedure packages &middot; 19/23 scheduler jobs</span><span data-lang="zh">44+ 数据表 &middot; 14 存储过程包 &middot; 19/23 调度作业</span></div>
+<div class="layer-title"><span data-lang="en">59 Oracle &middot; 80 PostgreSQL &middot; 59 YashanDB schema table objects</span><span data-lang="zh">Oracle 59 &middot; PostgreSQL 80 &middot; 崖山59个Schema表对象</span></div>
 <div class="layer-tech">Partitioning &middot; JSON &middot; Graph &middot; Vector &middot; Fulltext</div>
 </div>
 </div>
@@ -731,7 +738,7 @@ section{padding:60px 0}
 <div style="font-size:2rem;color:var(--green);margin-bottom:12px">&#9881;</div>
 <h3 style="color:var(--green);margin-bottom:16px;font-size:1.3rem"><span data-lang="en">Operable</span><span data-lang="zh">可运维</span></h3>
 <div style="color:var(--secondary);font-size:.9rem;line-height:1.8">
-<p><span data-lang="en"><strong>Offline Deployment:</strong> vendor/ directory with 30 pre-downloaded cp314 wheels, install_offline.sh for air-gapped environments, verify_deps.py integrity check — zero dependency on public PyPI at runtime.</span><span data-lang="zh"><strong>离线部署：</strong>vendor/目录含30个预下载cp314 wheels，install_offline.sh离线环境一键安装，verify_deps.py完整性检查——运行时零PyPI依赖。</span></p>
+<p><span data-lang="en"><strong>Offline Deployment:</strong> vendor/ contains 30 cp314 wheels for Oracle/PostgreSQL and 29 plus native client libraries for YashanDB; install_offline.sh and verify_deps.py support air-gapped installation without public PyPI.</span><span data-lang="zh"><strong>离线部署：</strong>Oracle/PostgreSQL包内含30个cp314 wheels，YashanDB包内含29个wheels及原生客户端库；install_offline.sh与verify_deps.py支持不访问公共PyPI的离线安装。</span></p>
 <p><span data-lang="en"><strong>Pure-Python Deploy:</strong> deploy_oracle.py replaces SQLcl (125MB+Java) with a state-machine SQL parser handling PROMPT/DEFINE/&&// syntax.</span><span data-lang="zh"><strong>纯Python部署：</strong>deploy_oracle.py替代SQLcl(125MB+Java)，状态机解析PROMPT/DEFINE/&&//语法。</span></p>
 <p><span data-lang="en"><strong>Recovery & Resiliency:</strong> Per-Agent recovery codes (8 one-time codes, SHA-256 hashed), admin-triggered credential recovery with dead-agent detection, connection lifecycle management with forced disconnect.</span><span data-lang="zh"><strong>恢复与韧性：</strong>每Agent恢复码(8个一次性码，SHA-256哈希)，Admin触发的凭证恢复及Agent死锁检测，连接生命周期管理与强制断开。</span></p>
 </div>
@@ -888,7 +895,7 @@ section{padding:60px 0}
 </div>
 <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px">
 <div style="font-size:1rem;font-weight:700;margin-bottom:8px"><span data-lang="en">Single-SQL Cross-Modal Query</span><span data-lang="zh">单语句跨模查询</span></div>
-<div style="color:var(--secondary);font-size:.9rem;line-height:1.7"><span data-lang="en">unified_sql strategy: single-SQL CTE fuses all 5 signals in one database call. Fast, simple, precise — 70-85% lower latency, significant token savings.</span><span data-lang="zh">unified_sql策略：单SQL CTE一次数据库调用融合5信号。快速、简单、精确——延迟降低70-85%，显著节省token。</span></div>
+<div style="color:var(--secondary);font-size:.9rem;line-height:1.7"><span data-lang="en">unified_sql fuses 5 signals in one database call. The v4.0.1 reproducible prompt benchmark measured 94.76% less input with Top-3 retrieval; this is not a latency or answer-quality claim.</span><span data-lang="zh">unified_sql策略以单次数据库调用融合5种信号。v4.0.1可复现Prompt基准测得Top-3检索输入Token减少94.76%；该数字不代表延迟或答案质量。</span></div>
 </div>
 </div>
 </div>
@@ -912,7 +919,7 @@ section{padding:60px 0}
 <div class="sec-item fade-in">
 <div class="sec-label">L3</div>
 <div class="sec-title"><span data-lang="en">Encrypted Credentials</span><span data-lang="zh">加密凭证</span></div>
-<div class="sec-desc"><span data-lang="en">config.json auto-encryption, AGENT_CREDENTIALS encryption, master key rotation</span><span data-lang="zh">config.json自动加密、AGENT_CREDENTIALS加密、主密钥轮换</span></div>
+<div class="sec-desc"><span data-lang="en">AES-256-GCM config encryption, owner-only files, AGENT_CREDENTIALS encryption, master key rotation</span><span data-lang="zh">AES-256-GCM配置加密、仅所有者可读文件、AGENT_CREDENTIALS加密、主密钥轮换</span></div>
 </div>
 <div class="sec-item fade-in">
 <div class="sec-label">L4</div>
@@ -942,7 +949,7 @@ section{padding:60px 0}
 <div class="feature-card fade-in" style="border-color:rgba(79,142,247,.3)">
 <div class="feature-icon" style="color:#4f8ef7">&#128230;</div>
 <div class="feature-title"><span data-lang="en">Auto-Encrypt at Rest</span><span data-lang="zh">启动时自动加密</span></div>
-<div class="feature-desc"><span data-lang="en">config.json credentials are auto-encrypted on server startup. Database passwords, LLM API keys, and model routing keys are never stored in plaintext on disk. PBKDF2-HMAC-SHA512 + authenticated encryption.</span><span data-lang="zh">服务器启动时config.json凭证自动加密。数据库密码、LLM API Key、模型路由Key永不明文存储。PBKDF2-HMAC-SHA512 + 认证加密。</span></div>
+<div class="feature-desc"><span data-lang="en">Server startup encrypts database credentials, LLM and model-routing API keys, and the session-signing secret with AES-256-GCM. config.json and master.key are always restricted to owner-only (0600) access.</span><span data-lang="zh">服务器启动时使用AES-256-GCM加密数据库凭证、LLM与模型路由API Key以及会话签名密钥。config.json与master.key始终限制为仅所有者可读写（0600）。</span></div>
 </div>
 <div class="feature-card fade-in" style="border-color:rgba(0,212,170,.3)">
 <div class="feature-icon" style="color:var(--green)">&#128259;</div>
@@ -961,7 +968,7 @@ section{padding:60px 0}
 <div class="container">
 <div class="section-label"><span data-lang="en">Cost Optimization</span><span data-lang="zh">成本优化</span></div>
 <h2 class="section-title"><span data-lang="en">Token Efficiency by Design</span><span data-lang="zh">降低Token消耗的设计哲学</span></h2>
-<p class="section-desc"><span data-lang="en">LLM calls are expensive. AI Agent Infra dramatically reduces token consumption through structured retrieval, persistent memory, and database-native processing — keeping the LLM focused on reasoning, not recall.</span><span data-lang="zh">LLM调用很昂贵。AI Agent Infra通过结构化检索、持久化记忆、数据库原生处理显著降低Token消耗——让LLM专注于推理而非回忆。</span></p>
+<p class="section-desc"><span data-lang="en">In the v4.0.1 reproducible benchmark, SQLite FTS5 Top-3 retrieval used 94.76% fewer cl100k_base prompt-input tokens than loading five complete documentation files. This narrow measurement does not claim latency or answer-quality gains.</span><span data-lang="zh">v4.0.1可复现基准中，SQLite FTS5 Top-3检索相比加载5份完整文档减少94.76%的cl100k_base输入Token。该测量不代表延迟或答案质量提升。</span></p>
 <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px">
 <div class="feature-card fade-in" style="border-color:rgba(79,142,247,.3);display:flex;gap:20px;align-items:flex-start;padding:24px">
 <div class="feature-icon" style="color:#4f8ef7;flex-shrink:0;font-size:1.8rem">&#128269;</div>
@@ -1037,7 +1044,7 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">Database Support</span><span data-lang="zh">数据库支持</span></div>
 <h2 class="section-title"><span data-lang="en">Multi-Database Support</span><span data-lang="zh">多数据库支持</span></h2>
 <div class="db-support fade-in">
-<p><span data-lang="en">Available on Oracle Database (production-ready), PostgreSQL (production-ready), and YashanDB (production-ready). Powered by OpenSpec for spec-driven development. We are also adapting other databases &mdash; database vendors are welcome to contribute adapters that meet the capability requirements above.</span><span data-lang="zh">已支持 Oracle 数据库（生产就绪）、PostgreSQL（生产就绪）与崖山数据库（生产就绪）。采用 OpenSpec 规格驱动开发。我们也在适配其他数据库&mdash;&mdash;欢迎广大数据库产品在满足上述能力需求的基础上提供适配。</span></p>
+<p><span data-lang="en">Validated by v4.0.1 live capability probes on Oracle AI Database 26ai, PostgreSQL 18.3, and YashanDB 23.5.4+. Powered by OpenSpec for spec-driven development. We are also adapting other databases &mdash; database vendors are welcome to contribute adapters that meet the capability requirements above.</span><span data-lang="zh">v4.0.1已在Oracle AI Database 26ai、PostgreSQL 18.3与YashanDB 23.5.4+通过实时能力验证。采用 OpenSpec 规格驱动开发。我们也在适配其他数据库&mdash;&mdash;欢迎广大数据库产品在满足上述能力需求的基础上提供适配。</span></p>
 <div class="db-badges">
 <span class="db-badge active">Oracle &middot; Active</span>
 <span class="db-badge active">PostgreSQL &middot; Active</span>
@@ -1055,8 +1062,8 @@ section{padding:60px 0}
 
 <div class="arch-note fade-in" style="margin-top:24px;border-color:rgba(0,102,204,.2);background:rgba(0,102,204,.04)">
 <div class="arch-note-title" style="color:#0066cc"><span data-lang="en">YashanDB Implementation Notes</span><span data-lang="zh">崖山数据库实现说明</span></div>
-<div class="arch-note-desc"><span data-lang="en">The YashanDB edition achieves feature parity using native YashanDB 23.5+ capabilities: Role-Based Access Control (GRANT/REVOKE + DEFINER packages) provides security isolation; yaspy driver replaces oracledb/psycopg2 for Python connectivity; SEARCH INDEX replaces Oracle Text for full-text search; VECTOR type with HNSW index provides similarity search; CREATE PROPERTY GRAPH + GRAPH_TABLE enables SQL/PGQ graph traversal; DBMS_SCHEDULER handles scheduled jobs; LIST partitioning (reference partitioning not supported, regular tables used instead); JSON type with yaspy auto-conversion for dict values; DBMS_CRYPTO provides encryption (named constants not available, numeric values used).</span><span data-lang="zh">崖山数据库版本使用 YashanDB 23.5+ 原生能力实现功能对等：角色权限控制（GRANT/REVOKE + DEFINER 包）提供安全隔离；yaspy 驱动替代 oracledb/psycopg2 实现 Python 连接；SEARCH INDEX 替代 Oracle Text 实现全文搜索；VECTOR 类型 + HNSW 索引实现相似度搜索；CREATE PROPERTY GRAPH + GRAPH_TABLE 实现 SQL/PGQ 图遍历；DBMS_SCHEDULER 处理定时作业；LIST 分区（不支持引用分区，改用普通表）；JSON 类型配合 yaspy 自动转换 dict；DBMS_CRYPTO 提供加密（命名常量不可用，使用数值）。</span></div>
-<div class="arch-note-tech" style="color:#0066cc">yaspy &middot; Role-Based Access Control &middot; SEARCH INDEX &middot; VECTOR + HNSW &middot; GRAPH_TABLE &middot; DBMS_SCHEDULER &middot; LIST Partitioning</div>
+<div class="arch-note-desc"><span data-lang="en">The YashanDB edition achieves equivalent external behavior with YashanDB 23.5.4+ capabilities: Role-Based Access Control (GRANT/REVOKE + DEFINER packages) provides isolation; yaspy provides Python connectivity; SEARCH INDEX implements full-text search; VECTOR with HNSW implements similarity search; the property-graph schema is retained while runtime traversal and graph algorithms use the shared relational edge model because GRAPH_TABLE is unavailable; DBMS_SCHEDULER handles jobs; LIST partitioning is used without reference partitioning; native JSON conversion handles structured values; and the built-in crypto package protects database-held secrets.</span><span data-lang="zh">崖山数据库版本基于YashanDB 23.5.4+实现等价外部行为：角色权限控制（GRANT/REVOKE + DEFINER包）提供隔离；yaspy负责Python连接；SEARCH INDEX实现全文检索；VECTOR与HNSW实现相似度搜索；保留属性图Schema，但因不支持GRAPH_TABLE，运行时遍历和图算法使用共享关系边模型；DBMS_SCHEDULER处理调度作业；使用LIST分区且不依赖引用分区；原生JSON转换处理结构化值；内置加密包保护数据库内敏感数据。</span></div>
+<div class="arch-note-tech" style="color:#0066cc">yaspy &middot; Role-Based Access Control &middot; SEARCH INDEX &middot; VECTOR + HNSW &middot; Relational Graph Traversal &middot; DBMS_SCHEDULER</div>
 </div>
 </div>
 
@@ -1067,6 +1074,10 @@ section{padding:60px 0}
 <div class="section-label"><span data-lang="en">Version History</span><span data-lang="zh">版本历史</span></div>
 <h2 class="section-title"><span data-lang="en">Evolution Timeline</span><span data-lang="zh">版本演进</span></h2>
 <div class="timeline-list">
+<div class="tl-item fade-in">
+<div class="tl-version"><div class="ver">v4.0.1</div><div class="date">2026-07-22</div></div>
+<div class="tl-desc"><span data-lang="en">Security hardening: fail-closed Business Agent identities; AES-256-GCM protection for database, LLM, routing, and session-signing secrets; owner-only runtime configuration; durable execution jobs; lossless Skill packages; and strict edition boundaries. Final regression: 141 passing tests in each of 6 packages, all 3 live database contracts passed explicitly, and 18/18 operating modes validated.</span><span data-lang="zh">安全加固：Business Agent独立身份且禁止回退；数据库、LLM、模型路由与会话签名密钥均使用AES-256-GCM保护；运行配置仅所有者可读写；持久执行任务；无损Skill包；严格版本边界。最终回归：6个发布包各141项测试通过，3个数据库实时契约均显式通过，18/18运行模式验证通过。</span></div>
+</div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v4.0.0</div><div class="date">2026-07-19</div></div>
 <div class="tl-desc"><span data-lang="en">Spec-Driven structural refactor + SDD enhancement - unified source repository with shared code layer + DB adapters, build.py one-command packaging, parameterized test framework. MCP dynamic tool loading, Spec version management, Harness inheritance, DAG visualization, Approval SLA, Event dead letter queue. Search explanation, Graph algorithms (PageRank), Batch embedding, Agent auto-recovery.</span><span data-lang="zh">基于 Spec-Driven Development 进行项目结构重构 + SDD 增强 - 统一源码仓库 + 共享代码层 + DB 适配层，build.py 一键打包，参数化测试框架。MCP 动态工具加载、Spec 版本管理、Harness 继承、DAG 可视化、审批 SLA、事件死信队列。搜索解释、图算法(PageRank)、批量嵌入、Agent 自动恢复。</span></div>
@@ -1083,7 +1094,7 @@ section{padding:60px 0}
 <div class="tl-version"><div class="ver">v3.10.1</div><div class="date">2026-07-14</div></div>
 <div class="tl-desc"><span data-lang="en">Offline Deployment - vendor/ directory with 30 pre-downloaded cp314 wheels, install_offline.sh for air-gapped installation, verify_deps.py for integrity check. Pure-Python deploy_oracle.py replaces SQLcl (125MB+Java) with a state-machine SQL parser handling PROMPT/DEFINE/&&// syntax. Zero external runtime dependencies.</span><span data-lang="zh">离线部署 - vendor/目录含30个预下载cp314 wheels，install_offline.sh气隙环境一键安装，verify_deps.py完整性验证。纯Python deploy_oracle.py替代SQLcl(125MB+Java)，状态机解析PROMPT/DEFINE/&&//语法。零外部运行时依赖。</span></div>
 </div>
-<div class="tl-item fade-in">
+<div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.10.0</div><div class="date">2026-07-09</div></div>
 <div class="tl-desc"><span data-lang="en">Universal Property Graph - 30+ graph functions across 8 domains: knowledge causal (CAUSES/CONTRADICTS), agent collaboration (group-scoped TRUSTS), task orchestration (FEEDS_INTO/PRODUCED_ARTIFACT), skill dependency, approval propagation (BLOCKS with cascade reject), data flow (DERIVED_FROM_DATA), memory evolution (PROMOTED_TO/MERGED_INTO), loop iteration (BUILDS_ON/INFORMS/CORRECTS). 23 new edge types. Dynamic trust via SYSTEM_CONFIG.</span><span data-lang="zh">通用属性图 - 8个领域30+新图函数：知识因果(CAUSES/CONTRADICTS)、Agent协作(组内TRUSTS)、任务编排(FEEDS_INTO/PRODUCED_ARTIFACT)、Skill依赖、审批传播(BLOCKS级联拒绝)、数据流(DERIVED_FROM_DATA)、记忆演化(PROMOTED_TO/MERGED_INTO)、Loop迭代(BUILDS_ON/INFORMS/CORRECTS)。23个新边类型。动态信任配置。</span></div>
 </div>
@@ -1149,18 +1160,20 @@ section{padding:60px 0}
 </div>
 </div>
 <div style="text-align:center;margin-top:16px;margin-bottom:8px">
-<button class="expand-btn" onclick="var hidden=document.querySelectorAll('.tl-item.hidden');var expanded=this.getAttribute('data-expanded')==='1';hidden.forEach(function(e){e.classList.toggle('show',!expanded)});this.setAttribute('data-expanded',expanded?'0':'1');var isZh=document.body.classList.contains('lang-zh');var txt=this.querySelector('.btn-txt');if(txt){txt.textContent=expanded?(isZh?'展开更多历史版本 (15)':'Show 15 earlier versions'):(isZh?'收起历史版本':'Hide earlier versions')}"><span class="btn-txt">Show more versions</span></button>
+<button class="expand-btn" type="button" onclick="toggleTimeline(this)"><span class="btn-txt">Show earlier versions</span></button>
 </div>
 </div>
 </div>
 </section>
 <footer>
 <div class="container">
-<div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:12px">
+<div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:12px">
 
-<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank" style="color:var(--green);font-size:.85rem;font-weight:600">Oracle Edition</a>
+<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank" style="color:var(--teal);font-size:.85rem;font-weight:600">Oracle Edition</a>
 <span style="color:var(--muted);font-size:.8rem">&middot;</span>
 <a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank" style="color:var(--teal);font-size:.85rem;font-weight:600">PG Edition</a>
+<span style="color:var(--muted);font-size:.8rem">&middot;</span>
+<a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-YashanDB-Community-Edition" target="_blank" style="color:var(--teal);font-size:.85rem;font-weight:600">YashanDB Edition</a>
 </div>
 <div style="display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:8px">
 <a href="https://db4agent.top" target="_blank" style="color:var(--accent);font-size:.95rem;font-weight:600">db4agent.top</a>
@@ -1170,16 +1183,46 @@ section{padding:60px 0}
 </footer>
 
 <script>
+function earlierVersionCount(){
+  return Math.max(0,document.querySelectorAll('.timeline-list > .tl-item').length-5);
+}
+
+function updateTimelineButton(btn){
+  var isZh=document.body.classList.contains('lang-zh');
+  var expanded=btn.getAttribute('data-expanded')==='1';
+  var count=earlierVersionCount();
+  var txt=btn.querySelector('.btn-txt');
+  if(txt)txt.textContent=expanded?(isZh?'收起历史版本':'Hide earlier versions'):(isZh?'展开更多历史版本 ('+count+')':'Show '+count+' earlier versions');
+}
+
+function toggleTimeline(btn){
+  var expanded=btn.getAttribute('data-expanded')==='1';
+  document.querySelectorAll('.timeline-list > .tl-item.hidden').forEach(function(item){item.classList.toggle('show',!expanded)});
+  btn.setAttribute('data-expanded',expanded?'0':'1');
+  updateTimelineButton(btn);
+}
+
+function initializeTimeline(){
+  var items=document.querySelectorAll('.timeline-list > .tl-item');
+  items.forEach(function(item,index){
+    item.classList.toggle('hidden',index>=5);
+    item.classList.remove('show');
+  });
+  var btn=document.querySelector('.expand-btn');
+  if(btn){
+    btn.hidden=items.length<=5;
+    btn.setAttribute('data-expanded','0');
+    updateTimelineButton(btn);
+  }
+}
+
 function toggleLang(){
   document.body.classList.toggle('lang-zh');
   var btn=document.querySelector('.expand-btn');
-  if(btn){
-    var isZh=document.body.classList.contains('lang-zh');
-    var expanded=btn.getAttribute('data-expanded')==='1';
-    var txt=btn.querySelector('.btn-txt');
-    if(txt)txt.textContent=expanded?(isZh?'收起历史版本':'Hide earlier versions'):(isZh?'展开更多历史版本 (15)':'Show 15 earlier versions');
-  }
+  if(btn)updateTimelineButton(btn);
 }
+
+initializeTimeline();
 
 var fadeObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible')}})},{threshold:0.1});
 document.querySelectorAll('.fade-in').forEach(function(el){fadeObs.observe(el)});
