@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- generated from release manifest sha256:eed1dbc160056e37fb4c09e58cbf173b1cb6f05c762b1c68a2e5ccf072fea45e -->
+<!-- generated from release manifest sha256:04e99cacf6e6bec117aaf61cce95c5d0ee66455772e3220b6ceedc11c7a47560 -->
 <html lang="zh-CN" data-theme="light">
 <head>
 <meta charset="UTF-8">
@@ -257,7 +257,9 @@ nav .logo img{height:48px}
 .nav-links a{font-size:.72rem}
 }
 @media(max-width:768px){
-.hero{padding:180px 16px 60px}
+nav .container{min-height:0}
+.nav-links{display:flex;flex-wrap:wrap;justify-content:center;overflow:visible;gap:7px 14px;padding:4px 0 9px}
+.hero{padding:210px 16px 60px}
 section{padding:60px 0}
 .pain-grid,.cap-grid,.features-grid,.signal-grid{grid-template-columns:1fr}
 .vs-wrap{overflow-x:auto}.vs-row>div{padding:8px 10px;font-size:.78rem}
@@ -283,7 +285,7 @@ section{padding:60px 0}
 .deploy-mode{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:12px}
 .deploy-prompt{font-size:.85rem;line-height:1.8;color:var(--secondary);white-space:pre-wrap;word-break:break-word;background:var(--code-bg);border-radius:8px;padding:16px;overflow-x:auto;flex:1;min-height:0}
 @media(max-width:768px){.deploy-cols{grid-template-columns:1fr}.deploy-prompt{font-size:.8rem}}
-@media(max-width:480px){.hero-product-name{display:block;margin-top:8px;font-size:.75em;vertical-align:baseline}}
+@media(max-width:480px){.hero-product-name{display:block;margin-top:8px;font-size:.75em;vertical-align:baseline;white-space:normal;overflow-wrap:normal}}
 
 /* Chuanxu brand system 1.0 component alignment */
 code,pre,.cap-tech,.layer-tech,.arch-note-tech,.deploy-prompt{font-family:var(--font-mono)!important}
@@ -395,11 +397,11 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 </svg>
 </div>
 <div class="hero-content">
-<div class="badge"><span class="dot"></span> v4.0.1 &middot; 6 Editions &middot; 18/18 Modes Validated</div>
+<div class="badge"><span class="dot"></span> v4.1.0 &middot; 6 Editions &middot; 18/18 Modes Validated</div>
 <h1><span data-lang="en">Chuanxu <span class="hero-product-name">AI Agent Management Platform</span></span><span data-lang="zh">川序 <span class="hero-product-name">AI Agent管理平台</span></span></h1>
 <p class="slogan"><span data-lang="en">As Water Arrives, the Channel Takes Shape: Orderly and Trusted AI Agent Operations</span><span data-lang="zh">水到而渠成，让智能体运行有序、可信</span></p>
 <p class="brand-meaning"><span data-lang="en"><strong>Chuan</strong> represents the convergence of diverse sources, continuous operation, and an open ecosystem; <strong>Xu</strong> represents order, orchestration, authorization, and governance.</span><span data-lang="zh"><strong>川</strong>，寓意多源汇流、持续运行与开放生态；<strong>序</strong>，代表秩序、编排、权限与治理。</span></p>
-<p class="subtitle"><span data-lang="en"><strong>The database-native infrastructure for AI agents</strong> - Built on the database to make AI agent operations observable, schedulable, and operable. Skill-first and framework-neutral, any Agent that can consume SKILL.md and execute its HTTP, MCP, or CLI workflows can use the platform; OpenClaw and Hermes Agent are confirmed examples. One database kernel provides hybrid search, knowledge graph, per-agent security, collaboration, scheduling, operations, and audit.</span><span data-lang="zh"><strong>AI Agent 的数据库原生基础设施</strong> -- 以数据库为底座，让智能体运行可观测、可调度、可运维。Skill-first、框架中立，任何能够使用SKILL.md并执行其中HTTP、MCP或CLI调用流程的Agent都可以使用平台，OpenClaw与Hermes Agent均已确认可接入。一个数据库内核提供混合检索、知识图谱、按Agent安全、协作、调度、运维与审计。</span></p>
+<p class="subtitle"><span data-lang="en"><strong>The database-native infrastructure for AI agents</strong> - Built on the database to make AI agent operations observable, schedulable, operable, and recoverable. Memory, knowledge, workspaces, session chains, task plans, loop state, registered identity, and governance evidence persist in the database, so a replacement Agent instance can rebuild context after a process or node failure. Skill-first and framework-neutral, any Agent that can consume SKILL.md and execute its HTTP, MCP, or CLI workflows can use the platform; OpenClaw and Hermes Agent are confirmed examples.</span><span data-lang="zh"><strong>AI Agent 的数据库原生基础设施</strong> -- 以数据库为底座，让智能体运行可观测、可调度、可运维、可恢复。记忆、知识、工作区、会话链、任务计划、循环状态、注册身份与治理证据持久化在数据库中，Agent进程或节点异常后，替代实例可从数据库重建上下文。Skill-first、框架中立，任何能够使用SKILL.md并执行其中HTTP、MCP或CLI调用流程的Agent都可以使用平台，OpenClaw与Hermes Agent均已确认可接入。</span></p>
 <p class="note"><span data-lang="en">Available on Oracle Database, PostgreSQL &amp; YashanDB. Other databases are being adapted.</span><span data-lang="zh">已支持 Oracle 数据库、PostgreSQL 与崖山数据库。其他数据库正在适配中。</span></p>
 <div class="cta-group">
 <a href="#deploy" class="btn btn-primary"><span data-lang="en">Choose a Database and Deploy</span><span data-lang="zh">选择数据库并开始部署</span></a>
@@ -422,13 +424,20 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <button onclick="document.querySelectorAll('.deploy-tab').forEach(function(e){e.style.display='none'});document.getElementById('deploy-pg').style.display='block';document.querySelectorAll('.db-tab-btn').forEach(function(b){b.style.opacity='.5'});this.style.opacity='1'" class="db-tab-btn" style="background:rgba(51,103,145,.15);color:#336791;border:1px solid rgba(51,103,145,.3);border-radius:8px;padding:11px 25px;font-size:1.05rem;font-weight:700;cursor:pointer;opacity:.5">PostgreSQL</button>
 <button onclick="document.querySelectorAll('.deploy-tab').forEach(function(e){e.style.display='none'});document.getElementById('deploy-yas').style.display='block';document.querySelectorAll('.db-tab-btn').forEach(function(b){b.style.opacity='.5'});this.style.opacity='1'" class="db-tab-btn" style="background:rgba(0,102,204,.15);color:#0066cc;border:1px solid rgba(0,102,204,.3);border-radius:8px;padding:11px 25px;font-size:1.05rem;font-weight:700;cursor:pointer;opacity:.5"><span data-lang="en">YashanDB</span><span data-lang="zh">崖山数据库</span></button>
 </div>
-<div id="deploy-ora" class="deploy-tab" style="display:block"><div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Standalone Mode</span><span data-lang="zh">Standalone 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-OracleDB-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用Oracle数据库作为Agent的运行底座，现在需要你以Standalone模式初始化部署。数据库已由管理员提前准备好，信息为IP地址xxx.xxx.xxx.xxx，端口xxxx，服务名xxxxxx，用户名/密码为xxxxxx/xxxxxx。必要时你也可以连接到sys用户进行需要的操作，密码为xxxx。Oracle SQLcl部署在/path/to/sqlcl中。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。如果遇到问题，先尝试自行解决。</span><span data-lang="en">A new Skill deployed at AI-Agent-Infra-with-OracleDB-Community-Edition. Using Oracle DB. Initialize Standalone mode. Database prepared — IP xxx.xxx.xxx.xxx, port xxxx, service xxxxxx, user/pass xxxxxx/xxxxxx. SQLcl at /path/to/sqlcl. Embedding: URL xxx.xxx/v1, model xxxxxxxxxxxx.</span></pre></div><div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Admin Agent Mode</span><span data-lang="zh">Admin Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-OracleDB-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用Oracle数据库作为Agent的运行底座，现在需要你作为管理Agent初始化部署。数据库已由管理员提前准备好。Web Portal监听端口设为xxxx。部署完成后生成Admin Token并安全保存。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。</span><span data-lang="en">A new Skill deployed at AI-Agent-Infra-with-OracleDB-Community-Edition. Initialize as Admin Agent. Database prepared. Set Web Portal port to xxxx. Generate Admin Token. Embedding: URL xxx.xxx/v1, model xxxxxxxxxxxx.</span></pre></div><div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Business Agent Mode</span><span data-lang="zh">Business Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-OracleDB-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用Oracle数据库作为Agent的运行底座。现在需要你作为业务Agent加入已有的管理Agent集群。Admin Agent已运行在IP地址xxx.xxx.xxx.xxx，端口xxxx上，Admin Token为AT_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。新业务Agent的ID为AGENT_XXX，名称为"XXX Agent"。请通过agent_bootstrap.py向Admin Agent注册。Web Portal监听端口设为xxxx。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。</span><span data-lang="en">A new Skill at AI-Agent-Infra-with-OracleDB-Community-Edition. Join Admin Agent cluster at IP xxx.xxx.xxx.xxx port xxxx, Token AT_xxx. Agent ID AGENT_XXX. Register via agent_bootstrap.py. Embedding: URL xxx.xxx/v1, model xxxxxxxxxxxx.</span></pre></div></div>
-<div id="deploy-pg" class="deploy-tab" style="display:none"><div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Standalone Mode</span><span data-lang="zh">Standalone 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-PG-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用PostgreSQL数据库作为Agent的运行底座，现在需要你以Standalone模式初始化部署。目标服务器IP地址为xxx.xxx.xxx.xxx，SSH用户为xxx。需要你安装PostgreSQL 18并完成全部配置（包括pgvector、Apache AGE、pg_cron扩展）。数据库端口设为5432（社区版）或5433（企业版），数据库名为ai_agent（社区版）或ai_agent_ee（企业版），superuser为pgsql。项目代码位于/path/to/project目录。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。</span><span data-lang="en">A new Skill at AI-Agent-Infra-with-PG-Community-Edition. Using PostgreSQL. Initialize Standalone. Server IP xxx.xxx.xxx.xxx, SSH user xxx. Install PostgreSQL 18 with pgvector, AGE, pg_cron. Port 5432/5433, db ai_agent/ai_agent_ee, user pgsql. Project at /path/to/project. Embedding: URL xxx.xxx/v1, model xxxxxxxxxxxx.</span></pre></div><div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Admin Agent Mode</span><span data-lang="zh">Admin Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-PG-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用PostgreSQL数据库作为Agent的运行底座，现在需要你作为管理Agent初始化部署。目标服务器IP地址为xxx.xxx.xxx.xxx，SSH用户为xxx。需要你安装PostgreSQL 18并完成全部配置。Web Portal监听端口为xxxx。部署完成后生成Admin Token并安全保存。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。</span><span data-lang="en">A new Skill at AI-Agent-Infra-with-PG-Community-Edition. Initialize as Admin Agent. Server IP xxx.xxx.xxx.xxx. Install PostgreSQL 18 with pgvector, AGE, pg_cron. Web Portal port xxxx. Generate Admin Token. Embedding: URL xxx.xxx/v1, model xxxxxxxxxxxx.</span></pre></div><div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Business Agent Mode</span><span data-lang="zh">Business Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-PG-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用PostgreSQL数据库作为Agent的运行底座。现在需要你作为业务Agent加入已有的管理Agent集群。Admin Agent已运行在IP地址xxx.xxx.xxx.xxx，端口xxxx上，Admin Token为AT_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。新业务Agent的ID为AGENT_XXX，名称为"XXX Agent"。请通过agent_bootstrap.py向Admin Agent注册。Web Portal监听端口设为xxxx。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。</span><span data-lang="en">A new Skill at AI-Agent-Infra-with-PG-Community-Edition. Join Admin cluster at IP xxx.xxx.xxx.xxx port xxxx, Token AT_xxx. Agent ID AGENT_XXX. Register via agent_bootstrap.py. Embedding: URL xxx.xxx/v1, model xxxxxxxxxxxx.</span></pre></div></div>
-<div id="deploy-yas" class="deploy-tab" style="display:none"><div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Standalone Mode</span><span data-lang="zh">Standalone 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-YashanDB-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用崖山数据库（YashanDB）作为Agent的运行底座，现在需要你以Standalone模式初始化部署。数据库已由管理员提前准备好，信息为IP地址xxx.xxx.xxx.xxx，端口xxxx，PDB服务名xxxxxx，用户名/密码为xxxxxx/xxxxxx。项目代码位于/path/to/project目录。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。</span><span data-lang="en">A new Skill at AI-Agent-Infra-with-YashanDB-Community-Edition. Using YashanDB. Initialize Standalone. Database prepared — IP xxx.xxx.xxx.xxx, port xxxx, PDB xxxxxx, user/pass xxxxxx/xxxxxx. Project at /path/to/project. Embedding: URL xxx.xxx/v1, model xxxxxxxxxxxx.</span></pre></div><div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Admin Agent Mode</span><span data-lang="zh">Admin Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-YashanDB-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用崖山数据库（YashanDB）作为Agent的运行底座，现在需要你作为管理Agent初始化部署。数据库已由管理员提前准备好。Web Portal监听端口设为xxxx。部署完成后生成Admin Token并安全保存。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。</span><span data-lang="en">A new Skill at AI-Agent-Infra-with-YashanDB-Community-Edition. Initialize as Admin Agent. Database prepared. Web Portal port xxxx. Generate Admin Token. Embedding: URL xxx.xxx/v1, model xxxxxxxxxxxx.</span></pre></div><div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Business Agent Mode</span><span data-lang="zh">Business Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在你的Skill目录中的AI-Agent-Infra-with-YashanDB-Community-Edition（或Enterprise-Edition）目录中部署了一个新的Skill，使用崖山数据库（YashanDB）作为Agent的运行底座。现在需要你作为业务Agent加入已有的管理Agent集群。Admin Agent已运行在IP地址xxx.xxx.xxx.xxx，端口xxxx上，Admin Token为AT_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx。新业务Agent的ID为AGENT_XXX，名称为"XXX Agent"。请通过agent_bootstrap.py向Admin Agent注册。Web Portal监听端口设为xxxx。Embedding模型信息为URL：xxx.xxx/v1，模型ID为xxxxxxxxxxxx。</span><span data-lang="en">A new Skill at AI-Agent-Infra-with-YashanDB-Community-Edition. Join Admin cluster at IP xxx.xxx.xxx.xxx port xxxx, Token AT_xxx. Agent ID AGENT_XXX. Register via agent_bootstrap.py. Embedding: URL xxx.xxx/v1, model xxxxxxxxxxxx.</span></pre></div></div>
+<div id="deploy-ora" class="deploy-tab" style="display:block">
+<div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Standalone Mode</span><span data-lang="zh">Standalone 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在Skill目录的AI-Agent-Infra-with-OracleDB-Community-Edition（或Enterprise-Edition）中，严格按SKILL.md初始化Standalone模式。全程使用/home/linuxbrew/.linuxbrew/bin/python3.14和纯Python scripts/deploy_oracle.py，无需SQLcl或Java。数据库：IP xxx.xxx.xxx.xxx，端口xxxx，服务名xxxxxx，Schema Owner用户名/密码xxxxxx/xxxxxx；仅在SKILL.md明确要求时使用SYS。社区版部署8_v4_1_0_registration.sql，企业版部署8_v4_1_0_governance.sql。配置Embedding URL xxx.xxx/v1、模型xxxxxxxxxxxx和Web端口xxxx。启动后确认config.json敏感字段已AES-256-GCM加密且权限为0600，并安全备份master key；不得输出、记录或提交凭证。</span><span data-lang="en">In AI-Agent-Infra-with-OracleDB-Community-Edition (or Enterprise-Edition), follow SKILL.md to initialize Standalone mode. Use /home/linuxbrew/.linuxbrew/bin/python3.14 and the pure-Python scripts/deploy_oracle.py; SQLcl and Java are not required. Database: host xxx.xxx.xxx.xxx, port xxxx, service xxxxxx, Schema Owner xxxxxx/xxxxxx; use SYS only when SKILL.md explicitly requires it. Deploy 8_v4_1_0_registration.sql for Community or 8_v4_1_0_governance.sql for Enterprise. Configure embedding URL xxx.xxx/v1, model xxxxxxxxxxxx, and web port xxxx. Verify AES-256-GCM config encryption and 0600 permissions after startup, back up the master key securely, and never print, log, or commit credentials.</span></pre></div>
+<div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Admin Agent Mode</span><span data-lang="zh">Admin Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">按Oracle版本SKILL.md使用/home/linuxbrew/.linuxbrew/bin/python3.14初始化Admin Agent模式，部署对应v4.1.0注册或企业治理脚本，配置Web端口xxxx、Embedding URL xxx.xxx/v1与模型xxxxxxxxxxxx。启动后验证部署检查、Dashboard与Portal，生成Admin Token并通过受控渠道保存，不写入日志或版本库；同时备份加密config.json对应的master key。所有Agent必须注册认证后才能进入受管范围。</span><span data-lang="en">Follow the Oracle SKILL.md with /home/linuxbrew/.linuxbrew/bin/python3.14 to initialize Admin Agent mode, including the applicable v4.1.0 registration or Enterprise governance script. Configure web port xxxx, embedding URL xxx.xxx/v1, and model xxxxxxxxxxxx. Verify deployment check, Dashboard, and Portal; store the generated Admin Token and config master key through controlled channels, never in logs or source control. Every Agent must register and authenticate before entering the managed boundary.</span></pre></div>
+<div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Business Agent Mode</span><span data-lang="zh">Business Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">按Oracle版本SKILL.md使用/home/linuxbrew/.linuxbrew/bin/python3.14和scripts/agent_bootstrap.py register，将AGENT_XXX（名称“XXX Agent”）注册到http://xxx.xxx.xxx.xxx:xxxx，Admin Token为AT_xxx。安全保存agent_config.json与一次性恢复码，执行test验证独立End User连接；禁止回退到Schema Owner。进程或节点异常时使用agent_bootstrap.py recover恢复凭证，再从数据库重建会话、工作区与任务上下文；不得在日志中暴露Token或恢复码。</span><span data-lang="en">Follow the Oracle SKILL.md with /home/linuxbrew/.linuxbrew/bin/python3.14 and scripts/agent_bootstrap.py register to register AGENT_XXX ("XXX Agent") with http://xxx.xxx.xxx.xxx:xxxx using Admin Token AT_xxx. Secure agent_config.json and the one-time recovery codes, then run test to verify the independent End User connection; never fall back to the Schema Owner. After a process or node failure, use agent_bootstrap.py recover and rebuild session, workspace, and task context from the database. Never expose tokens or recovery codes in logs.</span></pre></div>
 </div>
+<div id="deploy-pg" class="deploy-tab" style="display:none">
+<div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Standalone Mode</span><span data-lang="zh">Standalone 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在AI-Agent-Infra-with-PG-Community-Edition（或Enterprise-Edition）中严格按SKILL.md初始化Standalone模式，全程使用/home/linuxbrew/.linuxbrew/bin/python3.14。目标服务器xxx.xxx.xxx.xxx，SSH用户xxx；准备PostgreSQL 18.3、pgvector、Apache AGE与pg_cron，使用密码或证书认证，不使用trust认证。通过psql按顺序部署SQL，社区版包含8_v4_1_0_registration.sql，企业版还包含8_v4_1_0_governance.sql。配置Embedding URL xxx.xxx/v1、模型xxxxxxxxxxxx和Web端口xxxx。启动后验证配置自动加密与0600权限，安全备份master key，不输出、记录或提交凭证。</span><span data-lang="en">In AI-Agent-Infra-with-PG-Community-Edition (or Enterprise-Edition), follow SKILL.md to initialize Standalone mode using /home/linuxbrew/.linuxbrew/bin/python3.14. Target xxx.xxx.xxx.xxx via SSH user xxx; prepare PostgreSQL 18.3, pgvector, Apache AGE, and pg_cron. Use password or certificate authentication, not trust. Run the SQL files with psql in order, including 8_v4_1_0_registration.sql for Community and 8_v4_1_0_governance.sql for Enterprise. Configure embedding URL xxx.xxx/v1, model xxxxxxxxxxxx, and web port xxxx. Verify config encryption and 0600 permissions, securely back up the master key, and never print, log, or commit credentials.</span></pre></div>
+<div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Admin Agent Mode</span><span data-lang="zh">Admin Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">按PostgreSQL版本SKILL.md使用/home/linuxbrew/.linuxbrew/bin/python3.14初始化Admin Agent模式，使用安全认证部署对应v4.1.0注册或企业治理脚本，配置Web端口xxxx、Embedding URL xxx.xxx/v1与模型xxxxxxxxxxxx。验证部署检查、Dashboard与Portal；通过受控渠道保存Admin Token和master key，所有Agent必须注册认证后进入受管范围。</span><span data-lang="en">Follow the PostgreSQL SKILL.md with /home/linuxbrew/.linuxbrew/bin/python3.14 to initialize Admin Agent mode using secure database authentication and the applicable v4.1.0 registration or Enterprise governance script. Configure web port xxxx, embedding URL xxx.xxx/v1, and model xxxxxxxxxxxx. Verify deployment check, Dashboard, and Portal; secure the Admin Token and master key through controlled channels. Every Agent must register and authenticate before entering the managed boundary.</span></pre></div>
+<div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Business Agent Mode</span><span data-lang="zh">Business Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">按PostgreSQL版本SKILL.md使用/home/linuxbrew/.linuxbrew/bin/python3.14和scripts/agent_bootstrap.py register注册AGENT_XXX到http://xxx.xxx.xxx.xxx:xxxx，Admin Token为AT_xxx。安全保存agent_config.json与一次性恢复码，执行test验证独立LOGIN角色及RLS身份；连接失败或身份不匹配必须关闭失败，禁止回退Schema Owner。异常后用recover恢复凭证并从数据库重建上下文，不在日志中暴露敏感信息。</span><span data-lang="en">Follow the PostgreSQL SKILL.md with /home/linuxbrew/.linuxbrew/bin/python3.14 and scripts/agent_bootstrap.py register to register AGENT_XXX with http://xxx.xxx.xxx.xxx:xxxx using AT_xxx. Secure agent_config.json and one-time recovery codes; run test to verify the dedicated LOGIN role and RLS identity. Connection or identity failures must fail closed with no Schema Owner fallback. After failure, recover credentials and rebuild context from the database without exposing secrets in logs.</span></pre></div>
 </div>
-</section>
-</div>
+<div id="deploy-yas" class="deploy-tab" style="display:none">
+<div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Standalone Mode</span><span data-lang="zh">Standalone 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">在AI-Agent-Infra-with-YashanDB-Community-Edition（或Enterprise-Edition）中严格按SKILL.md初始化Standalone模式，全程使用/home/linuxbrew/.linuxbrew/bin/python3.14和scripts/deploy_yashandb.py。数据库：IP xxx.xxx.xxx.xxx，端口xxxx，PDB服务名xxxxxx，Schema Owner用户名/密码xxxxxx/xxxxxx。社区版部署8_v4_1_0_registration.sql，企业版部署8_v4_1_0_governance.sql。配置Embedding URL xxx.xxx/v1、模型xxxxxxxxxxxx和Web端口xxxx。启动后验证yaspy、配置自动加密与0600权限，安全备份master key，不输出、记录或提交凭证。</span><span data-lang="en">In AI-Agent-Infra-with-YashanDB-Community-Edition (or Enterprise-Edition), follow SKILL.md to initialize Standalone mode using /home/linuxbrew/.linuxbrew/bin/python3.14 and scripts/deploy_yashandb.py. Database: host xxx.xxx.xxx.xxx, port xxxx, PDB service xxxxxx, Schema Owner xxxxxx/xxxxxx. Deploy 8_v4_1_0_registration.sql for Community or 8_v4_1_0_governance.sql for Enterprise. Configure embedding URL xxx.xxx/v1, model xxxxxxxxxxxx, and web port xxxx. Verify yaspy, config encryption, and 0600 permissions; securely back up the master key and never print, log, or commit credentials.</span></pre></div>
+<div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Admin Agent Mode</span><span data-lang="zh">Admin Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">按崖山数据库版本SKILL.md使用/home/linuxbrew/.linuxbrew/bin/python3.14初始化Admin Agent模式，部署对应v4.1.0注册或企业治理脚本，配置Web端口xxxx、Embedding URL xxx.xxx/v1与模型xxxxxxxxxxxx。验证部署检查、Dashboard与Portal；通过受控渠道保存Admin Token和master key，所有Agent必须注册认证后进入受管范围。</span><span data-lang="en">Follow the YashanDB SKILL.md with /home/linuxbrew/.linuxbrew/bin/python3.14 to initialize Admin Agent mode and deploy the applicable v4.1.0 registration or Enterprise governance script. Configure web port xxxx, embedding URL xxx.xxx/v1, and model xxxxxxxxxxxx. Verify deployment check, Dashboard, and Portal; secure the Admin Token and master key through controlled channels. Every Agent must register and authenticate before entering the managed boundary.</span></pre></div>
+<div class="deploy-card fade-in"><div class="deploy-mode"><span data-lang="en">Business Agent Mode</span><span data-lang="zh">Business Agent 模式</span></div><pre class="deploy-prompt"><span data-lang="zh">按崖山数据库版本SKILL.md使用/home/linuxbrew/.linuxbrew/bin/python3.14和scripts/agent_bootstrap.py register注册AGENT_XXX到http://xxx.xxx.xxx.xxx:xxxx，Admin Token为AT_xxx。安全保存agent_config.json与一次性恢复码，执行test验证独立End User连接；禁止回退Schema Owner。异常后用recover恢复凭证并从数据库重建上下文，不在日志中暴露Token或恢复码。</span><span data-lang="en">Follow the YashanDB SKILL.md with /home/linuxbrew/.linuxbrew/bin/python3.14 and scripts/agent_bootstrap.py register to register AGENT_XXX with http://xxx.xxx.xxx.xxx:xxxx using AT_xxx. Secure agent_config.json and one-time recovery codes, then run test to verify the independent End User connection; never fall back to the Schema Owner. After failure, recover credentials and rebuild context from the database without exposing tokens or recovery codes in logs.</span></pre></div>
 </div>
 </div>
 </div>
@@ -438,11 +447,11 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="section-label"><span data-lang="en">By the Numbers</span><span data-lang="zh">数据一览</span></div>
 <h2 class="section-title"><span data-lang="en">Infrastructure at a Glance</span><span data-lang="zh">基础设施一览</span></h2>
 <div class="stats-grid">
-<div class="stat-card fade-in"><div class="stat-number" data-target="80">0</div><div class="stat-label"><span data-lang="en">Schema Table Objects (Oracle: 59, PG: 80, YashanDB: 59)</span><span data-lang="zh">Schema表对象 (Oracle: 59, PG: 80, 崖山: 59)</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="108">0</div><div class="stat-label"><span data-lang="en">HTTP/Portal API Route Literals</span><span data-lang="zh">HTTP/Portal API 路由字面量</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="66">0</div><div class="stat-label"><span data-lang="en">Python Modules (60-66 per edition)</span><span data-lang="zh">Python模块 (每版本60-66个)</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="23103">0</div><div class="stat-label"><span data-lang="en">Python Lines (21,297-23,103 per edition)</span><span data-lang="zh">Python代码行 (每版本21,297-23,103行)</span></div></div>
-<div class="stat-card fade-in"><div class="stat-number" data-target="38">0</div><div class="stat-label"><span data-lang="en">Release-Gate Unit/Security Tests Passed</span><span data-lang="zh">发布门禁单元/安全测试通过</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="95">0</div><div class="stat-label"><span data-lang="en">Unique Schema Table Targets (Oracle/YashanDB: 60 COM / 72 ENT; PG: 83 COM / 95 ENT)</span><span data-lang="zh">唯一Schema建表目标（Oracle/崖山：社区版60 / 企业版72；PG：社区版83 / 企业版95）</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="131">0</div><div class="stat-label"><span data-lang="en">HTTP/Portal/AP Route Literals per Edition</span><span data-lang="zh">每版本HTTP/Portal/AP路由字面量</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="73">0</div><div class="stat-label"><span data-lang="en">Python Modules (65-73 per edition)</span><span data-lang="zh">Python模块（每版本65-73个）</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="26559">0</div><div class="stat-label"><span data-lang="en">Python Lines (23,332-26,559 per edition)</span><span data-lang="zh">Python代码行（每版本23,332-26,559行）</span></div></div>
+<div class="stat-card fade-in"><div class="stat-number" data-target="175">0</div><div class="stat-label"><span data-lang="en">Enterprise Package Tests Passed (Community: 163)</span><span data-lang="zh">企业版发布包测试通过（社区版：163项）</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="6">0</div><div class="stat-label"><span data-lang="en">Editions (2 Oracle + 2 PG + 2 YashanDB)</span><span data-lang="zh">版本 (2 Oracle + 2 PG + 2 崖山)</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="3">0</div><div class="stat-label"><span data-lang="en">Supported Databases</span><span data-lang="zh">支持数据库</span></div></div>
 <div class="stat-card fade-in"><div class="stat-number" data-target="30">0</div><div class="stat-label"><span data-lang="en">Offline Wheels (Oracle/PG: 30, YashanDB: 29)</span><span data-lang="zh">离线wheels (Oracle/PG: 30, 崖山: 29)</span></div></div>
@@ -525,6 +534,11 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="pain-desc"><span data-lang="en">Agents execute production deploys, external API calls, and schema migrations without human review. No approval gates for critical steps. No audit trail for decisions.</span><span data-lang="zh">Agent执行生产部署、外部API调用、Schema迁移时无人工审核，关键步骤无审批门控，决策无审计追踪。</span></div>
 <div class="pain-solve"><span data-lang="en">Human-in-the-Loop: 3-level approval (Step/Loop/Tool) with PAUSED state, unified APPROVAL_REQUESTS queue + web UI</span><span data-lang="zh">Human-in-the-Loop：三级审批(步骤/循环/工具) + PAUSED状态 + 统一APPROVAL_REQUESTS队列 + Web界面</span></div>
 </div>
+<div class="pain-card fade-in">
+<div class="pain-title"><span data-lang="en">Agent Process as a Single Point of Failure</span><span data-lang="zh">Agent进程成为单点故障</span></div>
+<div class="pain-desc"><span data-lang="en">When core context lives only in local files or process memory, a host failure can interrupt work and strand sessions, plans, and operating history.</span><span data-lang="zh">核心上下文仅存在本地文件或进程内存时，主机异常会中断工作，并使会话、计划与运行历史难以接续。</span></div>
+<div class="pain-solve"><span data-lang="en">Persisted Agent state + registered recovery workflow + database HA and backup</span><span data-lang="zh">Agent状态持久化 + 注册恢复流程 + 数据库高可用与备份</span></div>
+</div>
 </div>
 </div>
 </section>
@@ -547,6 +561,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="vs-row"><div class="aspect"><span data-lang="en">Access Control</span><span data-lang="zh">访问控制</span></div><div class="split"><span data-lang="en">File permissions only — no row-level, no audit trail</span><span data-lang="zh">仅文件权限——无行级控制、无审计</span></div><div class="fusion"><span data-lang="en">Per-agent-user row-level isolation (Data Grants / RLS), zero-trust, full audit log</span><span data-lang="zh">按Agent用户行级隔离 (Data Grants / RLS)、零信任、完整审计</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Schema Evolution</span><span data-lang="zh">Schema演进</span></div><div class="split"><span data-lang="en">Rewrite files, break compatibility, manual migration</span><span data-lang="zh">重写文件，破坏兼容性，手动迁移</span></div><div class="fusion"><span data-lang="en">DDL migration, atomic update, backward compatible</span><span data-lang="zh">DDL迁移、原子更新、向后兼容</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Scalability</span><span data-lang="zh">可扩展性</span></div><div class="split"><span data-lang="en">Linear scan, O(n) search, degrades with volume</span><span data-lang="zh">线性扫描，O(n)检索，随数据量退化</span></div><div class="fusion"><span data-lang="en">B-tree/vector indexes, partition pruning, O(log n)</span><span data-lang="zh">B树/向量索引、分区裁剪、O(log n)</span></div></div>
+<div class="vs-row"><div class="aspect"><span data-lang="en">Failure Recovery</span><span data-lang="zh">故障恢复</span></div><div class="split"><span data-lang="en">Local files and in-process state can strand context on a failed host</span><span data-lang="zh">本地文件与进程状态可能随故障主机一起失联</span></div><div class="fusion"><span data-lang="en">A replacement Agent can re-register or recover credentials, then rebuild managed context from database state</span><span data-lang="zh">替代Agent可重新注册或恢复凭证，再从数据库状态重建受管上下文</span></div></div>
 <div class="vs-footer">
 <div class="label-col"></div>
 <div class="split-col red"><span data-lang="en">Files = isolation + fragility + opacity</span><span data-lang="zh">文件 = 隔离 + 脆弱 + 不透明</span></div>
@@ -615,6 +630,11 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="cap-desc"><span data-lang="en">Physical row migration across partitions on status change</span><span data-lang="zh">状态变更时物理行在分区间迁移</span></div>
 <div class="cap-tech">ENABLE ROW MOVEMENT</div>
 </div>
+<div class="cap-card fade-in">
+<div class="cap-title"><span data-lang="en">High Availability &amp; Backup</span><span data-lang="zh">高可用与备份恢复</span></div><span class="cap-badge required"><span data-lang="en">Production Requirement</span><span data-lang="zh">生产要求</span></span>
+<div class="cap-desc"><span data-lang="en">Protect persisted Agent state with the selected database's replication or clustering, failover, backup/restore, and point-in-time recovery capabilities.</span><span data-lang="zh">使用所选数据库的主备或集群、故障转移、备份恢复与时间点恢复能力保护持久化的Agent核心状态。</span></div>
+<div class="cap-tech">Replication &middot; Failover &middot; Backup/Restore &middot; PITR</div>
+</div>
 </div>
 </div>
 </section>
@@ -634,8 +654,9 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="vs-row"><div class="aspect"><span data-lang="en">Access Control</span><span data-lang="zh">访问控制</span></div><div class="fusion"><span data-lang="en">Row-level isolation per agent user, unified policy</span><span data-lang="zh">按Agent用户行级隔离，统一策略</span></div><div class="split"><span data-lang="en">Per-system auth, no unified row-level control</span><span data-lang="zh">每系统独立认证，无统一行级控制</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Schema Evolution</span><span data-lang="zh">Schema演进</span></div><div class="fusion"><span data-lang="en">DDL atomic update, single migration</span><span data-lang="zh">DDL原子更新，一次迁移</span></div><div class="split"><span data-lang="en">Coordinated migration across 5+ systems</span><span data-lang="zh">5+系统协调迁移</span></div></div>
 <div class="vs-row"><div class="aspect"><span data-lang="en">Deployment</span><span data-lang="zh">部署</span></div><div class="fusion"><span data-lang="en">1 database, 1 backup, 1 monitoring stack</span><span data-lang="zh">1个数据库，1套备份，1套监控</span></div><div class="split"><span data-lang="en">5+ services, 5+ backups, 5+ monitoring</span><span data-lang="zh">5+服务，5+备份，5+监控</span></div></div>
-<div class="vs-row"><div class="aspect"><span data-lang="en">Token Cost</span><span data-lang="zh">Token消耗</span></div><div class="fusion"><span data-lang="en">Top-3 retrieval, 94.76% less prompt input in the reproducible benchmark</span><span data-lang="zh">Top-3检索，可复现基准中输入Token减少94.76%</span></div><div class="split"><span data-lang="en">Multiple round-trips, context pollution</span><span data-lang="zh">多次往返，上下文污染</span></div></div>
+<div class="vs-row"><div class="aspect"><span data-lang="en">Token Cost</span><span data-lang="zh">Token消耗</span></div><div class="fusion"><span data-lang="en">Top-3 retrieval, 95.27% less prompt input in the reproducible benchmark</span><span data-lang="zh">Top-3检索，可复现基准中输入Token减少95.27%</span></div><div class="split"><span data-lang="en">Multiple round-trips, context pollution</span><span data-lang="zh">多次往返，上下文污染</span></div></div>
  <div class="vs-row"><div class="aspect"><span data-lang="en">Encryption</span><span data-lang="zh">加密</span></div><div class="fusion"><span data-lang="en">Database-native encryption, master key mgmt</span><span data-lang="zh">数据库原生加密，主密钥管理</span></div><div class="split"><span data-lang="en">Each system manages its own encryption</span><span data-lang="zh">各系统独立管理加密</span></div></div>
+<div class="vs-row"><div class="aspect"><span data-lang="en">Recovery &amp; Continuity</span><span data-lang="zh">恢复与连续性</span></div><div class="fusion"><span data-lang="en">One durable state foundation; replacement Agents rebuild context, while database HA and backup protect the state tier</span><span data-lang="zh">统一持久状态底座；替代Agent重建上下文，数据库高可用与备份保护状态层</span></div><div class="split"><span data-lang="en">Recovery must be coordinated across 5+ state systems with different consistency and backup points</span><span data-lang="zh">需跨5+状态系统协调恢复，各系统一致性与备份时间点不同</span></div></div>
 <div class="vs-footer">
 <div class="label-col"></div>
 <div class="fusion-col"><span data-lang="en">1 kernel · 1 deployment · unified model</span><span data-lang="zh">1个内核 · 1次部署 · 统一模型</span></div>
@@ -646,24 +667,33 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 </section>
 <section id="architecture">
 <div class="container">
-<div class="section-label"><span data-lang="en">3-Layer Design</span><span data-lang="zh">三层设计</span></div>
+<div class="section-label"><span data-lang="en">4-Layer Design</span><span data-lang="zh">四层设计</span></div>
 <h2 class="section-title"><span data-lang="en">Architecture</span><span data-lang="zh">架构</span></h2>
 <div class="arch-layers">
 <div class="arch-layer fade-in">
-<div class="layer-label"><span data-lang="en">Visualization Layer</span><span data-lang="zh">可视化层</span></div>
-<div class="layer-title"><span data-lang="en">Portal (user) + Dashboard (admin)</span><span data-lang="zh">Portal(用户) + Dashboard(管理)</span></div>
+<div class="layer-label"><span data-lang="en">Experience &amp; Access Layer</span><span data-lang="zh">体验与接入层</span></div>
+<div class="layer-title"><span data-lang="en">Portal (user) + Dashboard (admin) + SKILL.md / HTTP / MCP / CLI</span><span data-lang="zh">Portal（用户）+ Dashboard（管理）+ SKILL.md / HTTP / MCP / CLI</span></div>
 <div class="layer-tech">server.py &middot; templates/ &middot; static/</div>
 </div>
 <div class="arch-layer fade-in">
-<div class="layer-label"><span data-lang="en">API Layer</span><span data-lang="zh">API 层</span></div>
-<div class="layer-title"><span data-lang="en">32 Community / 37 Enterprise library modules &middot; 495-555 Python callables</span><span data-lang="zh">社区版32/企业版37个库模块 &middot; 495-555个Python可调用对象</span></div>
-<div class="layer-tech">memory_api &middot; knowledge_api &middot; agent_api &middot; ...</div>
+<div class="layer-label"><span data-lang="en">Management &amp; Governance Layer</span><span data-lang="zh">管理与治理层</span></div>
+<div class="layer-title"><span data-lang="en">Registered identity, lifecycle, scheduling, policy decisions, approvals, emergency control, and audit evidence</span><span data-lang="zh">注册身份、生命周期、调度、策略决策、多人审批、应急控制与审计证据</span></div>
+<div class="layer-tech">agent_api &middot; governance_api &middot; task_plan_api &middot; loop_api &middot; audit</div>
 </div>
 <div class="arch-layer fade-in">
 <div class="layer-label"><span data-lang="en">Database Layer</span><span data-lang="zh">数据库层</span></div>
-<div class="layer-title"><span data-lang="en">59 Oracle &middot; 80 PostgreSQL &middot; 59 YashanDB schema table objects</span><span data-lang="zh">Oracle 59 &middot; PostgreSQL 80 &middot; 崖山59个Schema表对象</span></div>
-<div class="layer-tech">Partitioning &middot; JSON &middot; Graph &middot; Vector &middot; Fulltext</div>
+<div class="layer-title"><span data-lang="en">Durable Agent state: 60/72 Oracle and YashanDB, 83/95 PostgreSQL unique Community/Enterprise table targets</span><span data-lang="zh">Agent持久状态：Oracle与崖山社区版/企业版60/72个、PostgreSQL 83/95个唯一建表目标</span></div>
+<div class="layer-tech">Memory &middot; Knowledge &middot; Workspace &middot; Session &middot; Task &middot; Loop &middot; Identity &middot; Evidence</div>
 </div>
+<div class="arch-layer fade-in">
+<div class="layer-label"><span data-lang="en">Resilience &amp; Recovery Layer</span><span data-lang="zh">韧性与恢复层</span></div>
+<div class="layer-title"><span data-lang="en">Agent re-registration/recovery + database replication or clustering + failover + backup/restore + point-in-time recovery</span><span data-lang="zh">Agent重新注册/恢复 + 数据库主备或集群 + 故障转移 + 备份恢复 + 时间点恢复</span></div>
+<div class="layer-tech">Availability, RPO, and RTO inherit the database architecture actually deployed</div>
+</div>
+</div>
+<div class="arch-note fade-in" style="margin-top:24px">
+<div class="arch-note-title"><span data-lang="en">Recovery Boundary</span><span data-lang="zh">恢复边界</span></div>
+<div class="arch-note-desc"><span data-lang="en">The Agent is not completely stateless. Back up the local master key, encrypted config, agent_config.json, and one-time recovery codes through controlled channels. Persisted tasks can be retried, but external side effects depend on each integration and are not automatically guaranteed exactly once.</span><span data-lang="zh">Agent并非完全无状态。本地主密钥、加密配置、agent_config.json与一次性恢复码仍需通过受控渠道备份。持久任务可以重试，但外部副作用取决于各集成端，平台不自动承诺恰好执行一次。</span></div>
 </div>
 </div>
 </section>
@@ -682,6 +712,31 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-agent"/></svg></div>
 <div class="feature-title"><span data-lang="en">Agent Management</span><span data-lang="zh">Agent管理</span></div>
 <div class="feature-desc"><span data-lang="en">Elastic pool management, session lifecycle, encrypted credentials, collaboration groups</span><span data-lang="zh">弹性池化管理、会话生命周期、凭证加密、协作组</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(29,214,246,.35)">
+<div class="feature-icon"><svg aria-hidden="true"><use href="#icon-key"/></svg></div>
+<div class="feature-title"><span data-lang="en">Registered Agent Identity</span><span data-lang="zh">注册Agent身份</span></div>
+<div class="feature-desc"><span data-lang="en">Every external or platform-hosted Agent registers and authenticates before entering the managed boundary, with stable identity, credential digest, heartbeat, status, disable, revoke, expiry, and administrator import.</span><span data-lang="zh">所有外部或平台内Agent进入受管边界前必须注册并认证，具备稳定身份、凭证摘要、心跳、状态、禁用、撤销、过期与管理员导入能力。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(29,214,246,.35)">
+<div class="feature-icon"><svg aria-hidden="true"><use href="#icon-shield"/></svg></div>
+<div class="feature-title"><span data-lang="en">Enterprise Governance</span><span data-lang="zh">企业治理</span></div>
+<div class="feature-desc"><span data-lang="en">Resource catalog for database data, APIs, Skills, Tools, knowledge, workspaces, and extracts; versioned policy decisions, bounded grants, N-of-M approvals with separation of duties, mandatory reasons, risk-based audit, retention, legal hold, and scoped evidence export.</span><span data-lang="zh">覆盖数据库数据、API、技能、工具、知识、工作区与数据转储的资源目录；版本化策略决策、有限授权、职责分离的N-of-M多人审批、原因必填、风险型审计、留存、法律保全与范围化证据导出。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(29,214,246,.35)">
+<div class="feature-icon"><svg aria-hidden="true"><use href="#icon-database"/></svg></div>
+<div class="feature-title"><span data-lang="en">Agent Recovery &amp; Continuity</span><span data-lang="zh">Agent恢复与连续性</span></div>
+<div class="feature-desc"><span data-lang="en">Core Agent state persists in the database. Replacement instances can re-register or recover credentials and rebuild context; production deployments protect that state with database HA, failover, backup/restore, and point-in-time recovery.</span><span data-lang="zh">Agent核心状态持久化在数据库中。替代实例可重新注册或恢复凭证并重建上下文；生产部署再以数据库高可用、故障转移、备份恢复与时间点恢复保护状态。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(29,214,246,.35)">
+<div class="feature-icon"><svg aria-hidden="true"><use href="#icon-tool"/></svg></div>
+<div class="feature-title"><span data-lang="en">Emergency Control (Enterprise)</span><span data-lang="zh">应急控制（企业版）</span></div>
+<div class="feature-desc"><span data-lang="en">Persisted, retryable steps can disable an Agent, revoke grants, terminate sessions, release pool allocations, cancel tasks, and enforce credential-rotation boundaries. Partial failures remain visible and retryable instead of being reported as complete.</span><span data-lang="zh">持久、可重试的步骤可禁用Agent、撤销授权、终止会话、释放池分配、取消任务并执行凭证轮换边界。部分失败会保持可见和可重试，不会被错误标记为已完成。</span></div>
+</div>
+<div class="feature-card fade-in" style="border-color:rgba(29,214,246,.35)">
+<div class="feature-icon"><svg aria-hidden="true"><use href="#icon-file"/></svg></div>
+<div class="feature-title"><span data-lang="en">Audit Evidence (Enterprise)</span><span data-lang="zh">审计证据（企业版）</span></div>
+<div class="feature-desc"><span data-lang="en">Risk-based auditing defaults to metadata and decision evidence. Limited detail uses payload hashes and encrypted references; retention, legal hold, scoped export, and integrity manifests preserve reviewability without indiscriminate full-content logging.</span><span data-lang="zh">风险型审计默认记录元数据与决策证据；有限详情使用载荷哈希和加密引用，并通过留存、法律保全、范围化导出与完整性清单保持可复核，避免无差别记录全部正文。</span></div>
 </div>
 <div class="feature-card fade-in">
 <div class="feature-icon"><svg aria-hidden="true"><use href="#icon-key"/></svg></div>
@@ -786,6 +841,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="feature-desc"><span data-lang="en">30+ graph functions across 8 domains: knowledge causal, agent collaboration (group-scoped dynamic trust), task orchestration, skill dependency, approval propagation, data lineage, memory evolution, loop iteration. 23 edge types.</span><span data-lang="zh">8个领域30+图函数：知识因果、Agent协作(组内动态信任)、任务编排、Skill依赖、审批传播、数据血缘、记忆演化、Loop迭代。23种边类型。</span></div>
 </div>
 </div>
+</div>
 </section>
 
 <section id="slogan">
@@ -817,8 +873,9 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <h3 style="color:var(--green);margin-bottom:16px;font-size:1.3rem"><span data-lang="en">Operable</span><span data-lang="zh">可运维</span></h3>
 <div style="color:var(--secondary);font-size:.9rem;line-height:1.8">
 <p><span data-lang="en"><strong>Offline Deployment:</strong> vendor/ contains 30 cp314 wheels for Oracle/PostgreSQL and 29 plus native client libraries for YashanDB; install_offline.sh and verify_deps.py support air-gapped installation without public PyPI.</span><span data-lang="zh"><strong>离线部署：</strong>Oracle/PostgreSQL包内含30个cp314 wheels，YashanDB包内含29个wheels及原生客户端库；install_offline.sh与verify_deps.py支持不访问公共PyPI的离线安装。</span></p>
-<p><span data-lang="en"><strong>Pure-Python Deploy:</strong> deploy_oracle.py replaces SQLcl (125MB+Java) with a state-machine SQL parser handling PROMPT/DEFINE/&&// syntax.</span><span data-lang="zh"><strong>纯Python部署：</strong>deploy_oracle.py替代SQLcl(125MB+Java)，状态机解析PROMPT/DEFINE/&&//语法。</span></p>
-<p><span data-lang="en"><strong>Recovery & Resiliency:</strong> Per-Agent recovery codes (8 one-time codes, SHA-256 hashed), admin-triggered credential recovery with dead-agent detection, connection lifecycle management with forced disconnect.</span><span data-lang="zh"><strong>恢复与韧性：</strong>每Agent恢复码(8个一次性码，SHA-256哈希)，Admin触发的凭证恢复及Agent死锁检测，连接生命周期管理与强制断开。</span></p>
+<p><span data-lang="en"><strong>Pure-Python Deploy:</strong> deploy_oracle.py replaces SQLcl (125MB+Java) with a state-machine SQL parser handling PROMPT/DEFINE/&amp;&amp;// syntax.</span><span data-lang="zh"><strong>纯Python部署：</strong>deploy_oracle.py替代SQLcl(125MB+Java)，状态机解析PROMPT/DEFINE/&amp;&amp;//语法。</span></p>
+<p><span data-lang="en"><strong>Agent Recovery:</strong> Memory, knowledge, workspaces, session chains, task plans, loop state, registered identity, and governance evidence persist in the database. One-time recovery codes and re-registration let replacement instances restore credentials and rebuild managed context after a process or node failure.</span><span data-lang="zh"><strong>Agent恢复：</strong>记忆、知识、工作区、会话链、任务计划、循环状态、注册身份与治理证据持久化在数据库中。进程或节点异常后，替代实例可通过一次性恢复码或重新注册恢复凭证，并重建受管上下文。</span></p>
+<p><span data-lang="en"><strong>Database Continuity:</strong> Production deployments use the selected database's mature replication or clustering, failover, backup/restore, and point-in-time recovery. Availability, RPO, and RTO depend on the architecture and drills actually implemented; local master keys, encrypted config, agent_config.json, and recovery codes still require controlled backup.</span><span data-lang="zh"><strong>数据库连续性：</strong>生产部署使用所选数据库成熟的主备或集群、故障转移、备份恢复与时间点恢复能力。可用性、RPO与RTO取决于实际架构和演练；本地主密钥、加密配置、agent_config.json与恢复码仍需受控备份。</span></p>
 </div>
 </div>
 </div>
@@ -973,7 +1030,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 </div>
 <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px">
 <div style="font-size:1rem;font-weight:700;margin-bottom:8px"><span data-lang="en">Single-SQL Cross-Modal Query</span><span data-lang="zh">单语句跨模查询</span></div>
-<div style="color:var(--secondary);font-size:.9rem;line-height:1.7"><span data-lang="en">unified_sql fuses 5 signals in one database call. The v4.0.1 reproducible prompt benchmark measured 94.76% less input with Top-3 retrieval; this is not a latency or answer-quality claim.</span><span data-lang="zh">unified_sql策略以单次数据库调用融合5种信号。v4.0.1可复现Prompt基准测得Top-3检索输入Token减少94.76%；该数字不代表延迟或答案质量。</span></div>
+<div style="color:var(--secondary);font-size:.9rem;line-height:1.7"><span data-lang="en">unified_sql fuses 5 signals in one database call. The v4.1.0 reproducible prompt benchmark measured 95.27% less input with Top-3 retrieval; this is not a latency or answer-quality claim.</span><span data-lang="zh">unified_sql策略以单次数据库调用融合5种信号。v4.1.0可复现Prompt基准测得Top-3检索输入Token减少95.27%；该数字不代表延迟或答案质量。</span></div>
 </div>
 </div>
 </div>
@@ -1046,7 +1103,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="container">
 <div class="section-label"><span data-lang="en">Cost Optimization</span><span data-lang="zh">成本优化</span></div>
 <h2 class="section-title"><span data-lang="en">Token Efficiency by Design</span><span data-lang="zh">降低Token消耗的设计哲学</span></h2>
-<p class="section-desc"><span data-lang="en">In the v4.0.1 reproducible benchmark, SQLite FTS5 Top-3 retrieval used 94.76% fewer cl100k_base prompt-input tokens than loading five complete documentation files. This narrow measurement does not claim latency or answer-quality gains.</span><span data-lang="zh">v4.0.1可复现基准中，SQLite FTS5 Top-3检索相比加载5份完整文档减少94.76%的cl100k_base输入Token。该测量不代表延迟或答案质量提升。</span></p>
+<p class="section-desc"><span data-lang="en">In the v4.1.0 reproducible benchmark, SQLite FTS5 Top-3 retrieval used 95.27% fewer cl100k_base prompt-input tokens than loading five complete documentation files. This narrow measurement does not claim latency or answer-quality gains.</span><span data-lang="zh">v4.1.0可复现基准中，SQLite FTS5 Top-3检索相比加载5份完整文档减少95.27%的cl100k_base输入Token。该测量不代表延迟或答案质量提升。</span></p>
 <div style="display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px">
 <div class="feature-card fade-in" style="border-color:rgba(79,142,247,.3);display:flex;gap:20px;align-items:flex-start;padding:24px">
 <div class="feature-icon" style="flex-shrink:0"><svg aria-hidden="true"><use href="#icon-search"/></svg></div>
@@ -1065,7 +1122,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="feature-card fade-in" style="border-color:rgba(0,212,170,.3);display:flex;gap:20px;align-items:flex-start;padding:24px">
 <div class="feature-icon" style="color:var(--green);flex-shrink:0"><svg aria-hidden="true"><use href="#icon-tool"/></svg></div>
 <div style="flex:1">
-<div class="feature-title"><span data-lang="en">Knowledge Extraction & Consolidation</span><span data-lang="zh">知识提取与整合</span></div>
+<div class="feature-title"><span data-lang="en">Knowledge Extraction &amp; Consolidation</span><span data-lang="zh">知识提取与整合</span></div>
 <div class="feature-desc"><span data-lang="en">Auto-extract knowledge from memory clusters via EXTRACTED_FROM edges. The system periodically consolidates multiple related memories into a single knowledge entity — reducing future context requirements by orders of magnitude. Context branching avoids redundant re-processing of unchanged data across sessions.</span><span data-lang="zh">通过EXTRACTED_FROM边从记忆簇中自动提取知识。系统定期将多条相关联记忆整合为单一知识实体——将未来的上下文需求降低数个数量级。上下文分支避免跨会话对未变更数据的重复处理。</span></div>
 </div>
 </div>
@@ -1090,6 +1147,9 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="ent-col"><span data-lang="en">Enterprise Edition</span><span data-lang="zh">企业版</span><span class="sub">BSL 1.1</span></div>
 </div>
 <div class="compare-row"><div class="feat-col"><span data-lang="en">Core Features (Memory, Knowledge, Graph, Search)</span><span data-lang="zh">核心功能（记忆、知识、图谱、搜索）</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">Registered Agent Identity &amp; Lifecycle</span><span data-lang="zh">注册Agent身份与生命周期</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">Agent State Recovery</span><span data-lang="zh">Agent状态恢复</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">Unified Chuanxu 17-Page UI</span><span data-lang="zh">统一川序17页界面</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
 <div class="compare-row"><div class="feat-col"><span data-lang="en">Loop Engineering</span><span data-lang="zh">循环工程</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
 <div class="compare-row"><div class="feat-col"><span data-lang="en">Admin/Agent Separation</span><span data-lang="zh">Admin/Agent分离</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
 <div class="compare-row"><div class="feat-col"><span data-lang="en">5-Signal Hybrid Search</span><span data-lang="zh">5信号混合搜索</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
@@ -1107,7 +1167,13 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="compare-row"><div class="feat-col"><span data-lang="en">Tool Ecosystem (OpenAPI + Registry)</span><span data-lang="zh">工具生态(OpenAPI+注册中心)</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
 <div class="compare-row"><div class="feat-col"><span data-lang="en">MCP Server + SSE Streaming</span><span data-lang="zh">MCP Server + SSE流式</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
 <div class="compare-row"><div class="feat-col"><span data-lang="en">Agent Protocol + Model Routing</span><span data-lang="zh">Agent Protocol + 模型路由</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
-<div class="compare-row"><div class="feat-col"><span data-lang="en">Human-in-the-Loop Approval</span><span data-lang="zh">人工审批</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">Runtime Human-in-the-Loop (Step/Loop/Tool)</span><span data-lang="zh">运行时人工审批（步骤/循环/工具）</span></div><div class="com-col"><span class="has">&#10003;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">Resource Catalog + Versioned Policy Decisions</span><span data-lang="zh">资源目录 + 版本化策略决策</span></div><div class="com-col"><span class="no">&#8212;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">Bounded Grants with Expiry/Revocation</span><span data-lang="zh">支持到期/撤销的有限授权</span></div><div class="com-col"><span class="no">&#8212;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">N-of-M Governance Approval + Separation of Duties</span><span data-lang="zh">N-of-M治理审批 + 职责分离</span></div><div class="com-col"><span class="no">&#8212;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">Retryable Emergency Control</span><span data-lang="zh">可重试应急控制</span></div><div class="com-col"><span class="no">&#8212;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">Risk-Based Audit + Scoped Evidence Export</span><span data-lang="zh">风险型审计 + 范围化证据导出</span></div><div class="com-col"><span class="no">&#8212;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
+<div class="compare-row"><div class="feat-col"><span data-lang="en">Retention Policies + Legal Hold</span><span data-lang="zh">留存策略 + 法律保全</span></div><div class="com-col"><span class="no">&#8212;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
 <div class="compare-row"><div class="feat-col"><span data-lang="en">LDAP Auth</span><span data-lang="zh">LDAP认证</span></div><div class="com-col"><span class="no">&#8212;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
 <div class="compare-row"><div class="feat-col"><span data-lang="en">Skill Token API</span><span data-lang="zh">Skill Token API</span></div><div class="com-col"><span class="no">&#8212;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
 <div class="compare-row"><div class="feat-col"><span data-lang="en">Workspace Context Audit</span><span data-lang="zh">工作区上下文审计</span></div><div class="com-col"><span class="no">&#8212;</span></div><div class="ent-col"><span class="has-ent">&#10003;</span></div></div>
@@ -1122,7 +1188,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="section-label"><span data-lang="en">Database Support</span><span data-lang="zh">数据库支持</span></div>
 <h2 class="section-title"><span data-lang="en">Multi-Database Support</span><span data-lang="zh">多数据库支持</span></h2>
 <div class="db-support fade-in">
-<p><span data-lang="en">Validated by v4.0.1 live capability probes on Oracle AI Database 26ai, PostgreSQL 18.3, and YashanDB 23.5.4+. Powered by OpenSpec for spec-driven development. We are also adapting other databases &mdash; database vendors are welcome to contribute adapters that meet the capability requirements above.</span><span data-lang="zh">v4.0.1已在Oracle AI Database 26ai、PostgreSQL 18.3与YashanDB 23.5.4+通过实时能力验证。采用 OpenSpec 规格驱动开发。我们也在适配其他数据库&mdash;&mdash;欢迎广大数据库产品在满足上述能力需求的基础上提供适配。</span></p>
+<p><span data-lang="en">Validated by v4.1.0 live capability probes on Oracle AI Database 26ai, PostgreSQL 18.3, and YashanDB 23.5.4+. Powered by OpenSpec for spec-driven development. We are also adapting other databases &mdash; database vendors are welcome to contribute adapters that meet the capability requirements above.</span><span data-lang="zh">v4.1.0已在Oracle AI Database 26ai、PostgreSQL 18.3与YashanDB 23.5.4+通过实时能力验证。采用OpenSpec规格驱动开发。我们也在适配其他数据库&mdash;&mdash;欢迎数据库厂商提供满足上述能力要求的适配。</span></p>
 <div class="db-badges">
 <span class="db-badge active">Oracle &middot; Active</span>
 <span class="db-badge active">PostgreSQL &middot; Active</span>
@@ -1131,20 +1197,21 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 </div>
 </div>
 <div class="arch-note fade-in" style="margin-top:32px">
+<div class="arch-note-title"><span data-lang="en">Database High Availability Is a Deployment Architecture</span><span data-lang="zh">数据库高可用属于部署架构</span></div>
+<div class="arch-note-desc"><span data-lang="en">All three editions persist the same categories of core Agent state, but database HA is not silently configured by the application. Production deployments must select and validate the database product's supported replication or clustering, automatic or manual failover, backup/restore, and point-in-time recovery design. Platform availability, RPO, and RTO inherit that actual architecture and its operating procedures.</span><span data-lang="zh">三个数据库版本均持久化同类Agent核心状态，但应用不会自动配置数据库高可用。生产部署必须根据所选数据库，设计并验证其支持的主备或集群、自动或手动故障转移、备份恢复与时间点恢复方案。平台可用性、RPO与RTO继承实际数据库架构及其运维流程。</span></div>
+<div class="arch-note-tech">Architecture Review &middot; Failover Drill &middot; Backup Verification &middot; Recovery Drill &middot; RPO/RTO</div>
+</div>
+<div class="arch-note fade-in" style="margin-top:24px">
 <div class="arch-note-title"><span data-lang="en">PostgreSQL Implementation Notes</span><span data-lang="zh">PostgreSQL 实现说明</span></div>
 <div class="arch-note-desc"><span data-lang="en">The PostgreSQL edition achieves full feature parity using equivalent native capabilities: Row Security Policies (RLS) replace Oracle Data Grants for per-agent row-level isolation; PL/Python3u replaces UTL_HTTP for outbound HTTP calls; pg_cron replaces DBMS_SCHEDULER for scheduled jobs; pgvector replaces Oracle VECTOR for similarity search; tsvector/tsquery replaces Oracle Text for full-text search; Apache AGE replaces Oracle Property Graph for SQL/PGQ graph traversal.</span><span data-lang="zh">PostgreSQL 版本使用等效原生能力实现完全功能对等：Row Security Policies (RLS) 替代 Oracle Data Grants 实现按Agent行级隔离；PL/Python3u 替代 UTL_HTTP 实现出站HTTP调用；pg_cron 替代 DBMS_SCHEDULER 实现定时作业；pgvector 替代 Oracle VECTOR 实现相似度搜索；tsvector/tsquery 替代 Oracle Text 实现全文搜索；Apache AGE 替代 Oracle Property Graph 实现 SQL/PGQ 图遍历。</span></div>
 <div class="arch-note-tech">RLS &middot; PL/Python3u &middot; pg_cron &middot; pgvector &middot; tsvector &middot; Apache AGE</div>
 </div>
-</div>
-</div>
-
 <div class="arch-note fade-in" style="margin-top:24px;border-color:rgba(0,102,204,.2);background:rgba(0,102,204,.04)">
 <div class="arch-note-title" style="color:#0066cc"><span data-lang="en">YashanDB Implementation Notes</span><span data-lang="zh">崖山数据库实现说明</span></div>
 <div class="arch-note-desc"><span data-lang="en">The YashanDB edition achieves equivalent external behavior with YashanDB 23.5.4+ capabilities: Role-Based Access Control (GRANT/REVOKE + DEFINER packages) provides isolation; yaspy provides Python connectivity; SEARCH INDEX implements full-text search; VECTOR with HNSW implements similarity search; the property-graph schema is retained while runtime traversal and graph algorithms use the shared relational edge model because GRAPH_TABLE is unavailable; DBMS_SCHEDULER handles jobs; LIST partitioning is used without reference partitioning; native JSON conversion handles structured values; and the built-in crypto package protects database-held secrets.</span><span data-lang="zh">崖山数据库版本基于YashanDB 23.5.4+实现等价外部行为：角色权限控制（GRANT/REVOKE + DEFINER包）提供隔离；yaspy负责Python连接；SEARCH INDEX实现全文检索；VECTOR与HNSW实现相似度搜索；保留属性图Schema，但因不支持GRAPH_TABLE，运行时遍历和图算法使用共享关系边模型；DBMS_SCHEDULER处理调度作业；使用LIST分区且不依赖引用分区；原生JSON转换处理结构化值；内置加密包保护数据库内敏感数据。</span></div>
 <div class="arch-note-tech" style="color:#0066cc">yaspy &middot; Role-Based Access Control &middot; SEARCH INDEX &middot; VECTOR + HNSW &middot; Relational Graph Traversal &middot; DBMS_SCHEDULER</div>
 </div>
 </div>
-
 </section>
 
 <section id="timeline">
@@ -1152,6 +1219,10 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="section-label"><span data-lang="en">Version History</span><span data-lang="zh">版本历史</span></div>
 <h2 class="section-title"><span data-lang="en">Evolution Timeline</span><span data-lang="zh">版本演进</span></h2>
 <div class="timeline-list">
+<div class="tl-item fade-in">
+<div class="tl-version"><div class="ver">v4.1.0</div><div class="date">2026-07-24</div></div>
+<div class="tl-desc"><span data-lang="en">Governance release: registered-Agent admission and lifecycle; database, API, Skill, Tool, knowledge, workspace, and data-extract policy decisions; bounded grants; N-of-M approvals with separation of duties; risk-based audit, retention, legal hold, and scoped evidence export; retryable emergency controls; and a unified Chuanxu UI across 17 product pages. Core Agent state remains in the database so replacement instances can recover managed context, while production continuity inherits the deployed database HA and backup architecture. Release evidence: 6 clean deployments, 3 live database contracts with 51 governance checks each, 42 focused UI/governance checks, 163 Community or 175 Enterprise package tests per edition, and 18/18 operating modes validated.</span><span data-lang="zh">治理版本：注册Agent准入与生命周期；数据库、API、技能、工具、知识、工作区与数据转储策略决策；有限授权；支持职责分离的N-of-M多人审批；风险型审计、留存、法律保全与范围化证据导出；可重试应急控制；17个产品页面统一川序UI。Agent核心状态保存在数据库中，替代实例可恢复受管上下文，生产连续性则继承实际部署的数据库高可用与备份架构。发布证据：6次清洁部署，3个数据库实时契约各完成51项治理检查，42项专项界面/治理检查，每个社区版163项或企业版175项发布包测试，以及18/18运行模式验证通过。</span></div>
+</div>
 <div class="tl-item fade-in">
 <div class="tl-version"><div class="ver">v4.0.1</div><div class="date">2026-07-22</div></div>
 <div class="tl-desc"><span data-lang="en">Security hardening: fail-closed Business Agent identities; AES-256-GCM protection for database, LLM, routing, and session-signing secrets; owner-only runtime configuration; durable execution jobs; lossless Skill packages; and strict edition boundaries. Final regression: 141 passing tests in each of 6 packages, all 3 live database contracts passed explicitly, and 18/18 operating modes validated.</span><span data-lang="zh">安全加固：Business Agent独立身份且禁止回退；数据库、LLM、模型路由与会话签名密钥均使用AES-256-GCM保护；运行配置仅所有者可读写；持久执行任务；无损Skill包；严格版本边界。最终回归：6个发布包各141项测试通过，3个数据库实时契约均显式通过，18/18运行模式验证通过。</span></div>
@@ -1168,9 +1239,9 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 <div class="tl-version"><div class="ver">v3.10.2</div><div class="date">2026-07-16</div></div>
 <div class="tl-desc"><span data-lang="en">Enterprise encryption enhancement - per-Agent independent crypto keys (DB storage + admin_token distribution), config.json auto-encryption on startup (database + LLM + model_routing), key rotation API, encrypt_config.py CLI tool, Portal Markdown rendering.</span><span data-lang="zh">企业加密增强 - 每Agent独立密钥(DB存储+admin_token分发)、config.json启动时自动加密(database+llm+model_routing)、密钥轮换API、encrypt_config.py CLI工具、Portal Markdown渲染。</span></div>
 </div>
-<div class="tl-item fade-in">
+<div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.10.1</div><div class="date">2026-07-14</div></div>
-<div class="tl-desc"><span data-lang="en">Offline Deployment - vendor/ directory with 30 pre-downloaded cp314 wheels, install_offline.sh for air-gapped installation, verify_deps.py for integrity check. Pure-Python deploy_oracle.py replaces SQLcl (125MB+Java) with a state-machine SQL parser handling PROMPT/DEFINE/&&// syntax. Zero external runtime dependencies.</span><span data-lang="zh">离线部署 - vendor/目录含30个预下载cp314 wheels，install_offline.sh气隙环境一键安装，verify_deps.py完整性验证。纯Python deploy_oracle.py替代SQLcl(125MB+Java)，状态机解析PROMPT/DEFINE/&&//语法。零外部运行时依赖。</span></div>
+<div class="tl-desc"><span data-lang="en">Offline Deployment - vendor/ directory with 30 pre-downloaded cp314 wheels, install_offline.sh for air-gapped installation, verify_deps.py for integrity check. Pure-Python deploy_oracle.py replaces SQLcl (125MB+Java) with a state-machine SQL parser handling PROMPT/DEFINE/&amp;&amp;// syntax. Zero external runtime dependencies.</span><span data-lang="zh">离线部署 - vendor/目录含30个预下载cp314 wheels，install_offline.sh气隙环境一键安装，verify_deps.py完整性验证。纯Python deploy_oracle.py替代SQLcl(125MB+Java)，状态机解析PROMPT/DEFINE/&amp;&amp;//语法。零外部运行时依赖。</span></div>
 </div>
 <div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.10.0</div><div class="date">2026-07-09</div></div>
@@ -1202,7 +1273,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 </div>
 <div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.7.1</div><div class="date">2026-06-19</div></div>
-<div class="tl-desc"><span data-lang="en">Loop Engineering Collaborative Integration: Spec-Driven Loop, Task-Loop Binding, Collaborative Loop. SPEC_VALIDATION & AGGREGATE evaluation types</span><span data-lang="zh">循环工程协同集成：规格驱动循环、任务-循环绑定、协作循环。SPEC_VALIDATION与AGGREGATE评估类型</span></div>
+<div class="tl-desc"><span data-lang="en">Loop Engineering Collaborative Integration: Spec-Driven Loop, Task-Loop Binding, Collaborative Loop. SPEC_VALIDATION &amp; AGGREGATE evaluation types</span><span data-lang="zh">循环工程协同集成：规格驱动循环、任务-循环绑定、协作循环。SPEC_VALIDATION与AGGREGATE评估类型</span></div>
 </div>
 <div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.7.0</div><div class="date">2026-06-18</div></div>
@@ -1214,7 +1285,7 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 </div>
 <div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.6.1</div><div class="date">2026-06-16</div></div>
-<div class="tl-desc"><span data-lang="en">PG Community & Enterprise Editions initial release, full feature parity with Oracle</span><span data-lang="zh">PG社区版与企业版初始发布，与Oracle完全功能对等</span></div>
+<div class="tl-desc"><span data-lang="en">PG Community &amp; Enterprise Editions initial release, full feature parity with Oracle</span><span data-lang="zh">PG社区版与企业版初始发布，与Oracle完全功能对等</span></div>
 </div>
 <div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v3.6.0</div><div class="date">2026-06-13</div></div>
@@ -1234,12 +1305,11 @@ a:focus-visible,button:focus-visible{outline:3px solid rgba(29,214,246,.52);outl
 </div>
 <div class="tl-item hidden fade-in">
 <div class="tl-version"><div class="ver">v1.0.0</div><div class="date">2026-05-09</div></div>
-<div class="tl-desc"><span data-lang="en">Initial release: knowledge base & property graph</span><span data-lang="zh">初始版本：知识库与属性图</span></div>
+<div class="tl-desc"><span data-lang="en">Initial release: knowledge base &amp; property graph</span><span data-lang="zh">初始版本：知识库与属性图</span></div>
 </div>
 </div>
 <div style="text-align:center;margin-top:16px;margin-bottom:8px">
 <button class="expand-btn" type="button" onclick="toggleTimeline(this)"><span class="btn-txt">Show earlier versions</span></button>
-</div>
 </div>
 </div>
 </section>
