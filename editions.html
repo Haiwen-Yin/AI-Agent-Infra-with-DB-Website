@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="比较社区版、企业版以及 Oracle、PostgreSQL、YashanDB 实现。">
+  <meta name="theme-color" content="#dce2e8">
+  <title>版本与数据库 | Chuanxu</title>
+  <link rel="icon" href="assets/chuanxu-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="lang-zh" data-page="editions">
+
+<svg aria-hidden="true" width="0" height="0" style="position:absolute">
+  <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main"><span data-lang="zh">跳到主要内容</span><span data-lang="en">Skip to main content</span></a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand-link" href="index.html" aria-label="Chuanxu home">
+      <img class="logo-light" data-lang="zh" src="assets/chuanxu-logo-zh.svg" alt="川序">
+      <img class="logo-light" data-lang="en" src="assets/chuanxu-logo-en.svg" alt="Chuanxu">
+      <img class="logo-dark" data-lang="zh" src="assets/chuanxu-logo-zh-on-dark.svg" alt="川序">
+      <img class="logo-dark" data-lang="en" src="assets/chuanxu-logo-en-on-dark.svg" alt="Chuanxu">
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation"><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a><a href="product.html"><span data-lang="zh">产品</span><span data-lang="en">Product</span></a><a href="architecture.html"><span data-lang="zh">架构</span><span data-lang="en">Architecture</span></a><a href="security.html"><span data-lang="zh">安全</span><span data-lang="en">Security</span></a><a href="editions.html" aria-current="page"><span data-lang="zh">版本与数据库</span><span data-lang="en">Editions</span></a><a href="docs.html"><span data-lang="zh">文档</span><span data-lang="en">Docs</span></a><a href="releases.html"><span data-lang="zh">历史</span><span data-lang="en">Releases</span></a></nav>
+    <div class="header-actions">
+      <a class="icon-button github-button" href="https://github.com/Haiwen-Yin" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 12 .7Z"/></svg>
+      </a>
+      <button class="icon-button" type="button" data-theme-toggle onclick="toggleTheme()">
+        <svg class="theme-sun" aria-hidden="true"><use href="#icon-sun"/></svg>
+        <svg class="theme-moon" aria-hidden="true"><use href="#icon-moon"/></svg>
+      </button>
+      <button class="icon-button lang-button" type="button" data-lang-toggle onclick="toggleLanguage()">EN</button>
+      <button class="icon-button menu-button" type="button" data-menu-toggle onclick="toggleMenu()" aria-expanded="false" aria-label="打开导航">
+        <svg aria-hidden="true"><use href="#icon-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main"><header class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a> / <span data-lang="zh">版本与数据库</span><span data-lang="en">Editions</span></div><p class="eyebrow"><span data-lang="zh">3 种数据库 · 6 个版本</span><span data-lang="en">3 Databases · 6 Editions</span></p><h1><span data-lang="zh">同一功能核心，选择适合企业环境的数据库</span><span data-lang="en">One Functional Core, Your Choice of Enterprise Database</span></h1><p><span data-lang="zh">Oracle AI Database 26ai、PostgreSQL 18.3 和崖山数据库 23.5.4+ 分别提供社区版与企业版。三种实现对齐功能后独立发布，不要求同时部署。</span><span data-lang="en">Oracle AI Database 26ai, PostgreSQL 18.3, and YashanDB 23.5.4+ each provide Community and Enterprise editions. They are independently released after functional alignment and are not deployed together.</span></p></div></header>
+<section class="section"><div class="container detail-grid">
+  <nav class="side-nav"><a href="#profiles"><span data-lang="zh">运行配置</span><span data-lang="en">Profiles</span></a><a href="#compare"><span data-lang="zh">版本对比</span><span data-lang="en">Comparison</span></a><a href="#databases"><span data-lang="zh">数据库实现</span><span data-lang="en">Databases</span></a><a href="#choose"><span data-lang="zh">如何选择</span><span data-lang="en">Selection</span></a></nav>
+  <div class="detail-content">
+    <article class="detail-block" id="profiles"><div class="section-kicker"><span data-lang="zh">运行配置</span><span data-lang="en">Runtime Profiles</span></div><h2><span data-lang="zh">先选择成熟度，再选择数据库和版本</span><span data-lang="en">Choose Maturity Before Database and Edition</span></h2><div class="profile-strip"><div class="profile-block"><span class="profile-label"><span data-lang="zh">生产配置</span><span data-lang="en">PRODUCTION PROFILE</span></span><h3><span data-lang="zh">当前生产建议</span><span data-lang="en">Current Production Recommendation</span></h3><p><span data-lang="zh">v4.3.0 稳定功能基线，适合生产评估、POC 和受控部署。</span><span data-lang="en">The v4.3.0 stable baseline for production evaluation, POCs, and controlled deployment.</span></p></div><div class="profile-block experimental"><span class="profile-label"><span data-lang="zh">图预览</span><span data-lang="en">GRAPH PREVIEW</span></span><h3><span data-lang="zh">实验能力</span><span data-lang="en">Experimental Capability</span></h3><p><span data-lang="zh">按需显式启用。关闭后不产生路由、Worker、调度或后台活动。</span><span data-lang="en">Explicitly enabled when needed. When disabled, it creates no routes, workers, schedules, or background activity.</span></p></div></div></article>
+    <article class="detail-block" id="compare"><div class="section-kicker"><span data-lang="zh">社区版与企业版</span><span data-lang="en">Community vs Enterprise</span></div><h2><span data-lang="zh">免费验证核心能力，企业版增加治理控制</span><span data-lang="en">Validate the Core for Free; Add Governance With Enterprise</span></h2><table class="spec-table"><thead><tr><th><span data-lang="zh">能力</span><span data-lang="en">Capability</span></th><th><span data-lang="zh">社区版</span><span data-lang="en">Community</span></th><th><span data-lang="zh">企业版</span><span data-lang="en">Enterprise</span></th></tr></thead><tbody><tr><td><span data-lang="zh">记忆、知识、任务、工作区、技能、分支、协作、Loop</span><span data-lang="en">Memory, knowledge, tasks, workspaces, Skills, branches, collaboration, Loops</span></td><td>✓</td><td>✓</td></tr><tr><td><span data-lang="zh">用户与 Agent 注册、归属、数据库会话</span><span data-lang="en">User and Agent registration, ownership, database sessions</span></td><td>✓</td><td>✓</td></tr><tr><td><span data-lang="zh">权限驱动 UI、Production Profile、Graph Preview</span><span data-lang="en">Permission-driven UI, Production Profile, Graph Preview</span></td><td>✓</td><td>✓</td></tr><tr><td><span data-lang="zh">细粒度策略、多方审批、职责分离</span><span data-lang="en">Fine-grained policy, multi-party approval, separation of duties</span></td><td>—</td><td>✓</td></tr><tr><td><span data-lang="zh">风险审计、留存、法律保全、应急控制</span><span data-lang="en">Risk audit, retention, legal hold, emergency control</span></td><td>—</td><td>✓</td></tr><tr><td><span data-lang="zh">企业许可和技术支持</span><span data-lang="en">Enterprise license and support</span></td><td><span data-lang="zh">有限尽力支持</span><span data-lang="en">Limited best effort</span></td><td><span data-lang="zh">按合同</span><span data-lang="en">By contract</span></td></tr></tbody></table><p><span data-lang="zh">公开 GitHub 仓库仅发布社区版；企业版在客户需求和商业许可确认后提供，当前倾向不公开源码。</span><span data-lang="en">Only Community editions are published in public GitHub repositories. Enterprise is provided after customer need and commercial licensing are confirmed and is currently intended to remain source-private.</span></p></article>
+    <article class="detail-block" id="databases"><div class="section-kicker"><span data-lang="zh">数据库适配</span><span data-lang="en">Database Adapters</span></div><h2><span data-lang="zh">原生能力不同，共同产品契约一致</span><span data-lang="en">Different Native Capabilities, One Product Contract</span></h2><div class="db-band"><div class="oracle"><h3>Oracle AI Database 26ai</h3><p><span data-lang="zh">Vector、Oracle Text、Property Graph / SQL PGQ、DBMS_SCHEDULER、数据库原生多租户及成熟高可用与备份生态。</span><span data-lang="en">Vector, Oracle Text, Property Graph / SQL PGQ, DBMS_SCHEDULER, native multitenancy, and mature HA and backup options.</span></p></div><div class="postgresql"><h3>PostgreSQL 18.3</h3><p><span data-lang="zh">pgvector、tsvector、Apache AGE、pg_cron 和 RLS。当前以关系运行时为权威、AGE 为图投影；PostgreSQL 19 原生 Property Graph 作为后续适配目标。</span><span data-lang="en">pgvector, tsvector, Apache AGE, pg_cron, and RLS. The relational runtime is authoritative and AGE is the graph projection; PostgreSQL 19 native Property Graph is a future adapter target.</span></p></div><div class="yashandb"><h3>YashanDB 23.5.4+</h3><p><span data-lang="zh">VECTOR + HNSW、SEARCH INDEX、原生 Property Graph、DBMS_SCHEDULER、LIST 分区、原生 JSON 转换与数据库加密包。</span><span data-lang="en">VECTOR + HNSW, SEARCH INDEX, native Property Graph, DBMS_SCHEDULER, LIST partitioning, native JSON conversion, and database crypto packages.</span></p></div></div></article>
+    <article class="detail-block" id="choose"><div class="section-kicker"><span data-lang="zh">选择建议</span><span data-lang="en">Selection Guide</span></div><h2><span data-lang="zh">以现有技术栈、合规与运维能力为先</span><span data-lang="en">Start With Existing Technology, Compliance, and Operations</span></h2><div class="grid-3"><div class="panel accent-warning"><h3>Oracle</h3><p><span data-lang="zh">适合已有 Oracle 技术体系、需要原生多租户与成熟企业运维能力的组织。</span><span data-lang="en">For organizations with Oracle expertise, native multitenancy, and mature enterprise operations.</span></p></div><div class="panel accent-blue"><h3>PostgreSQL</h3><p><span data-lang="zh">适合重视开放生态、可控许可成本和灵活组件组合的团队。</span><span data-lang="en">For teams prioritizing an open ecosystem, controllable licensing cost, and flexible components.</span></p></div><div class="panel accent-green"><h3>YashanDB</h3><p><span data-lang="zh">适合国产数据库采购要求和需要本地企业数据库支持的环境。</span><span data-lang="en">For domestic-database procurement requirements and local enterprise database support.</span></p></div></div><div class="actions-row"><a class="button primary" href="docs.html"><span data-lang="zh">进入部署文档</span><span data-lang="en">Open Documentation</span></a><a class="button secondary" href="mailto:746414750@qq.com"><span data-lang="zh">讨论数据库选型</span><span data-lang="en">Discuss Database Selection</span></a></div></article>
+  </div>
+</div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a class="footer-logo" href="index.html">
+        <img class="logo-light" data-lang="zh" src="assets/chuanxu-logo-zh.svg" alt="川序">
+        <img class="logo-light" data-lang="en" src="assets/chuanxu-logo-en.svg" alt="Chuanxu">
+        <img class="logo-dark" data-lang="zh" src="assets/chuanxu-logo-zh-on-dark.svg" alt="川序">
+        <img class="logo-dark" data-lang="en" src="assets/chuanxu-logo-en-on-dark.svg" alt="Chuanxu">
+      </a>
+      <div class="footer-links">
+        <div><strong><span data-lang="zh">产品</span><span data-lang="en">Product</span></strong><a href="product.html"><span data-lang="zh">产品能力</span><span data-lang="en">Capabilities</span></a><a href="security.html"><span data-lang="zh">零信任安全</span><span data-lang="en">Zero Trust</span></a><a href="architecture.html"><span data-lang="zh">技术架构</span><span data-lang="en">Architecture</span></a></div>
+        <div><strong><span data-lang="zh">开始使用</span><span data-lang="en">Get Started</span></strong><a href="docs.html"><span data-lang="zh">部署文档</span><span data-lang="en">Documentation</span></a><a href="editions.html"><span data-lang="zh">选择版本</span><span data-lang="en">Choose an Edition</span></a><a href="releases.html"><span data-lang="zh">版本历史</span><span data-lang="en">Releases</span></a></div>
+        <div><strong><span data-lang="zh">社区版本</span><span data-lang="en">Community Editions</span></strong><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank">Oracle</a><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank">PostgreSQL</a><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-YashanDB-Community-Edition" target="_blank">YashanDB</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Haiwen Yin · AI Agent Infra with DB</span>
+      <span class="footer-contact"><a href="https://db4agent.top">db4agent.top</a><a href="mailto:746414750@qq.com"><span data-lang="zh">邮箱：746414750@qq.com</span><span data-lang="en">Email: 746414750@qq.com</span></a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

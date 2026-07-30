@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="提示词和 API 规范不构成授权，安全由服务端零信任控制强制执行。">
+  <meta name="theme-color" content="#dce2e8">
+  <title>零信任安全 | Chuanxu</title>
+  <link rel="icon" href="assets/chuanxu-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="lang-zh" data-page="security">
+
+<svg aria-hidden="true" width="0" height="0" style="position:absolute">
+  <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main"><span data-lang="zh">跳到主要内容</span><span data-lang="en">Skip to main content</span></a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand-link" href="index.html" aria-label="Chuanxu home">
+      <img class="logo-light" data-lang="zh" src="assets/chuanxu-logo-zh.svg" alt="川序">
+      <img class="logo-light" data-lang="en" src="assets/chuanxu-logo-en.svg" alt="Chuanxu">
+      <img class="logo-dark" data-lang="zh" src="assets/chuanxu-logo-zh-on-dark.svg" alt="川序">
+      <img class="logo-dark" data-lang="en" src="assets/chuanxu-logo-en-on-dark.svg" alt="Chuanxu">
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation"><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a><a href="product.html"><span data-lang="zh">产品</span><span data-lang="en">Product</span></a><a href="architecture.html"><span data-lang="zh">架构</span><span data-lang="en">Architecture</span></a><a href="security.html" aria-current="page"><span data-lang="zh">安全</span><span data-lang="en">Security</span></a><a href="editions.html"><span data-lang="zh">版本与数据库</span><span data-lang="en">Editions</span></a><a href="docs.html"><span data-lang="zh">文档</span><span data-lang="en">Docs</span></a><a href="releases.html"><span data-lang="zh">历史</span><span data-lang="en">Releases</span></a></nav>
+    <div class="header-actions">
+      <a class="icon-button github-button" href="https://github.com/Haiwen-Yin" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 12 .7Z"/></svg>
+      </a>
+      <button class="icon-button" type="button" data-theme-toggle onclick="toggleTheme()">
+        <svg class="theme-sun" aria-hidden="true"><use href="#icon-sun"/></svg>
+        <svg class="theme-moon" aria-hidden="true"><use href="#icon-moon"/></svg>
+      </button>
+      <button class="icon-button lang-button" type="button" data-lang-toggle onclick="toggleLanguage()">EN</button>
+      <button class="icon-button menu-button" type="button" data-menu-toggle onclick="toggleMenu()" aria-expanded="false" aria-label="打开导航">
+        <svg aria-hidden="true"><use href="#icon-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main"><header class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a> / <span data-lang="zh">安全</span><span data-lang="en">Security</span></div><p class="eyebrow"><span data-lang="zh">Agent 运行零信任</span><span data-lang="en">Zero Trust for Agent Operations</span></p><h1><span data-lang="zh">任何时刻都不默认信任 Agent</span><span data-lang="en">Never Trust an Agent by Default</span></h1><p><span data-lang="zh">提示词、API 规范、模型安全策略、频道关系和前端可见性都不能授权。安全必须在数据、凭证、工具和副作用的真实执行边界强制生效。</span><span data-lang="en">Prompts, API contracts, model safety policies, channel relationships, and UI visibility never authorize. Security must be enforced at the real execution boundary for data, credentials, tools, and side effects.</span></p></div></header>
+<section class="section"><div class="container detail-grid">
+  <nav class="side-nav"><a href="#principles"><span data-lang="zh">原则</span><span data-lang="en">Principles</span></a><a href="#decision"><span data-lang="zh">授权决策</span><span data-lang="en">Decision</span></a><a href="#identity"><span data-lang="zh">身份与凭证</span><span data-lang="en">Identity</span></a><a href="#channels"><span data-lang="zh">频道安全</span><span data-lang="en">Channels</span></a><a href="#governance"><span data-lang="zh">审批审计</span><span data-lang="en">Governance</span></a><a href="#limits"><span data-lang="zh">安全边界</span><span data-lang="en">Limits</span></a></nav>
+  <div class="detail-content">
+    <article class="detail-block" id="principles"><div class="section-kicker"><span data-lang="zh">核心原则</span><span data-lang="en">Core Principle</span></div><h2><span data-lang="zh">引导行为不等于授予权限</span><span data-lang="en">Guidance Is Not Authority</span></h2><div class="grid-2"><div class="panel accent-warning"><h3><span data-lang="zh">不能作为安全边界</span><span data-lang="en">Not a Security Boundary</span></h3><p><span data-lang="zh">系统提示词 · API 契约 · 工具描述 · 模型策略 · 频道成员关系 · 隐藏菜单 · 图投影</span><span data-lang="en">System Prompt · API Contract · Tool Description · Model Policy · Channel Membership · Hidden Menu · Graph Projection</span></p></div><div class="panel accent-green"><h3><span data-lang="zh">必须强制执行</span><span data-lang="en">Must Be Enforced</span></h3><p><span data-lang="zh">已认证主体 · 当前授权 · 显式拒绝 · 受限凭证 · 服务端策略 · 审计证据</span><span data-lang="en">Authenticated Principal · Current Grant · Explicit Deny · Scoped Credential · Server Policy · Audit Evidence</span></p></div></div><p><span data-lang="zh">每次读取、披露、模型调用、Skill/Tool/API 获取、副作用、记忆提升、制品传输和结果提交，都必须解析当前认证主体并重新校验服务端授权。</span><span data-lang="en">Every read, disclosure, model call, Skill/Tool/API acquisition, side effect, memory promotion, artifact transfer, and commit must resolve the current authenticated Principal and re-evaluate server-side authorization.</span></p></article>
+    <article class="detail-block" id="decision"><div class="section-kicker"><span data-lang="zh">授权交集</span><span data-lang="en">Authorization Intersection</span></div><h2><span data-lang="zh">权限不是一个角色，而是一组当前条件的交集</span><span data-lang="en">Authority Is an Intersection of Current Conditions, Not One Role</span></h2><div class="code-line"><span data-lang="zh">允许 = 身份状态 ∩ 归属 ∩ 角色 ∩ 显式拒绝 ∩ 安全域 ∩ 频道范围 ∩ 资源授权 ∩ 用途 ∩ 密级 ∩ 有效期</span><span data-lang="en">ALLOW = identity_status ∩ ownership ∩ role ∩ explicit_deny ∩ security_domain ∩ channel_scope ∩ resource_grant ∩ purpose ∩ classification ∩ validity</span></div><ul class="check-list"><li><span data-lang="zh">敏感、受限和未知分类默认拒绝</span><span data-lang="en">Sensitive, restricted, and unknown classifications deny by default</span></li><li><span data-lang="zh">身份、策略、用途、范围或有效期缺失时失败关闭</span><span data-lang="en">Missing identity, policy, purpose, scope, or validity fails closed</span></li><li><span data-lang="zh">在披露与提交边界重新决策，避免使用过期授权</span><span data-lang="en">Re-evaluate at disclosure and commit boundaries to avoid stale authority</span></li></ul></article>
+    <article class="detail-block" id="identity"><div class="section-kicker"><span data-lang="zh">身份隔离</span><span data-lang="en">Identity Isolation</span></div><h2><span data-lang="zh">Admin Agent 与 Business Agent 使用不同数据库身份</span><span data-lang="en">Admin and Business Agents Use Different Database Identities</span></h2><p><span data-lang="zh">只有 Admin Agent 可以持有 Schema Owner 凭证；Business Agent 使用独立 End User 或数据库 LOGIN 身份，连接、解密或身份不匹配时禁止回退到 Schema Owner。一次性 Enrollment Token 确定 Agent 归属，恢复码使用后失效。</span><span data-lang="en">Only Admin Agents may hold Schema Owner credentials. Business Agents use independent End User or database LOGIN identities and never fall back to Schema Owner after connection, decryption, or identity mismatch. One-time Enrollment Tokens establish ownership; recovery codes expire after use.</span></p><div class="grid-3"><div class="panel"><h3>AES-256-GCM</h3><p><span data-lang="zh">数据库、LLM、路由和会话敏感配置加密存储。</span><span data-lang="en">Encrypt sensitive database, LLM, routing, and session configuration.</span></p></div><div class="panel"><h3>0600</h3><p><span data-lang="zh">配置文件限制为当前操作系统用户读写。</span><span data-lang="en">Restrict config files to the current operating-system user.</span></p></div><div class="panel"><h3><span data-lang="zh">短期凭证</span><span data-lang="en">Short-lived Credentials</span></h3><p><span data-lang="zh">按实例、频道、安全域或 Run 缩小凭证影响面。</span><span data-lang="en">Reduce credential blast radius by instance, channel, domain, or run.</span></p></div></div></article>
+    <article class="detail-block" id="channels"><div class="section-kicker"><span data-lang="zh">频道安全</span><span data-lang="en">Channel Security</span></div><h2><span data-lang="zh">Agent 可以加入多个频道，但不能借频道获得更多数据</span><span data-lang="en">Agents May Join Many Channels Without Gaining More Data</span></h2><p><span data-lang="zh">频道成员关系只允许参与频道工作，不扩大数据库、API、Skill、Tool、模型、记忆、知识、制品或导出权限。跨安全域信息必须通过受治理 Bridge，并在传输前后重新校验授权、分类和用途。</span><span data-lang="en">Channel membership permits participation but never expands database, API, Skill, Tool, model, memory, knowledge, artifact, or export rights. Cross-security-domain information must use a governed Bridge with authorization, classification, and purpose re-checked before and after transfer.</span></p></article>
+    <article class="detail-block" id="governance"><div class="section-kicker"><span data-lang="zh">企业治理</span><span data-lang="en">Enterprise Governance</span></div><h2><span data-lang="zh">高风险操作可以要求多人审批与职责分离</span><span data-lang="en">High-risk Actions Can Require Multi-party Approval and Separation of Duties</span></h2><p><span data-lang="zh">策略可配置 N-of-M 审批、申请人与审批人分离、原因必填、限时授权、即时撤销和可选事后复核。审计按风险记录身份、动作、资源、决策、摘要和证据引用，留存策略与法律保全控制证据生命周期。</span><span data-lang="en">Policies can configure N-of-M approval, requester/approver separation, mandatory reasons, time-bound grants, immediate revocation, and optional post-review. Risk-based audit records identity, action, resource, decision, digest, and evidence references; retention and legal hold govern evidence lifecycle.</span></p><figure class="product-shot"><img src="assets/dashboard-approvals-light.png" alt="川序审批页面"><figcaption><span data-lang="zh">v4.3.0 企业版审批页面实际浏览器验证截图。</span><span data-lang="en">Actual v4.3.0 Enterprise approval browser-validation capture.</span></figcaption></figure></article>
+    <article class="detail-block" id="limits"><div class="section-kicker"><span data-lang="zh">明确边界</span><span data-lang="en">Explicit Limits</span></div><h2><span data-lang="zh">数据库控制面不能撤回已经离开的数据</span><span data-lang="en">A Database Control Plane Cannot Recall Data That Has Already Left</span></h2><div class="panel accent-warning"><p><span data-lang="zh">平台可以阻断后续访问、撤销凭证、终止受管会话并隔离实例，但不能撤回已经导出、复制或缓存的数据，也不能自动终止数据库外且未接入 Gateway 的进程。第三方安全审计尚未完成，真实客户目录、复杂策略规模和外部 Tool 全覆盖仍需验证。</span><span data-lang="en">The platform can block subsequent access, revoke credentials, terminate managed sessions, and isolate instances. It cannot retract exported, copied, or cached data, nor terminate external processes that do not use the Gateway. Third-party security audit is not yet complete; real customer directories, policy scale, and full external Tool coverage still require validation.</span></p></div></article>
+  </div>
+</div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a class="footer-logo" href="index.html">
+        <img class="logo-light" data-lang="zh" src="assets/chuanxu-logo-zh.svg" alt="川序">
+        <img class="logo-light" data-lang="en" src="assets/chuanxu-logo-en.svg" alt="Chuanxu">
+        <img class="logo-dark" data-lang="zh" src="assets/chuanxu-logo-zh-on-dark.svg" alt="川序">
+        <img class="logo-dark" data-lang="en" src="assets/chuanxu-logo-en-on-dark.svg" alt="Chuanxu">
+      </a>
+      <div class="footer-links">
+        <div><strong><span data-lang="zh">产品</span><span data-lang="en">Product</span></strong><a href="product.html"><span data-lang="zh">产品能力</span><span data-lang="en">Capabilities</span></a><a href="security.html"><span data-lang="zh">零信任安全</span><span data-lang="en">Zero Trust</span></a><a href="architecture.html"><span data-lang="zh">技术架构</span><span data-lang="en">Architecture</span></a></div>
+        <div><strong><span data-lang="zh">开始使用</span><span data-lang="en">Get Started</span></strong><a href="docs.html"><span data-lang="zh">部署文档</span><span data-lang="en">Documentation</span></a><a href="editions.html"><span data-lang="zh">选择版本</span><span data-lang="en">Choose an Edition</span></a><a href="releases.html"><span data-lang="zh">版本历史</span><span data-lang="en">Releases</span></a></div>
+        <div><strong><span data-lang="zh">社区版本</span><span data-lang="en">Community Editions</span></strong><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank">Oracle</a><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank">PostgreSQL</a><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-YashanDB-Community-Edition" target="_blank">YashanDB</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Haiwen Yin · AI Agent Infra with DB</span>
+      <span class="footer-contact"><a href="https://db4agent.top">db4agent.top</a><a href="mailto:746414750@qq.com"><span data-lang="zh">邮箱：746414750@qq.com</span><span data-lang="en">Email: 746414750@qq.com</span></a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

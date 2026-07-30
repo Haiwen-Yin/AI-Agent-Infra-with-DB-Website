@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="了解川序如何统一管理 Agent 身份、任务、协作、运行与治理。">
+  <meta name="theme-color" content="#dce2e8">
+  <title>产品能力 | Chuanxu</title>
+  <link rel="icon" href="assets/chuanxu-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body class="lang-zh" data-page="product">
+
+<svg aria-hidden="true" width="0" height="0" style="position:absolute">
+  <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main"><span data-lang="zh">跳到主要内容</span><span data-lang="en">Skip to main content</span></a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand-link" href="index.html" aria-label="Chuanxu home">
+      <img class="logo-light" data-lang="zh" src="assets/chuanxu-logo-zh.svg" alt="川序">
+      <img class="logo-light" data-lang="en" src="assets/chuanxu-logo-en.svg" alt="Chuanxu">
+      <img class="logo-dark" data-lang="zh" src="assets/chuanxu-logo-zh-on-dark.svg" alt="川序">
+      <img class="logo-dark" data-lang="en" src="assets/chuanxu-logo-en-on-dark.svg" alt="Chuanxu">
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation"><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a><a href="product.html" aria-current="page"><span data-lang="zh">产品</span><span data-lang="en">Product</span></a><a href="architecture.html"><span data-lang="zh">架构</span><span data-lang="en">Architecture</span></a><a href="security.html"><span data-lang="zh">安全</span><span data-lang="en">Security</span></a><a href="editions.html"><span data-lang="zh">版本与数据库</span><span data-lang="en">Editions</span></a><a href="docs.html"><span data-lang="zh">文档</span><span data-lang="en">Docs</span></a><a href="releases.html"><span data-lang="zh">历史</span><span data-lang="en">Releases</span></a></nav>
+    <div class="header-actions">
+      <a class="icon-button github-button" href="https://github.com/Haiwen-Yin" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 12 .7Z"/></svg>
+      </a>
+      <button class="icon-button" type="button" data-theme-toggle onclick="toggleTheme()">
+        <svg class="theme-sun" aria-hidden="true"><use href="#icon-sun"/></svg>
+        <svg class="theme-moon" aria-hidden="true"><use href="#icon-moon"/></svg>
+      </button>
+      <button class="icon-button lang-button" type="button" data-lang-toggle onclick="toggleLanguage()">EN</button>
+      <button class="icon-button menu-button" type="button" data-menu-toggle onclick="toggleMenu()" aria-expanded="false" aria-label="打开导航">
+        <svg aria-hidden="true"><use href="#icon-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main"><header class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a> / <span data-lang="zh">产品</span><span data-lang="en">Product</span></div><p class="eyebrow"><span data-lang="zh">产品 · v4.3.0</span><span data-lang="en">Product · v4.3.0</span></p><h1><span data-lang="zh">让 Agent 的身份、工作与责任链进入统一控制面</span><span data-lang="en">Bring Agent Identity, Work, and Accountability Into One Control Plane</span></h1><p><span data-lang="zh">川序不是新的 Agent 框架，而是框架中立、Skill-first 的管理基础设施。Agent 可以由平台内外不同运行时承载，但必须注册、认证并经过受控边界后才进入治理范围。</span><span data-lang="en">Chuanxu is not another Agent framework. It is framework-neutral, Skill-first management infrastructure. Agents may run inside or outside the platform, but only registered, authenticated traffic through controlled boundaries is governed.</span></p></div></header>
+<section class="section"><div class="container detail-grid">
+  <nav class="side-nav" aria-label="Product sections"><a href="#control"><span data-lang="zh">统一控制面</span><span data-lang="en">Control Plane</span></a><a href="#work"><span data-lang="zh">工作与协作</span><span data-lang="en">Work</span></a><a href="#channels"><span data-lang="zh">频道</span><span data-lang="en">Channels</span></a><a href="#gateway"><span data-lang="zh">网关</span><span data-lang="en">Gateway</span></a><a href="#interface"><span data-lang="zh">产品界面</span><span data-lang="en">Interface</span></a><a href="#boundary"><span data-lang="zh">能力边界</span><span data-lang="en">Boundaries</span></a></nav>
+  <div class="detail-content">
+    <article class="detail-block" id="v430-evidence"><div class="section-kicker"><span data-lang="zh">v4.3.0 产品实证</span><span data-lang="en">v4.3.0 Product Evidence</span></div><h2><span data-lang="zh">身份与协作已进入同一管理界面</span><span data-lang="en">Identity and Collaboration Share One Management Surface</span></h2><div class="grid-2"><figure class="product-shot"><img src="assets/dashboard-users-light.png" alt="川序 v4.3.0 用户管理页面"><figcaption><span data-lang="zh">用户管理：注册审批、角色、权限与安全生命周期。</span><span data-lang="en">User Management: registration approval, roles, permissions, and security lifecycle.</span></figcaption></figure><figure class="product-shot"><img src="assets/dashboard-channels-light.png" alt="川序 v4.3.0 频道页面"><figcaption><span data-lang="zh">频道：人和 Agent 在数据库授权边界内协作并留痕。</span><span data-lang="en">Channels: humans and Agents collaborate with evidence inside database-governed boundaries.</span></figcaption></figure></div></article>
+    <article class="detail-block" id="control"><div class="section-kicker"><span data-lang="zh">资产与身份</span><span data-lang="en">Estate and Identity</span></div><h2><span data-lang="zh">先知道企业中有哪些人和 Agent</span><span data-lang="en">Know the Human and Agent Estate First</span></h2><p><span data-lang="zh">v4.3.0 统一 Human/Agent Principal、审批控制的用户注册、数据库会话、一次性 Agent Enrollment 和明确归属。管理员拥有全局视图，其他用户只能查看和操作其权限允许的全部、所管辖用户、所属 Agent 或自己的 Agent。</span><span data-lang="en">v4.3.0 unifies Human/Agent Principals, approval-controlled user registration, database sessions, one-time Agent Enrollment, and explicit ownership. Administrators have a global view; other users see and act only across the scope assigned to them.</span></p><div class="grid-3"><div class="panel"><h3><span data-lang="zh">人员主体</span><span data-lang="en">Human Principal</span></h3><p><span data-lang="zh">用户注册、状态、角色、MFA 策略与数据库会话。</span><span data-lang="en">Registration, status, roles, MFA policy, and database sessions.</span></p></div><div class="panel"><h3><span data-lang="zh">Agent 主体</span><span data-lang="en">Agent Principal</span></h3><p><span data-lang="zh">稳定身份、用户归属、实例、心跳、凭证和生命周期。</span><span data-lang="en">Stable identity, ownership, instances, heartbeat, credentials, and lifecycle.</span></p></div><div class="panel"><h3><span data-lang="zh">权限驱动界面</span><span data-lang="en">Permission-driven UI</span></h3><p><span data-lang="zh">菜单可见性与操作能力按服务端权限生成，但界面本身不构成授权。</span><span data-lang="en">Navigation and actions reflect server-side rights, while UI visibility itself never grants access.</span></p></div></div></article>
+    <article class="detail-block" id="work"><div class="section-kicker"><span data-lang="zh">持久工作模型</span><span data-lang="en">Durable Work Model</span></div><h2><span data-lang="zh">从一次对话到长期、多 Agent 工作</span><span data-lang="en">From One Conversation to Long-running Multi-Agent Work</span></h2><p><span data-lang="zh">记忆、知识、工作区、会话链、任务计划、分支、协作组、Loop 与 Graph Run 持久化在数据库中。副作用操作具备策略、审批、租约、重试和幂等边界，进程异常后可以由替代实例恢复受管上下文。</span><span data-lang="en">Memory, knowledge, workspaces, session chains, task plans, branches, collaboration groups, Loops, and Graph Runs persist in the database. Side effects use policy, approval, leases, retries, and idempotency boundaries so replacement instances can rebuild managed context after failure.</span></p><div class="grid-2"><div class="panel accent-purple"><h3><span data-lang="zh">协作关卡</span><span data-lang="en">Collaboration Gate</span></h3><p><span data-lang="zh">多个 Agent 在关键节点汇合，先到者等待；可总结、讨论、Review、调整后继续。兼容标识仍为 Barrier，但产品术语统一为协作关卡。</span><span data-lang="en">Agents converge at critical points; early arrivals wait for summaries, discussion, review, and adjustment before continuing. Barrier remains a compatibility identifier.</span></p></div><div class="panel accent-green"><h3><span data-lang="zh">可变 Loop 与 Graph</span><span data-lang="en">Mutable Loop and Graph</span></h3><p><span data-lang="zh">执行过程可根据结果细化，但版本、变更原因、运行状态和证据始终持久化并可复核。</span><span data-lang="en">Execution can evolve based on results while versions, reasons, runtime state, and evidence remain durable and reviewable.</span></p></div></div></article>
+    <article class="detail-block" id="channels"><div class="section-kicker"><span data-lang="zh">受治理频道</span><span data-lang="en">Governed Channels</span></div><h2><span data-lang="zh">像群聊一样查看协作，但频道成员关系不扩大权限</span><span data-lang="en">Conversation-like Collaboration Without Permission Expansion</span></h2><p><span data-lang="zh">频道将人员、Agent、线程、消息、Action Card、制品和协作关卡汇集在可查看的工作流中。人和 Agent 都可以参与多个频道，但任何数据披露、Skill/Tool/API 调用和制品传输仍重新校验实际资源权限；跨安全域只能通过受治理 Bridge。</span><span data-lang="en">Channels bring people, Agents, threads, messages, Action Cards, artifacts, and collaboration gates into a visible workflow. Humans and Agents may join multiple channels, but every disclosure, Skill/Tool/API call, and artifact transfer still re-checks resource authorization; cross-domain transfer requires a governed Bridge.</span></p><div class="panel"><h3><span data-lang="zh">频道不是授权容器</span><span data-lang="en">A Channel Is Not an Authorization Container</span></h3><p><span data-lang="zh">加入频道不自动获得数据库、知识、记忆、API、Skill、Tool、模型或导出权限，避免受损 Agent 借频道成员关系扩大影响面。</span><span data-lang="en">Joining a channel never grants database, knowledge, memory, API, Skill, Tool, model, or export rights, limiting the blast radius of a compromised Agent.</span></p></div></article>
+    <article class="detail-block" id="gateway"><div class="section-kicker"><span data-lang="zh">Agent 网关</span><span data-lang="en">Agent Gateway</span></div><h2><span data-lang="zh">隔离运行实例，缩小凭证和故障影响面</span><span data-lang="en">Isolate Runtime Instances and Reduce Credential Blast Radius</span></h2><p><span data-lang="zh">同一逻辑 Agent 可以按安全域、频道、Task 或 Run 创建隔离实例，使用独立临时目录和短期凭证。实例受损时可以单独撤销、栅栏和隔离，而不必禁用其他正常实例。</span><span data-lang="en">One logical Agent can create isolated instances by security domain, channel, task, or run, each with separate temporary files and short-lived credentials. A compromised instance can be revoked, fenced, and isolated without disabling healthy instances.</span></p></article>
+    <article class="detail-block" id="interface"><div class="section-kicker"><span data-lang="zh">统一界面</span><span data-lang="en">Unified Interface</span></div><h2>17 <span data-lang="zh">个 Dashboard 一级页面</span><span data-lang="en">Top-level Dashboard Views</span></h2><p><span data-lang="zh">监控、智能体、任务、工作区、知识、记忆、技能、规格、分支、协作、循环、图探索、频道、协作关卡、审批、审计和用户管理使用统一品牌视觉与权限模型。实验能力在监控页面单独配置，不作为一级页面。</span><span data-lang="en">Monitor, Agents, Tasks, Workspaces, Knowledge, Memory, Skills, Specs, Branches, Collaboration, Loops, Graph, Channels, Collaboration Gates, Approval, Audit, and User Management share one visual and authorization model. Experimental capabilities are configured within Monitor rather than presented as a top-level view.</span></p><figure class="product-shot"><img src="assets/dashboard-graph-light.png" alt="Graph Engineering 页面"><figcaption><span data-lang="zh">v4.3.0 图探索实际页面；Graph Preview 需在监控页面显式启用。</span><span data-lang="en">Actual v4.3.0 Graph view; Graph Preview must be explicitly enabled from Monitor.</span></figcaption></figure></article>
+    <article class="detail-block" id="boundary"><div class="section-kicker"><span data-lang="zh">真实边界</span><span data-lang="en">Honest Boundary</span></div><h2><span data-lang="zh">管理范围取决于受控接入</span><span data-lang="en">Governance Depends on Controlled Adoption</span></h2><p><span data-lang="zh">平台不会无条件发现未安装 Skill、未注册或绕过平台的 Agent；无法撤回已经导出或缓存的数据，也不能自动终止平台控制面外的进程。外部 API 和 Tool 只有经平台执行面或受控凭证分发时才能统一阻断。</span><span data-lang="en">The platform cannot unconditionally discover Agents that have not installed a Skill, registered, or used controlled routes. It cannot retract exported or cached data, nor terminate processes outside its control plane. External APIs and Tools can be blocked centrally only when routed through the execution plane or controlled credential delivery.</span></p></article>
+  </div>
+</div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a class="footer-logo" href="index.html">
+        <img class="logo-light" data-lang="zh" src="assets/chuanxu-logo-zh.svg" alt="川序">
+        <img class="logo-light" data-lang="en" src="assets/chuanxu-logo-en.svg" alt="Chuanxu">
+        <img class="logo-dark" data-lang="zh" src="assets/chuanxu-logo-zh-on-dark.svg" alt="川序">
+        <img class="logo-dark" data-lang="en" src="assets/chuanxu-logo-en-on-dark.svg" alt="Chuanxu">
+      </a>
+      <div class="footer-links">
+        <div><strong><span data-lang="zh">产品</span><span data-lang="en">Product</span></strong><a href="product.html"><span data-lang="zh">产品能力</span><span data-lang="en">Capabilities</span></a><a href="security.html"><span data-lang="zh">零信任安全</span><span data-lang="en">Zero Trust</span></a><a href="architecture.html"><span data-lang="zh">技术架构</span><span data-lang="en">Architecture</span></a></div>
+        <div><strong><span data-lang="zh">开始使用</span><span data-lang="en">Get Started</span></strong><a href="docs.html"><span data-lang="zh">部署文档</span><span data-lang="en">Documentation</span></a><a href="editions.html"><span data-lang="zh">选择版本</span><span data-lang="en">Choose an Edition</span></a><a href="releases.html"><span data-lang="zh">版本历史</span><span data-lang="en">Releases</span></a></div>
+        <div><strong><span data-lang="zh">社区版本</span><span data-lang="en">Community Editions</span></strong><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-OracleDB-Community-Edition" target="_blank">Oracle</a><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-PG-Community-Edition" target="_blank">PostgreSQL</a><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-YashanDB-Community-Edition" target="_blank">YashanDB</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Haiwen Yin · AI Agent Infra with DB</span>
+      <span class="footer-contact"><a href="https://db4agent.top">db4agent.top</a><a href="mailto:746414750@qq.com"><span data-lang="zh">邮箱：746414750@qq.com</span><span data-lang="en">Email: 746414750@qq.com</span></a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>
