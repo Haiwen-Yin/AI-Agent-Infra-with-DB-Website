@@ -127,6 +127,8 @@ img { max-width: 100%; }
 .brand-meaning strong { display: grid; place-items: center; width: 32px; height: 32px; color: var(--blue); font-size: 22px; line-height: 1; }
 .brand-meaning > span:last-child strong { color: var(--purple); }
 .brand-meaning > span > span { color: var(--secondary); font-size: 14px; line-height: 1.45; }
+body:not(.lang-zh) .brand-meaning > span { grid-template-columns: 72px minmax(0, 1fr); }
+body:not(.lang-zh) .brand-meaning strong { width: auto; min-width: 62px; font-size: 19px; }
 .hero-summary { margin: 20px 0 0; max-width: 800px; color: var(--secondary); font-size: 17px; line-height: 1.8; }
 .hero-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
 .meta-chip { border: 1px solid var(--border); border-left: 3px solid var(--blue); border-radius: 4px; padding: 6px 10px; background: var(--surface-strong); color: var(--secondary); font-size: 12px; font-weight: 700; }
