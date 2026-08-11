@@ -146,6 +146,7 @@ body:not(.lang-zh) .brand-meaning strong { width: auto; min-width: 62px; font-si
 .section-head.center { text-align: center; margin-inline: auto; }
 .section-kicker { margin-bottom: 10px; color: var(--blue); font-size: 12px; font-weight: 850; text-transform: uppercase; }
 .section h2, .page-hero h1 { margin: 0; font-size: 38px; line-height: 1.25; }
+.keep-together { white-space: nowrap; }
 .section-intro { margin: 14px 0 0; color: var(--secondary); font-size: 17px; line-height: 1.8; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
