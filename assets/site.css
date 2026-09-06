@@ -165,9 +165,12 @@ body:not(.lang-zh) .brand-meaning strong { width: auto; min-width: 62px; font-si
 .problem-item span { display: block; margin-top: 6px; color: var(--secondary); font-size: 15px; line-height: 1.6; }
 
 .agent-system { position: relative; border: 1px solid var(--border); border-radius: 6px; background: var(--surface-strong); overflow: hidden; padding: 28px; box-shadow: 0 3px 12px rgba(27, 48, 78, 0.1); }
-.agent-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
-.agent-node { min-height: 96px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); padding: 14px; text-align: center; display: flex; flex-direction: column; justify-content: center; }
-.agent-node strong { display: block; min-height: 34px; font-size: 15px; line-height: 1.3; }
+.agent-layer { border: 2px solid var(--green); border-radius: 8px; padding: 16px 24px; background: color-mix(in srgb, var(--green) 5%, var(--surface-strong)); }
+.agent-layer .platform-title { padding-bottom: 10px; }
+.agent-layer .platform-title > span { color: var(--green); }
+.agent-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 40px; margin-top: 12px; }
+.agent-node { flex: 0 1 auto; min-width: 0; max-width: 100%; padding: 4px 0; text-align: center; overflow-wrap: anywhere; }
+.agent-node strong { display: block; font-size: 15px; line-height: 1.4; }
 .agent-node > span { display: block; min-height: 28px; margin-top: 6px; color: var(--muted); font-size: 13px; line-height: 1.4; }
 .flow-connector { position: relative; height: 58px; display: flex; align-items: center; justify-content: center; color: var(--blue); font: 750 13px/1 var(--font-mono); }
 .flow-connector::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--blue); opacity: .5; }
@@ -183,7 +186,24 @@ body:not(.lang-zh) .brand-meaning strong { width: auto; min-width: 62px; font-si
 .platform-module strong { display: block; font-size: 15px; }
 .platform-module span { display: block; color: var(--muted); font-size: 13px; line-height: 1.45; }
 .database-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.database-layer { border: 2px solid var(--purple); border-radius: 8px; padding: 16px 24px; background: color-mix(in srgb, var(--purple) 5%, var(--surface-strong)); }
+.database-layer .platform-title > span { color: var(--purple); }
+.database-layer .database-row { margin-top: 16px; }
 .database-node { border: 1px solid var(--border); padding: 14px; text-align: center; font-size: 14px; font-weight: 800; background: var(--surface); }
+.database-logo {
+  display: block;
+  width: 100%;
+  max-width: 224px;
+  height: 64px;
+  margin: 0 auto 16px;
+  object-fit: contain;
+  object-position: center;
+}
+.database-node .database-logo {
+  margin: 0 auto 12px;
+  object-position: center;
+}
+.database-ecosystem { display: block; margin-top: 10px; color: var(--secondary); font-size: 13px; font-weight: 400; line-height: 1.6; text-align: center; }
 .database-node.oracle { border-bottom: 4px solid #c83c4a; }
 .database-node.postgresql { border-bottom: 4px solid #1769d2; }
 .database-node.yashandb { border-bottom: 4px solid #007f6f; }
@@ -246,7 +266,7 @@ body:not(.lang-zh) .brand-meaning strong { width: auto; min-width: 62px; font-si
 .db-band .oracle { border-top: 5px solid #c83c4a; }
 .db-band .postgresql { border-top: 5px solid #1769d2; }
 .db-band .yashandb { border-top: 5px solid #007f6f; }
-.db-band h3 { margin-top: 0; }
+.db-band h3 { margin-top: 0; text-align: center; }
 .db-band p { color: var(--secondary); font-size: 15px; line-height: 1.6; }
 .release-list { display: grid; gap: 0; border-top: 1px solid var(--border); }
 .release { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--border); }
@@ -323,8 +343,6 @@ body:not(.lang-zh) .brand-meaning strong { width: auto; min-width: 62px; font-si
   .grid-3, .proof-layout, .security-callout, .footer-top { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
   .problem-list { grid-template-columns: 1fr 1fr; }
-  .agent-row { grid-template-columns: repeat(3, 1fr); }
-  .agent-node:nth-child(n+4) { min-height: 70px; }
   .platform-modules { grid-template-columns: repeat(2, 1fr); }
   .detail-grid { grid-template-columns: 1fr; }
   .side-nav { position: static; display: flex; overflow-x: auto; border-left: 0; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
@@ -351,10 +369,11 @@ body:not(.lang-zh) .brand-meaning strong { width: auto; min-width: 62px; font-si
   .actions-row .button { width: 100%; }
   .section h2, .page-hero h1 { font-size: 28px; }
   .section-intro { font-size: 15px; }
-  .problem-list, .agent-row, .platform-modules, .database-row, .profile-strip, .db-band { grid-template-columns: 1fr; }
+  .problem-list, .platform-modules, .database-row, .profile-strip, .db-band { grid-template-columns: 1fr; }
   .problem-item { min-height: 110px; }
   .agent-system { padding: 16px; }
-  .agent-node { min-height: 66px; }
+  .agent-layer, .platform-layer, .database-layer { padding: 16px 12px; }
+  .agent-node { flex-basis: 100%; min-height: 66px; }
   .platform-title { align-items: flex-start; flex-direction: column; gap: 2px; }
   .profile-block + .profile-block, .db-band > div + div { border-left: 0; border-top: 1px solid var(--border); }
   .footer-links { grid-template-columns: 1fr 1fr; }
@@ -367,6 +386,10 @@ body:not(.lang-zh) .brand-meaning strong { width: auto; min-width: 62px; font-si
   .segmented-control button:last-child { border-bottom: 0; }
   .prompt-result-head { align-items: flex-start; flex-direction: column; }
   .prompt-output { min-height: 520px; font-size: 12px; }
+}
+
+@media (max-width: 360px) {
+  .agent-system { padding: 8px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
