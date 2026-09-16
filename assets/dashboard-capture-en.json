@@ -1,0 +1,21 @@
+{
+  "version": "4.4.15",
+  "language": "en",
+  "captured_at": "2026-09-15T19:26:07.978Z",
+  "package_manifest_sha256": "b35ce52a15ee636e2a213dd01955244cf619a58d2cc2a6098f5a6d7a2aad7fc0",
+  "files": {
+    "dashboard-monitor-en-light.png": "af0df7412be9f9d5010d855572745068ba2d44a4ba97527ba9bd6b7e5a998891",
+    "dashboard-channels-en-light.png": "76ed91074feefbc30b73dfb0ee13268340a2d84c2088aff34a494e2eae0db7ec",
+    "dashboard-users-en-light.png": "c0f738e7fa20b20438b6187199b59a6153be290a408822a435007ca2ad90fff2",
+    "dashboard-organization-en-light.png": "034d9a0e28768b38a123177e119d3c32f6e24ed2ae848c39e70cc5c11895363b",
+    "dashboard-security-domains-en-light.png": "cea0e6d7e471ebff155f4342864aa4262a51523b00888e95c3c88f9313278203",
+    "dashboard-graph-en-light.png": "c19de5bc61668722f4272c25cb12e76333a7050f41fbe0125fb2c13e5fdd8ae0",
+    "dashboard-approvals-en-light.png": "8bb183381c55df95bb17f68606977d107557cc0a94d0e322c21c723c5fdf0767",
+    "dashboard-compliance-en-light.png": "3bc6c820af166bc435c341509f0d3354728c888b81476f16c54e467e1a1aba7a",
+    "dashboard-capabilities-en-light.png": "c0b348fb8356b06a25fc54ce90e8b4a8b64287e853567cecb48ff6cbdc6c8250",
+    "dashboard-wallboard-en-light.png": "9012f374442fa11c3e62af81baf1466815d6bfef72ce289dd2ea97f1309a918f",
+    "dashboard-model-routing-en-light.png": "59ea74c081be3a582ea9d06f3726db6b52e86f1e16d3f8b41b53420e42c5ac11",
+    "dashboard-knowledge-detail-en-light.png": "e90cf70440dcc4c45453b654df14d2382465f91c4b0e82c6a8c602784d896404",
+    "dashboard-continuity-en-light.png": "edb9fc32b1ce13cb37078142460349a390a72f0d886404a8beee4c41d8b9ada0"
+  }
+}

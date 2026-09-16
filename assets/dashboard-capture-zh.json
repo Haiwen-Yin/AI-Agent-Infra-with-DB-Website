@@ -1,0 +1,22 @@
+{
+  "version": "4.4.15",
+  "language": "zh",
+  "captured_at": "2026-09-15T19:25:18.171Z",
+  "package_manifest_sha256": "b35ce52a15ee636e2a213dd01955244cf619a58d2cc2a6098f5a6d7a2aad7fc0",
+  "files": {
+    "dashboard-monitor-light.png": "72dbcfd9936627743ef15d0f26be592fc02e2117f9120afc14f1f0e21ac9e727",
+    "dashboard-channels-light.png": "f84a751e81bcd0576e633461b3d52da64f7d5ef161cd7e79dc0ca6e4c560e588",
+    "dashboard-users-light.png": "95e877a2c505c438480d56acc0fde6f7f26e9a1ec2b8cafa481322967b4625a4",
+    "dashboard-organization-light.png": "4d3d98bbd64d30a4a1c705e5b3f64e33f2be28d0514c5241f69f0f2c28d41a00",
+    "dashboard-security-domains-light.png": "976fd2f0b365738ddc5f3f67df8d7274c79a2a668f20cec55d6dd433224b41f9",
+    "dashboard-graph-light.png": "68c09541a17d315a229d2d3cf229eb5b5a545e5a5bce518395ec70d7821c2ffc",
+    "dashboard-approvals-light.png": "f67bc988ae226020565f9863cf74b28311b624a06b17c8a8475a700f8c595817",
+    "dashboard-compliance-light.png": "fcb186a41d831f860f86cb0753d2c127de8f92043d0167d2811459ac0075e9d2",
+    "dashboard-capabilities-light.png": "3a3442e11e7b69c42095542b627bfed7743a608508fb1ed4686e75f7a27ccca2",
+    "dashboard-wallboard-light.png": "55ff4762a85dc34d0b79a4dec50e983468dd8d186f0a6155679df5a758ed840b",
+    "dashboard-model-routing-light.png": "20dac89d5b223d2d66b7ea19040420b4df10591722d67b937694d43da3586be0",
+    "dashboard-knowledge-detail-light.png": "d18b4b295fbe0687c9debf1430a1b246b5bdfb7cd18663c46e49870ba8da29fd",
+    "dashboard-continuity-light.png": "74440128f62571777c2a7a52aefde238356fc88fefea28bb173666acbf12c78a",
+    "dashboard-monitor-dark.png": "709b1ef0fabe378d70af2e9b6e034b1f07642854267d5b98452397a31479c84c"
+  }
+}
