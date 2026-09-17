@@ -411,6 +411,15 @@ body[data-page="founder"] main .section h2 { margin-bottom: 0; }
   .agent-system { padding: 8px; }
 }
 
+.ecosystem-block + .ecosystem-block { margin-top: 56px; }
+.ecosystem-block > p { margin-bottom: 24px; }
+.ecosystem-card { min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.ecosystem-logo { display: flex; align-items: center; justify-content: center; height: 116px; padding: 18px; background: #fff; border-radius: 12px; }
+.ecosystem-logo img { display: block; max-width: 100%; max-height: 80px; width: auto; height: auto; object-fit: contain; }
+.ecosystem-logo img[src*="tencentdb-agent-memory"] { transform: scale(1.24); }
+.ecosystem-card h3 { margin: 0; }
+.ecosystem-links { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-top: auto; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
