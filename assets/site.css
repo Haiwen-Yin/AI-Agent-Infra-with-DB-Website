@@ -417,8 +417,21 @@ body[data-page="founder"] main .section h2 { margin-bottom: 0; }
 .ecosystem-logo { display: flex; align-items: center; justify-content: center; height: 116px; padding: 18px; background: #fff; border-radius: 12px; }
 .ecosystem-logo img { display: block; max-width: 100%; max-height: 80px; width: auto; height: auto; object-fit: contain; }
 .ecosystem-logo img[src*="tencentdb-agent-memory"] { transform: scale(1.24); }
-.ecosystem-card h3 { margin: 0; }
-.ecosystem-links { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-top: auto; }
+.ecosystem-logo img[src*="powercontext"] { max-width: 78%; max-height: 60px; }
+.ecosystem-footer { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-top: auto; }
+.ecosystem-card h3 { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.ecosystem-links { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 8px 14px; flex-shrink: 0; }
+.ecosystem-links a { white-space: nowrap; }
+@media (max-width: 600px) {
+  .ecosystem-footer { gap: 10px; }
+  .ecosystem-card h3 { font-size: 16px; }
+  .ecosystem-links { max-width: 105px; gap: 6px; font-size: 13px; }
+}
+#postgresql-ecosystem > p { margin-bottom: 16px; }
+#postgresql-ecosystem .grid-2 { gap: 12px; }
+#postgresql-ecosystem .ecosystem-card { padding: 18px; gap: 10px; }
+#postgresql-ecosystem .ecosystem-logo { height: 80px; padding: 10px; }
+#postgresql-ecosystem .ecosystem-logo img { max-height: 60px; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
