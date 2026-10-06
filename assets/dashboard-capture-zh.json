@@ -1,37 +1,36 @@
 {
-  "version": "4.5.1",
+  "version": "4.5.2",
   "language": "zh",
-  "captured_at": "2026-10-05T18:28:02.574Z",
-  "package_manifest_sha256": "b992b75fa16757a4727c1c062f07bb231943c4980bb968c4062b43052068b693",
-  "runtime_version": "4.5.1",
+  "captured_at": "2026-10-06T10:58:19.415Z",
+  "package_manifest_sha256": "466332512136efb4534695a603d5815d9e384513d135e21cc2ac41cba225deb5",
+  "runtime_version": "4.5.2",
   "frontend_assets_verified": [
-    "/static/assets/index-Bb6eHA-O.js",
+    "/static/assets/index-BQmKnbnG.js",
     "/static/assets/vendor-YRoSpSIE.js",
     "/static/assets/icon-vendor-BYtQlED9.js",
-    "/static/assets/index-DMIgwNcA.css",
-    "/static/assets/GraphPage-Ciw_oUkQ.js"
+    "/static/assets/index-Bx1S-Xj5.css",
+    "/static/assets/GraphPage-CY3u2kmj.js"
   ],
   "navigation_rows": [
     11,
     10
   ],
   "files": {
-    "dashboard-monitor-light.png": "3dac21bc5c72218410dd45b9be94f52723e75629203f1d5af2d7ec8a8cb98731",
-    "dashboard-monitor-dark.png": "7f8549180fa93c806e8b8be0eadb934f4400faec6da1f9c587d5f9dc654dfb91",
-    "dashboard-channels-light.png": "a3acb05687ff21cee5a75db58aa22b021de457167b2d2c31c700edd1b7ce6fc1",
-    "dashboard-users-light.png": "3bf20827ba11ad534987c724f50a90e7595c57f1b0473289c7b3cb5e5e53732c",
-    "dashboard-organization-light.png": "20a4a63ebc6b7588383db0bcf70c6956ddc761d69c0f6f430238bcc64f45cd52",
-    "dashboard-security-domains-light.png": "41228d9b8852eb27ec71e1f20b45c2d7d4416b56a2355d9482568701cf6c4504",
-    "dashboard-graph-light.png": "873b486d100a72312226032ad0e41c36f692e289c1c2e33cbc2c96fbe120a263",
-    "dashboard-approvals-light.png": "1ffe5da3249d14819e71136cab0c6f7f4c728d74a96bc8782da26f7638c95342",
-    "dashboard-compliance-light.png": "f819e06a5f75856f67be203c52682590aed9f0a1aa08b4179f5d9580766c02f3",
-    "dashboard-capabilities-light.png": "c3aee72aaa958f0de758a40f9bd4367f2a10d8aaf7694247888e4976ff2b0a8e",
-    "dashboard-wallboard-light.png": "ef4851addcf799077f0e7c222e8ec8a17a17c614df627550615b669f524d32eb",
-    "dashboard-model-routing-light.png": "3febfedf9399f9de5270084a59a77ae2a9336cfacabcfe76012f4e4fecead7fb",
-    "dashboard-knowledge-detail-light.png": "690a8be2a14da25ba9c6412407e87428e9a2a2c6d6884b2ef6d87c6aba3ad53b",
-    "dashboard-continuity-light.png": "2e7f648b82a460e74115ddc4085975346c786b289d9bcc162e97a40f8f091c2d"
+    "dashboard-monitor-light.png": "ea43eaee4aeae06bf9ffa16514078c43b4208ede269ac82cd8ec936fa5830c56",
+    "dashboard-monitor-dark.png": "b286ae4ca7540ce0467366f22fbc3d84dd287f8d9aa50571558e33f8a395d239",
+    "dashboard-channels-light.png": "89a3052778c0008df827b48c2b263da20c96f1a656527a1753f91cef46531a07",
+    "dashboard-users-light.png": "db30e81aaffdc94f149ffbdbcf27d46761f538c7251676360cc44ddf67298d75",
+    "dashboard-organization-light.png": "1e9f971572ef4d9f9f634a999759ccd19288ba61fabb40c742532d91e870063e",
+    "dashboard-security-domains-light.png": "78dfb9eeb8f0836fba53c98752c84e9524fa530c825d9ce3cf7dc7103d215255",
+    "dashboard-graph-light.png": "bfeead97c755107dcc223834d49a22669b8a77e739242e63a49a8ff645af8af2",
+    "dashboard-approvals-light.png": "ca029fb6cee4cd83980682544f1fe3db1817df171c62168e54229dcdd81343b8",
+    "dashboard-compliance-light.png": "2f870f766caa3f6b5347420cedcb486204e912b8e4d7fb28c066a16395c035d8",
+    "dashboard-capabilities-light.png": "7be9923e4c59b3e7df0e2dee66eceabb1f81b8a3a82d4bbf44b7d4bb938dcc23",
+    "dashboard-wallboard-light.png": "83440573c2d13b267a1f6b20798c3446c7fabad4e9ff57da3d9e7beba3051272",
+    "dashboard-model-routing-light.png": "36120674db3a5d39d23be612c42e864ed3b34a5dbf537d8bc6eb47b7aa8cfaa9",
+    "dashboard-knowledge-detail-light.png": "6253638b392c41f4c6e270bc9350015271182c3d06d26bf35282d54b45e82f4f",
+    "dashboard-continuity-light.png": "3cccb28423abb61d490d3da0244e5a5c3cc5ac7000f4d2483297cc7e5e23772e"
   },
   "scope": "Authenticated screenshots from classified temporary local Oracle Enterprise; no business mutations or OCI access",
-  "dark_capture_updated_at": "2026-10-05T18:41:50.885Z",
   "dark_capture_verified": true
 }
