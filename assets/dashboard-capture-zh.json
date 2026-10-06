@@ -1,22 +1,37 @@
 {
-  "version": "4.5.0",
+  "version": "4.5.1",
   "language": "zh",
-  "captured_at": "2026-09-27T06:10:55.637Z",
-  "package_manifest_sha256": "0f350c088cf5e976be1dd912a44f1ffa8bafeee30506cbb47b0f53e15d770aad",
+  "captured_at": "2026-10-05T18:28:02.574Z",
+  "package_manifest_sha256": "b992b75fa16757a4727c1c062f07bb231943c4980bb968c4062b43052068b693",
+  "runtime_version": "4.5.1",
+  "frontend_assets_verified": [
+    "/static/assets/index-Bb6eHA-O.js",
+    "/static/assets/vendor-YRoSpSIE.js",
+    "/static/assets/icon-vendor-BYtQlED9.js",
+    "/static/assets/index-DMIgwNcA.css",
+    "/static/assets/GraphPage-Ciw_oUkQ.js"
+  ],
+  "navigation_rows": [
+    11,
+    10
+  ],
   "files": {
-    "dashboard-monitor-light.png": "6094caf8e5d50c14aed8dc5f0b7dbc6aa32d51c9c60b538b2a31ec3a7e74a92a",
-    "dashboard-channels-light.png": "3318ff0c37abd0b4533405e36a8453ea53ad28f26b2dc7f91b4b33acd9a03ecd",
-    "dashboard-users-light.png": "4814186e2dbb65e737c2f8ceef76b00cd01a9c3c82fdbb9ca513e1e2634d5d5f",
-    "dashboard-organization-light.png": "d78f99baf0f20576f06151043dfc9e083c14cd09b615502c9d5dc093ebc4f3fe",
-    "dashboard-security-domains-light.png": "bf31a93bc39f015e048c93b473a9e1394484506b7fbf7cb1cc9bd4b1a1141663",
-    "dashboard-graph-light.png": "95cd444588dacd5acfcd842fd136f3d0f971c4dd9fac1a487e7276d45d306e80",
-    "dashboard-approvals-light.png": "bde97b29672a82f716de2e29bc36a675fdc6e08aeea691eb2b626a147a75d077",
-    "dashboard-compliance-light.png": "c99cb8c4a554e6b1199053bd981c6a186a5ec8c246d9419fa92aee716d16729a",
-    "dashboard-capabilities-light.png": "bbc47751d86c949840de1964bb33628157412bceb99380f3e5567ebf6cf9fb68",
-    "dashboard-wallboard-light.png": "7e609fae5189c77670b224d7c903b903a6c10669cb858afc170e160c13a1dedf",
-    "dashboard-model-routing-light.png": "97d1610999677fd8482ddb0a14813ad3da9adb430dfe7e5b40a93e896a3f9ef1",
-    "dashboard-knowledge-detail-light.png": "3e8085da3f5ac575595d92c25c79d1054f65e137915e2d63a679165b0fac2557",
-    "dashboard-continuity-light.png": "475603eadd654e1da6382fdb8c8fc2d8faee001f6a8be2825303c82aa0acac97",
-    "dashboard-monitor-dark.png": "515f8980e353bba462ee135bd94e484bb2eb0b455a9ab71792dc554d6c3e5a16"
-  }
+    "dashboard-monitor-light.png": "3dac21bc5c72218410dd45b9be94f52723e75629203f1d5af2d7ec8a8cb98731",
+    "dashboard-monitor-dark.png": "7f8549180fa93c806e8b8be0eadb934f4400faec6da1f9c587d5f9dc654dfb91",
+    "dashboard-channels-light.png": "a3acb05687ff21cee5a75db58aa22b021de457167b2d2c31c700edd1b7ce6fc1",
+    "dashboard-users-light.png": "3bf20827ba11ad534987c724f50a90e7595c57f1b0473289c7b3cb5e5e53732c",
+    "dashboard-organization-light.png": "20a4a63ebc6b7588383db0bcf70c6956ddc761d69c0f6f430238bcc64f45cd52",
+    "dashboard-security-domains-light.png": "41228d9b8852eb27ec71e1f20b45c2d7d4416b56a2355d9482568701cf6c4504",
+    "dashboard-graph-light.png": "873b486d100a72312226032ad0e41c36f692e289c1c2e33cbc2c96fbe120a263",
+    "dashboard-approvals-light.png": "1ffe5da3249d14819e71136cab0c6f7f4c728d74a96bc8782da26f7638c95342",
+    "dashboard-compliance-light.png": "f819e06a5f75856f67be203c52682590aed9f0a1aa08b4179f5d9580766c02f3",
+    "dashboard-capabilities-light.png": "c3aee72aaa958f0de758a40f9bd4367f2a10d8aaf7694247888e4976ff2b0a8e",
+    "dashboard-wallboard-light.png": "ef4851addcf799077f0e7c222e8ec8a17a17c614df627550615b669f524d32eb",
+    "dashboard-model-routing-light.png": "3febfedf9399f9de5270084a59a77ae2a9336cfacabcfe76012f4e4fecead7fb",
+    "dashboard-knowledge-detail-light.png": "690a8be2a14da25ba9c6412407e87428e9a2a2c6d6884b2ef6d87c6aba3ad53b",
+    "dashboard-continuity-light.png": "2e7f648b82a460e74115ddc4085975346c786b289d9bcc162e97a40f8f091c2d"
+  },
+  "scope": "Authenticated screenshots from classified temporary local Oracle Enterprise; no business mutations or OCI access",
+  "dark_capture_updated_at": "2026-10-05T18:41:50.885Z",
+  "dark_capture_verified": true
 }
