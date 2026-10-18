@@ -138,7 +138,7 @@
     var database = "oracle";
     var mode = "";
     var promptData = {};
-    var names = { oracle: "Oracle 26ai", pg: "PostgreSQL 18.3", yashandb: "YashanDB 23.5.4+" };
+    var names = { oracle: "Oracle 26ai", pg: "PostgreSQL 18", yashandb: "YashanDB 23.5.4+" };
     var modeNames = {
       standalone: { zh: "独立部署", en: "Standalone" },
       "admin-agent": { zh: "管理 Agent", en: "Admin Agent" },

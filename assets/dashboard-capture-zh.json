@@ -1,36 +1,39 @@
 {
-  "version": "4.5.2",
+  "version": "5.0.0",
   "language": "zh",
-  "captured_at": "2026-10-06T10:58:19.415Z",
-  "package_manifest_sha256": "466332512136efb4534695a603d5815d9e384513d135e21cc2ac41cba225deb5",
-  "runtime_version": "4.5.2",
+  "captured_at": "2026-10-18T06:49:17.313Z",
+  "package_manifest_sha256": "45d97c621354610cda66be19f147ef962e4c0acce3afe414fe6aeee45f5887cb",
+  "runtime_version": "5.0.0",
   "frontend_assets_verified": [
-    "/static/assets/index-BQmKnbnG.js",
+    "/static/assets/index-JWFjYyr5.js",
     "/static/assets/vendor-YRoSpSIE.js",
-    "/static/assets/icon-vendor-BYtQlED9.js",
-    "/static/assets/index-Bx1S-Xj5.css",
-    "/static/assets/GraphPage-CY3u2kmj.js"
+    "/static/assets/icon-vendor-C52k9mET.js",
+    "/static/assets/index-CiQBcGl2.css",
+    "/static/assets/GraphPage-Bi0FJsYM.js"
   ],
   "navigation_rows": [
     11,
     10
   ],
   "files": {
-    "dashboard-monitor-light.png": "ea43eaee4aeae06bf9ffa16514078c43b4208ede269ac82cd8ec936fa5830c56",
-    "dashboard-monitor-dark.png": "b286ae4ca7540ce0467366f22fbc3d84dd287f8d9aa50571558e33f8a395d239",
-    "dashboard-channels-light.png": "89a3052778c0008df827b48c2b263da20c96f1a656527a1753f91cef46531a07",
-    "dashboard-users-light.png": "db30e81aaffdc94f149ffbdbcf27d46761f538c7251676360cc44ddf67298d75",
-    "dashboard-organization-light.png": "1e9f971572ef4d9f9f634a999759ccd19288ba61fabb40c742532d91e870063e",
-    "dashboard-security-domains-light.png": "78dfb9eeb8f0836fba53c98752c84e9524fa530c825d9ce3cf7dc7103d215255",
-    "dashboard-graph-light.png": "bfeead97c755107dcc223834d49a22669b8a77e739242e63a49a8ff645af8af2",
-    "dashboard-approvals-light.png": "ca029fb6cee4cd83980682544f1fe3db1817df171c62168e54229dcdd81343b8",
-    "dashboard-compliance-light.png": "2f870f766caa3f6b5347420cedcb486204e912b8e4d7fb28c066a16395c035d8",
-    "dashboard-capabilities-light.png": "7be9923e4c59b3e7df0e2dee66eceabb1f81b8a3a82d4bbf44b7d4bb938dcc23",
-    "dashboard-wallboard-light.png": "83440573c2d13b267a1f6b20798c3446c7fabad4e9ff57da3d9e7beba3051272",
-    "dashboard-model-routing-light.png": "36120674db3a5d39d23be612c42e864ed3b34a5dbf537d8bc6eb47b7aa8cfaa9",
-    "dashboard-knowledge-detail-light.png": "6253638b392c41f4c6e270bc9350015271182c3d06d26bf35282d54b45e82f4f",
-    "dashboard-continuity-light.png": "3cccb28423abb61d490d3da0244e5a5c3cc5ac7000f4d2483297cc7e5e23772e"
+    "dashboard-monitor-light.png": "bb535c72c95c1c576e5dc8d175d9d300f3483b85766f1bb8dc5955b2967aeb65",
+    "dashboard-monitor-dark.png": "8e812d9ca998e6353df886afba8b101b4f941188308706db92662353f94ea69d",
+    "dashboard-channels-light.png": "9158fc9e3a5db1086492295c5baadedaa79cd18796fa4a55da58e5dcf0cb40e9",
+    "dashboard-users-light.png": "6fe03b8a6e10213a337dd73462574df827d6a2a2cdacd3c1688d6c164c546283",
+    "dashboard-organization-light.png": "aa43f4ff2d75f37932d6f7e5e4a838335b89b0bc392660f13c4b5374be2df03c",
+    "dashboard-security-domains-light.png": "2d8863466de9c1714910d415ec43be28cb18175ce99ba2d00792f7ba28a09b61",
+    "dashboard-graph-light.png": "1803eb5146ef76a56bf9c5f0460b62b947c804eada618a1145fc1e59955682f8",
+    "dashboard-approvals-light.png": "dc0304c342eb8aeeec06715b447adf8ed97ad48db2b5cf0dbe7bfba4d0d81279",
+    "dashboard-compliance-light.png": "5b5e6c2d825233dbd6a8e7c649c3616b0b673c9d38da28f8d1bdf6e57125895e",
+    "dashboard-capabilities-light.png": "7b72b12bd963c8997e514f2e9360548a10365cce9fd44039ff5fc50ef3311007",
+    "dashboard-wallboard-light.png": "acecbcaf6a69dafd3c9682166a3b01581c9adba0afade678d81d4a00388bb964",
+    "dashboard-model-routing-light.png": "cc9b2c855f7a86df15db77b5dfb388381f23dfd5425c95894485b129388adb37",
+    "dashboard-knowledge-detail-light.png": "a2651c9af3a345d667dc8953334e20c7f6272c2b778e623926d30e9da8578382",
+    "dashboard-continuity-light.png": "2887ac3efb5e79d9dfef7c6bb3efacf5090b18d76730f84c92e76161a4ccacae",
+    "dashboard-ip-access-light.png": "ea6fd69f4585fc3b986e3aba43cd160096541063e1bd41e7cf12b6d8263cca7d"
   },
-  "scope": "Authenticated screenshots from classified temporary local Oracle Enterprise; no business mutations or OCI access",
+  "product": "oracle-enterprise",
+  "database": "oracle",
+  "scope": "Authenticated screenshots from classified temporary local oracle enterprise; no business mutations or OCI access",
   "dark_capture_verified": true
 }

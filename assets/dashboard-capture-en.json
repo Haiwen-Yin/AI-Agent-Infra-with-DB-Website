@@ -1,34 +1,37 @@
 {
-  "version": "4.5.2",
+  "version": "5.0.0",
   "language": "en",
-  "captured_at": "2026-10-06T10:58:48.229Z",
-  "package_manifest_sha256": "466332512136efb4534695a603d5815d9e384513d135e21cc2ac41cba225deb5",
-  "runtime_version": "4.5.2",
+  "captured_at": "2026-10-18T06:49:46.522Z",
+  "package_manifest_sha256": "45d97c621354610cda66be19f147ef962e4c0acce3afe414fe6aeee45f5887cb",
+  "runtime_version": "5.0.0",
   "frontend_assets_verified": [
-    "/static/assets/index-BQmKnbnG.js",
+    "/static/assets/index-JWFjYyr5.js",
     "/static/assets/vendor-YRoSpSIE.js",
-    "/static/assets/icon-vendor-BYtQlED9.js",
-    "/static/assets/index-Bx1S-Xj5.css",
-    "/static/assets/GraphPage-CY3u2kmj.js"
+    "/static/assets/icon-vendor-C52k9mET.js",
+    "/static/assets/index-CiQBcGl2.css",
+    "/static/assets/GraphPage-Bi0FJsYM.js"
   ],
   "navigation_rows": [
     11,
     10
   ],
   "files": {
-    "dashboard-monitor-en-light.png": "9082eca560bf23dc5e1b1319b50d37a2a9d7cdc453db907740ea1ecfbcdeec9b",
-    "dashboard-channels-en-light.png": "1a6dd84f7d16083da88d5ff4568f189d7a030b19090f314d7b591528d4350af6",
-    "dashboard-users-en-light.png": "9a766479e5714365576a971cd68a1f291f81a7742005e815e47f0c62333ec4c8",
-    "dashboard-organization-en-light.png": "7a31e93693d89e2e2aaede57a8ac6b542fac37619c79210e752fe116aaec82a7",
-    "dashboard-security-domains-en-light.png": "1970842bb4b545f8cfeea608b0fc3eeaebd6fde0695afb2486e2b8f00abaadc4",
-    "dashboard-graph-en-light.png": "210f675e2e6af9cf9eb5bc4ff0ad4d5463e97e84f518b1584c111fa02c4fe32b",
-    "dashboard-approvals-en-light.png": "78bd05a8d91e7157edbdb396ed75f755ea60d4cb354a08ef15f732bf3ced220b",
-    "dashboard-compliance-en-light.png": "46c0b1f19be43727d02342d8b5bf4823b6a8cb5ef47166f400d1a1e8f2e0bab0",
-    "dashboard-capabilities-en-light.png": "7966ebf165018c67b5a7d8f87c57d34eaf51f7211df2ac054fcc01a0d1e525a6",
-    "dashboard-wallboard-en-light.png": "6d6e61f5dd8719a6dbcaa972e2ae264d239fddb6af93f5f4995a057d88435642",
-    "dashboard-model-routing-en-light.png": "96b920f6086c19c6c06ad51e880ea0c9852cec0c39a69f306e03966550bcd9e9",
-    "dashboard-knowledge-detail-en-light.png": "5d60987a53575d7fbbc2e2fe14e9bb2d5cde1a6feb02c16d5acb0f09673b4434",
-    "dashboard-continuity-en-light.png": "1444c9826c32323654a097e8bb083f2c468080e73434b411a6fef7df7e82e210"
+    "dashboard-monitor-en-light.png": "3028502d90a979e42cef7d47d55d48a8fe4cdc19db52fbca162efa3db8fc4238",
+    "dashboard-channels-en-light.png": "03b02f8475506e430c995bc90d527b2e452dd64db456f4b7fa656da3e4cf919e",
+    "dashboard-users-en-light.png": "6a24b93b70adbb617e8d4248089c62e8d3dab1991954a4eb60036346803173e4",
+    "dashboard-organization-en-light.png": "8f39534c7fc1cc82cda2f4824f6574343dd3ea54b83586c54f03bc01397ec66b",
+    "dashboard-security-domains-en-light.png": "d205b063325035c1d1ed0ca5c7bb62159b09d0253d19bb7e1a8ba355962ec267",
+    "dashboard-graph-en-light.png": "2041bf6308f212fa5b58fdba7d012bd86874492d9cb032ae2e1be6ebc61084e3",
+    "dashboard-approvals-en-light.png": "8bfe0b618a6986577d4df1b618c2d245bb1e19363ca6dfe6797ccf5ddc0b515c",
+    "dashboard-compliance-en-light.png": "661a4ed48f7f887f2d8fe7fac3f713ae8b91c3b5a2c28f7af8418142e8f293bc",
+    "dashboard-capabilities-en-light.png": "aa7f2ef083c00fa9d3b95fa345b1e13021fc1e462b8d6a294863567207f3004c",
+    "dashboard-wallboard-en-light.png": "d747c1356a35a64c873f218641e7f6be2d71d6dcd27f6383b210b7320bce5bba",
+    "dashboard-model-routing-en-light.png": "ce0c55c676a2c81926acc45fc26c23ea4e7f9a2466c20425ad290b67012fe048",
+    "dashboard-knowledge-detail-en-light.png": "7130a18c18180a74a98768bd8c17e4035fe0ec83a6e38910584c86ab445c19ad",
+    "dashboard-continuity-en-light.png": "8ff156b5fd392fbffbb357748a3d3d0d5955ba67145b8b699aefd5a0e0224b23",
+    "dashboard-ip-access-en-light.png": "3a2219a6e811dfcc44f4326e567cc506b5d04d655168a4c9c6dd79bb542ecbbb"
   },
-  "scope": "Authenticated screenshots from classified temporary local Oracle Enterprise; no business mutations or OCI access"
+  "product": "oracle-enterprise",
+  "database": "oracle",
+  "scope": "Authenticated screenshots from classified temporary local oracle enterprise; no business mutations or OCI access"
 }
