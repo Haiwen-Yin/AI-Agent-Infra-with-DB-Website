@@ -56,10 +56,13 @@
   applyLanguage(getStored("chuanxu-language", "zh"));
   applyTheme(getStored("chuanxu-theme", "light"));
 
+  if (document.body.dataset.page === "architecture" && window.location.hash === "#multi-agent") {
+    window.location.replace("index.html#multi-agent");
+  }
+
   if (document.body.dataset.page === "home" && window.location.hash) {
     var legacyRoutes = {
       "#problems": "product.html#control",
-      "#multi-agent": "architecture.html#multi-agent",
       "#release-highlights": "product.html#task-continuity",
       "#proof": "product.html#v502-model-capacity",
       "#trust": "security.html",
