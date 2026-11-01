@@ -58,6 +58,18 @@
 
   if (document.body.dataset.page === "home" && window.location.hash) {
     var legacyRoutes = {
+      "#problems": "product.html#control",
+      "#multi-agent": "architecture.html#multi-agent",
+      "#release-highlights": "product.html#task-continuity",
+      "#proof": "product.html#v502-model-capacity",
+      "#trust": "security.html",
+      "#profiles": "editions.html#profiles",
+      "#ecosystem": "editions.html#postgresql-ecosystem",
+      "#memory-ecosystem": "product.html#memory-ecosystem",
+      "#postgresql-ecosystem": "editions.html#postgresql-ecosystem",
+      "#product-delivery": "editions.html#product-delivery",
+      "#v501-highlights": "product.html#memory-working-notes",
+      "#v502-highlights": "product.html#v502-model-results",
       "#deploy": "docs.html",
       "#stats": "product.html",
       "#pain-points": "architecture.html#files",
@@ -77,7 +89,7 @@
       "#timeline": "releases.html"
     };
     var legacyTarget = legacyRoutes[window.location.hash];
-    if (legacyTarget && legacyTarget !== window.location.hash) window.location.replace(legacyTarget);
+    if (legacyTarget && legacyTarget !== window.location.hash && !document.getElementById(window.location.hash.slice(1))) window.location.replace(legacyTarget);
   }
 
   document.querySelectorAll(".primary-nav a").forEach(function (link) {

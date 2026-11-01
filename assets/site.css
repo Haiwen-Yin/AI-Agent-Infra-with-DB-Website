@@ -114,6 +114,16 @@ img { max-width: 100%; }
 .hero-scroll { position: absolute; z-index: 2; left: 50%; bottom: 18px; display: grid; justify-items: center; gap: 7px; color: var(--secondary); font-size: 12px; font-weight: 750; transform: translateX(-50%); }
 .hero-scroll:hover { color: var(--blue); }
 .hero-scroll i { width: 10px; height: 10px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); animation: scroll-cue 1.6s ease-in-out infinite; }
+.home-hero .hero-content { padding-block: 56px 78px; }
+.home-topic-links { display: grid; gap: 6px; margin-top: 18px; }
+.home-topic-links a { color: var(--blue); padding-block: 5px; font-size: 14px; }
+.home-topic-links a:hover { text-decoration: underline; }
+.home-guide { display: block; transition: border-color .18s, background .18s; }
+.home-guide:hover { border-color: var(--blue); background: var(--surface-strong); }
+.home-guide:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+.home-contact { text-align: center; }
+.home-contact .section-intro { margin-inline: auto; }
+.home-contact .actions-row { justify-content: center; }
 .hero + .section { position: relative; }
 .hero + .section::before { content: ""; position: absolute; top: 0; left: 50%; width: min(180px, 42vw); height: 3px; background: var(--blue); transform: translateX(-50%); }
 @keyframes scroll-cue { 0%, 100% { transform: translateY(0) rotate(45deg); } 50% { transform: translateY(5px) rotate(45deg); } }
