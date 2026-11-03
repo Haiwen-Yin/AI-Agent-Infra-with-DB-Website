@@ -448,3 +448,15 @@ body[data-page="founder"] main .section h2 { margin-bottom: 0; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Collapsible historical release details. */
+.release-history-entry { display: block; }
+.release-history-entry > summary { display: grid; grid-template-columns: 150px minmax(0, 1fr) 24px; align-items: start; gap: 24px; cursor: pointer; list-style: none; }
+.release-history-entry > summary::-webkit-details-marker { display: none; }
+.release-history-entry > summary:focus-visible { outline: 2px solid var(--blue); outline-offset: 6px; border-radius: 3px; }
+.release-history-title { font-size: 1.17em; font-weight: 700; }
+.release-history-indicator { text-align: center; color: var(--blue); transition: transform .15s; }
+.release-history-entry[open] .release-history-indicator { transform: rotate(180deg); }
+.release-history-content { margin-top: 20px; }
+.release-history-content > p { margin-bottom: 20px; }
+@media (max-width: 760px) { .release-history-entry > summary { grid-template-columns: minmax(0, 1fr) 24px; gap: 10px; } .release-history-title { grid-row: 2; } .release-history-indicator { grid-column: 2; grid-row: 1; } }

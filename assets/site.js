@@ -241,3 +241,17 @@
     document.querySelectorAll(".reveal").forEach(function (element) { element.classList.add("visible"); });
   }
 })();
+
+// Preserve the moved homepage bookmark and open direct historical links.
+(function () {
+  if (document.body.dataset.page === 'home' && location.hash === '#v502-release') {
+    location.replace('releases.html#v502-release');
+  }
+  function openRelease() {
+    if (document.body.dataset.page !== 'releases' || !location.hash) return;
+    var entry = document.getElementById(location.hash.slice(1));
+    if (entry && entry.matches('details.release-history-entry')) entry.open = true;
+  }
+  openRelease();
+  window.addEventListener('hashchange', openRelease);
+})();
