@@ -255,3 +255,6 @@
   openRelease();
   window.addEventListener('hashchange', openRelease);
 })();
+
+// Keep previous release bookmarks after moving the homepage section.
+if (document.body.dataset.page === 'home' && location.hash === '#v503-release') location.replace('releases.html#v503-release');
