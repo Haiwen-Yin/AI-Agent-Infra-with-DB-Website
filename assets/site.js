@@ -258,3 +258,35 @@
 
 // Keep previous release bookmarks after moving the homepage section.
 if (document.body.dataset.page === 'home' && location.hash === '#v503-release') location.replace('releases.html#v503-release');
+
+if (['product', 'architecture'].includes(document.body.dataset.page) && location.hash === '#v504-topic-01') location.replace('releases.html#v504-topic-01');
+
+if (['product', 'architecture'].includes(document.body.dataset.page) && location.hash === '#v504-topic-02') location.replace('releases.html#v504-topic-02');
+
+if (['product', 'architecture'].includes(document.body.dataset.page) && location.hash === '#v504-topic-03') location.replace('releases.html#v504-topic-03');
+
+if (['product', 'architecture'].includes(document.body.dataset.page) && location.hash === '#v504-topic-04') location.replace('releases.html#v504-topic-04');
+
+if (['product', 'architecture'].includes(document.body.dataset.page) && location.hash === '#v504-topic-05') location.replace('releases.html#v504-topic-05');
+
+if (['product', 'architecture'].includes(document.body.dataset.page) && location.hash === '#v504-topic-06') location.replace('releases.html#v504-topic-06');
+
+if (['product', 'architecture'].includes(document.body.dataset.page) && location.hash === '#v504-ui') location.replace('releases.html#v504-ui');
+
+if (['product', 'architecture'].includes(document.body.dataset.page) && location.hash === '#v504-context') location.replace('releases.html#v504-context');
+
+// Keep previous release bookmarks after moving the homepage section.
+if (document.body.dataset.page === 'home' && location.hash === '#v504-release') location.replace('releases.html#v504-release');
+
+(function () {
+  function openMovedRelease() {
+    if (document.body.dataset.page !== 'releases' || !location.hash) return;
+    var entry = document.getElementById('v504-release');
+    var target = document.getElementById(location.hash.slice(1));
+    if (!entry || !target) return;
+    if (entry.contains(target) || target.id === 'v504-history') {
+      entry.open = true; if (target !== entry) target.scrollIntoView();
+    }
+  }
+  openMovedRelease(); window.addEventListener('hashchange', openMovedRelease);
+})();
