@@ -62,17 +62,17 @@
 
   if (document.body.dataset.page === "home" && window.location.hash) {
     var legacyRoutes = {
-      "#problems": "product.html#control",
-      "#release-highlights": "product.html#task-continuity",
-      "#proof": "product.html#v502-model-capacity",
+      "#problems": "product-agents.html#control",
+      "#release-highlights": "product-collaboration.html#task-continuity",
+      "#proof": "product-models.html#v502-model-capacity",
       "#trust": "security.html",
       "#profiles": "editions.html#profiles",
       "#ecosystem": "editions.html#postgresql-ecosystem",
-      "#memory-ecosystem": "product.html#memory-ecosystem",
+      "#memory-ecosystem": "product-memory.html#memory-ecosystem",
       "#postgresql-ecosystem": "editions.html#postgresql-ecosystem",
       "#product-delivery": "editions.html#product-delivery",
-      "#v501-highlights": "product.html#memory-working-notes",
-      "#v502-highlights": "product.html#v502-model-results",
+      "#v501-highlights": "product-memory.html#memory-working-notes",
+      "#v502-highlights": "product-answers.html#v502-model-results",
       "#deploy": "docs.html",
       "#stats": "product.html",
       "#pain-points": "architecture.html#files",

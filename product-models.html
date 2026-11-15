@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="模型调用与可观测 / Models &amp; observability · 川序 AI Agent 管理平台">
+  <meta name="theme-color" content="#dce2e8">
+  <title>模型调用与可观测 / Models &amp; observability · 川序 Chuanxu</title>
+  <link rel="icon" href="assets/chuanxu-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/product-pages.css">
+</head>
+<body data-product-detail="models" class="lang-zh" data-page="product">
+
+<svg aria-hidden="true" width="0" height="0" style="position:absolute">
+  <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main"><span data-lang="zh">跳到主要内容</span><span data-lang="en">Skip to main content</span></a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand-link" href="index.html" aria-label="Chuanxu home">
+      <img class="logo-light" data-lang="zh" src="assets/chuanxu-logo-zh.svg" alt="川序">
+      <img class="logo-light" data-lang="en" src="assets/chuanxu-logo-en.png" alt="Chuanxu">
+      <img class="logo-dark" data-lang="zh" src="assets/chuanxu-logo-zh-on-dark.svg" alt="川序">
+      <img class="logo-dark" data-lang="en" src="assets/chuanxu-logo-en-on-dark.png" alt="Chuanxu">
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation"><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a><a href="product.html" aria-current="page"><span data-lang="zh">产品</span><span data-lang="en">Product</span></a><a href="architecture.html"><span data-lang="zh">架构</span><span data-lang="en">Architecture</span></a><a href="database-capabilities.html"><span data-lang="zh">数据库能力</span><span data-lang="en">DB Capabilities</span></a><a href="security.html"><span data-lang="zh">安全</span><span data-lang="en">Security</span></a><a href="editions.html"><span data-lang="zh">版本与数据库</span><span data-lang="en">Editions</span></a><a href="docs.html"><span data-lang="zh">文档</span><span data-lang="en">Docs</span></a><a href="releases.html"><span data-lang="zh">历史</span><span data-lang="en">Releases</span></a><a href="founder.html"><span data-lang="zh">创始人</span><span data-lang="en">Founder</span></a></nav>
+    <div class="header-actions">
+      <a class="icon-button github-button" href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-DB-Community-Edition" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A12 12 0 0 0 12 .7Z"/></svg>
+      </a>
+      <button class="icon-button" type="button" data-theme-toggle onclick="toggleTheme()">
+        <svg class="theme-sun" aria-hidden="true"><use href="#icon-sun"/></svg>
+        <svg class="theme-moon" aria-hidden="true"><use href="#icon-moon"/></svg>
+      </button>
+      <button class="icon-button lang-button" type="button" data-lang-toggle onclick="toggleLanguage()">EN</button>
+      <button class="icon-button menu-button" type="button" data-menu-toggle onclick="toggleMenu()" aria-expanded="false" aria-label="打开导航">
+        <svg aria-hidden="true"><use href="#icon-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main"><header class="page-hero product-page-hero"><div class="container"><div class="breadcrumb"><a href="index.html"><span data-lang="zh">首页</span><span data-lang="en">Home</span></a> / <a href="product.html"><span data-lang="zh">产品</span><span data-lang="en">Product</span></a> / <span data-lang="zh">模型调用与可观测</span><span data-lang="en">Models &amp; observability</span></div><p class="eyebrow">Product · v5.0.5</p><h1><span data-lang="zh">模型调用与可观测</span><span data-lang="en">Models &amp; observability</span></h1><p><span data-lang="zh">管理模型用量、容量与取消，保留运行观测并按规则诊断和恢复。</span><span data-lang="en">Manage model usage, capacity and cancellation; retain observations and follow governed recovery paths.</span></p></div></header><section class="section"><div class="container detail-grid product-detail-grid"><aside class="product-section-index"><a class="product-back" href="product.html">← <span data-lang="zh">全部功能方向</span><span data-lang="en">All capabilities</span></a><nav class="side-nav" aria-label="Product sections"><a href="#model-observability"><span data-lang="zh">用量、配额与成本</span><span data-lang="en">Usage, quota &amp; cost</span></a><a href="#v502-model-capacity"><span data-lang="zh">容量与取消</span><span data-lang="en">Capacity &amp; cancellation</span></a><a href="#v502-runtime-observations"><span data-lang="zh">运行观测</span><span data-lang="en">Runtime observations</span></a><a href="#v502-processing-recovery"><span data-lang="zh">诊断与受控恢复</span><span data-lang="en">Diagnosis &amp; recovery</span></a><a href="#wallboard"><span data-lang="zh">只读管理大屏</span><span data-lang="en">Read-only wallboard</span></a></nav></aside><div class="detail-content"><article class="detail-block" id="model-observability"><div class="section-kicker"><span data-lang="zh">v5.0.1 可选模型网关</span><span data-lang="en">v5.0.1 Optional Model Gateway</span></div><h2><span data-lang="zh">在不强制改造全部 Agent 的前提下，建立 Token、配额与成本事实</span><span data-lang="en">Build Token, Quota, and Cost Evidence Without Forcing Every Agent Through One Route</span></h2><p><span data-lang="zh">每个 LLM 服务商配置可以独立启用直连、平台网关或两者并行。管理员在同一行选择路由方式，确认变更并填写合规理由；转发地址由运行平台自动生成，不接受任意中转地址。网关执行硬配额或告警配额、原子预留与结算，并用 AES-GCM 保护有界幂等重放数据。经过可信路径的请求记录模型、Token 维度、来源、成本、延迟与状态，但不长期保存提示词和模型回答。</span><span data-lang="en">Each LLM Provider Profile can independently allow direct access, the platform gateway, or both. An administrator selects routes on the same row, confirms the change, and records a compliance reason. The running platform generates the forwarding address and rejects arbitrary relay configuration. The gateway enforces hard or warning quotas, atomic reservation and settlement, and AES-GCM-protected bounded idempotent replay. Requests through trusted paths retain model, Token dimensions, provenance, cost, latency, and status without retaining prompts or model responses as long-term telemetry.</span></p><p><span data-lang="zh">服务商账单导入进入追加式对账，企业平衡分摊把可核验费用分配到使用者、Agent 和组织；外部证据必须签名。绕过网关且没有可信适配器证据的调用明确标记为 UNOBSERVED，不制造“全量可见”的假象。</span><span data-lang="en">Provider invoice imports enter append-only reconciliation, while enterprise-balanced allocation assigns verified cost to users, Agents, and organizations. External evidence must be signed. Calls outside the gateway remain UNOBSERVED without trusted adapter evidence; the product never implies complete visibility.</span></p></article><article class="detail-block" id="v502-model-capacity"><div class="section-kicker">v5.0.2 · 2/8</div><h2><span data-lang="zh">共享模型容量与取消</span><span data-lang="en">Shared model capacity and cancellation</span></h2><p><span data-lang="zh">端点别名共享明确的协调者与有界队列；取消区分排队、已发送和未确认状态，未知请求先协调再继续。</span><span data-lang="en">Endpoint aliases share an explicit coordinator and bounded queue. Cancellation distinguishes queued, sent and unconfirmed work; unknown requests reconcile before continuing.</span></p><figure class="product-shot"><img data-lang="zh" src="assets/v502-model-profiles-capacity-zh-light.png" alt="模型配置与共享容量"><img data-lang="en" src="assets/v502-model-profiles-capacity-en-light.png" alt="Model profiles and shared capacity"></figure></article><article class="detail-block" id="v502-runtime-observations"><div class="section-kicker">v5.0.2 · 3/8</div><h2><span data-lang="zh">可核对的模型观测</span><span data-lang="en">Traceable model observations</span></h2><p><span data-lang="zh">记录排队、首字与总耗时，以及可获得的输入、输出、缓存和推理用量；缺失保持未知，不填成零，也不披露隐藏推理。</span><span data-lang="en">Record queue, first-token and total timing with available input, output, cache and reasoning usage. Missing values stay unknown; hidden reasoning is never exposed.</span></p></article><article class="detail-block" id="v502-processing-recovery"><div class="section-kicker">v5.0.2 · 6/8</div><h2><span data-lang="zh">处理诊断与受控恢复</span><span data-lang="en">Processing diagnosis and governed recovery</span></h2><p><span data-lang="zh">沿原 Task、尝试、Loop 与 Graph 诊断阻塞、无进展和重复工具调用，恢复保留原预算；已完成工作不重跑，未知副作用不盲目重发。</span><span data-lang="en">Diagnose blocking, no progress and repeated tools along the original Task, attempt, Loop and Graph. Recovery preserves budgets, skips completed work and reconciles unknown effects before any resend.</span></p><figure class="product-shot"><img data-lang="zh" src="assets/v502-continuity-workflows-zh-light.png" alt="工作连续性与处理恢复"><img data-lang="en" src="assets/v502-continuity-workflows-en-light.png" alt="Continuity workflows and processing recovery"></figure></article><article class="detail-block" id="wallboard"><div class="section-kicker"><span data-lang="zh">企业管理者视图</span><span data-lang="en">Executive Operating Picture</span></div><h2><span data-lang="zh">一个登录后只读大屏，同时看平台运行与模型消耗</span><span data-lang="en">One Authenticated Read-only View for Platform Operations and Model Consumption</span></h2><p><span data-lang="zh">管理大屏汇总 Agent 总量、在线、忙碌与停滞状态，活动会话、运行任务计划与循环，并以近 14 日曲线展示 Token 和成本变化。页面同时给出受限模型用量、网关覆盖率、生成时间与新鲜度。大屏没有确认、审批、导出、配置、模型探活或 Agent 调用入口，适合企业管理者持续查看而不扩大操作权限。</span><span data-lang="en">The wallboard combines total, online, busy, and stalled Agents with active Sessions, running Task Plans and Loops, then plots 14-day Token and cost curves. It also presents bounded model usage, gateway coverage, generation time, and freshness. There are no acknowledge, approve, export, configure, provider-test, or Agent-invocation actions, making it suitable for continuous executive viewing without expanding operational authority.</span></p></article><nav class="product-adjacent" aria-label="More product capabilities"><a href="product.html">← <span data-lang="zh">全部功能方向</span><span data-lang="en">All capabilities</span></a><a href="product-governance.html"><span data-lang="zh">安全治理与合规</span><span data-lang="en">Security &amp; governance</span> →</a></nav></div></div></section></main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a class="footer-logo" href="index.html">
+        <img class="logo-light" data-lang="zh" src="assets/chuanxu-logo-zh.svg" alt="川序">
+        <img class="logo-light" data-lang="en" src="assets/chuanxu-logo-en.png" alt="Chuanxu">
+        <img class="logo-dark" data-lang="zh" src="assets/chuanxu-logo-zh-on-dark.svg" alt="川序">
+        <img class="logo-dark" data-lang="en" src="assets/chuanxu-logo-en-on-dark.png" alt="Chuanxu">
+      </a>
+      <div class="footer-links">
+        <div><strong><span data-lang="zh">产品</span><span data-lang="en">Product</span></strong><a href="product.html"><span data-lang="zh">产品能力</span><span data-lang="en">Capabilities</span></a><a href="demos/product-explorer/index.html" data-product-demo><span data-lang="zh">产品动效演示</span><span data-lang="en">Product Demo</span></a><a href="architecture.html"><span data-lang="zh">技术架构</span><span data-lang="en">Architecture</span></a><a href="database-capabilities.html"><span data-lang="zh">数据库能力</span><span data-lang="en">Database Capabilities</span></a><a href="security.html"><span data-lang="zh">零信任安全</span><span data-lang="en">Zero Trust</span></a></div>
+        <div><strong><span data-lang="zh">开始使用</span><span data-lang="en">Get Started</span></strong><a href="docs.html"><span data-lang="zh">部署文档</span><span data-lang="en">Documentation</span></a><a href="editions.html"><span data-lang="zh">选择版本</span><span data-lang="en">Choose an Edition</span></a><a href="releases.html"><span data-lang="zh">版本历史</span><span data-lang="en">Releases</span></a></div>
+        <div><strong><span data-lang="zh">社区产品</span><span data-lang="en">Community Products</span></strong><a href="https://github.com/Haiwen-Yin/AI-Agent-Infra-with-DB-Community-Edition" target="_blank" rel="noreferrer"><span data-lang="zh">川序整合社区版</span><span data-lang="en">Chuanxu Unified Community</span></a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Haiwen Yin · AI Agent Infra with DB</span>
+      <span class="footer-contact"><a href="https://db4agent.cn">db4agent.cn</a><a href="mailto:746414750@qq.com"><span data-lang="zh">邮箱：746414750@qq.com</span><span data-lang="en">Email: 746414750@qq.com</span></a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/product-routes.js"></script>
+<script src="assets/site.js"></script>
+</body>
+</html>

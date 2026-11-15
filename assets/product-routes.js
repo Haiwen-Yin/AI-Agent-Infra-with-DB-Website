@@ -1,0 +1,77 @@
+// Preserve incoming product bookmarks and browser Back behavior.
+(function () {
+  'use strict';
+  var destinations = {
+  "administration": "product-governance.html#administration",
+  "agent-business-permissions": "product-agents.html#agent-business-permissions",
+  "agent-context-assets": "product-memory.html#agent-context-assets",
+  "agent-extensions": "product-agents.html#agent-extensions",
+  "agent-private-memory": "product-memory.html#agent-private-memory",
+  "answer-quality": "product-answers.html#answer-quality",
+  "bootstrap": "product-operations.html#bootstrap",
+  "boundary": "product-governance.html#boundary",
+  "capability-config": "product-operations.html#capability-config",
+  "channels": "product-collaboration.html#channels",
+  "compliance": "product-governance.html#compliance",
+  "continuity": "product-collaboration.html#continuity",
+  "control": "product-agents.html#control",
+  "gateway": "product-agents.html#gateway",
+  "governed-retrospectives": "product-collaboration.html#governed-retrospectives",
+  "grounded-answers": "product-answers.html#grounded-answers",
+  "interface": "product-operations.html#interface",
+  "knowledge": "product-knowledge.html#knowledge",
+  "maintenance": "product-governance.html#maintenance",
+  "managed-agent-work": "product-collaboration.html#managed-agent-work",
+  "memory-ecosystem": "product-memory.html#memory-ecosystem",
+  "memory-working-notes": "product-memory.html#memory-working-notes",
+  "model-observability": "product-models.html#model-observability",
+  "native-agents": "product-agents.html#native-agents",
+  "organization": "product-agents.html#organization",
+  "product-delivery": "product-operations.html#product-delivery",
+  "sdd": "product-operations.html#sdd",
+  "security-domains": "product-governance.html#security-domains",
+  "source-synchronization": "product-knowledge.html#source-synchronization",
+  "task-continuity": "product-collaboration.html#task-continuity",
+  "v432-evidence": "product-operations.html#v432-evidence",
+  "v502-context-batching": "product-memory.html#v502-context-batching",
+  "v502-exact-evaluation": "product-answers.html#v502-exact-evaluation",
+  "v502-governed-model-turns": "product-answers.html#v502-governed-model-turns",
+  "v502-model-capacity": "product-models.html#v502-model-capacity",
+  "v502-model-results": "product-answers.html#v502-model-results",
+  "v502-processing-recovery": "product-models.html#v502-processing-recovery",
+  "v502-runtime-observations": "product-models.html#v502-runtime-observations",
+  "v502-versioned-mcp": "product-agents.html#v502-versioned-mcp",
+  "v503-topic-01": "product-knowledge.html#v503-topic-01",
+  "v503-topic-02": "product-knowledge.html#v503-topic-02",
+  "v503-topic-03": "product-knowledge.html#v503-topic-03",
+  "v503-topic-04": "product-knowledge.html#v503-topic-04",
+  "v503-topic-05": "product-knowledge.html#v503-topic-05",
+  "v503-topic-06": "product-knowledge.html#v503-topic-06",
+  "v503-topic-07": "product-knowledge.html#v503-topic-07",
+  "v503-topic-08": "product-collaboration.html#v503-topic-08",
+  "v504-context": "releases.html#v504-context",
+  "v504-topic-01": "releases.html#v504-topic-01",
+  "v504-topic-02": "releases.html#v504-topic-02",
+  "v504-topic-03": "releases.html#v504-topic-03",
+  "v504-topic-04": "releases.html#v504-topic-04",
+  "v504-topic-05": "releases.html#v504-topic-05",
+  "v504-topic-06": "releases.html#v504-topic-06",
+  "v504-ui": "releases.html#v504-ui",
+  "v505-topic-01": "product-answers.html#v505-topic-01",
+  "v505-topic-02": "product-answers.html#v505-topic-02",
+  "v505-topic-04": "product-collaboration.html#v505-topic-04",
+  "v505-topic-06": "product-memory.html#v505-topic-06",
+  "v505-topic-07": "product-agents.html#v505-topic-07",
+  "v505-topic-09": "product-operations.html#v505-topic-09",
+  "v505-ui": "product-operations.html#v505-ui",
+  "wallboard": "product-models.html#wallboard",
+  "work": "product-collaboration.html#work"
+};
+  function followProductBookmark() {
+    if (document.body.dataset.page !== 'product' || document.body.hasAttribute('data-product-detail')) return;
+    var target = destinations[decodeURIComponent(location.hash.slice(1))];
+    if (target) location.replace(target);
+  }
+  followProductBookmark();
+  window.addEventListener('hashchange', followProductBookmark);
+})();
